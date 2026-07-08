@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import CraftWalkthrough from "@/components/CraftWalkthrough";
 import TonalBand from "@/components/motion/TonalBand";
 import { ClipReveal, Parallax, Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
 import { COLLECTIONS, getAllPieces, getPiecesInCollection, priceInfo } from "@/lib/products";
@@ -22,12 +23,6 @@ const HOW_IT_WORKS = [
   ["70% deposit", "The deposit starts the build — and the countdown."],
   ["We build", "Five to eight weeks in our Nairobi workshop."],
   ["Delivery & balance", "The balance is due within 7 days of delivery."],
-] as const;
-
-const WORKSHOP_FACTS = [
-  ["13", "fundis in our own Nairobi workshop"],
-  ["~15", "independent artisan partners in the guild"],
-  ["5–8", "weeks to build each piece, from deposit"],
 ] as const;
 
 export default function HomePage() {
@@ -154,53 +149,31 @@ export default function HomePage() {
         );
       })}
 
-      {/* ---- The workshop · charcoal tonal band ---- */}
+      {/* ---- The build · charcoal tonal band with craft walkthrough ---- */}
       <TonalBand className="py-24 sm:py-32">
         <div className="mx-auto max-w-6xl px-6 sm:px-8">
           <Reveal className="max-w-3xl">
             <p className="eyebrow opacity-70">The workshop</p>
             <h2 className="mt-5 font-display text-3xl leading-snug sm:text-5xl">
               Nothing here is pulled from a shelf.{" "}
-              <span className="italic opacity-90">It is made — for you.</span>
+              <span className="italic opacity-90">Watch it become yours.</span>
             </h2>
           </Reveal>
-          <Stagger className="mt-14 grid gap-10 sm:grid-cols-3">
-            {WORKSHOP_FACTS.map(([figure, caption]) => (
-              <StaggerItem key={caption}>
-                <p className="font-display text-5xl sm:text-6xl">{figure}</p>
-                <p className="mt-3 max-w-[16rem] text-base leading-relaxed opacity-75">
-                  {caption}
-                </p>
-              </StaggerItem>
-            ))}
-          </Stagger>
-          <div className="mt-14 grid items-center gap-10 sm:grid-cols-5 sm:gap-14">
-            <Reveal className="sm:col-span-3">
-              <p className="max-w-xl text-base leading-relaxed opacity-80">
-                Rug weavers, soapstone carvers, seagrass basket weavers,
-                woodworkers and welders — a curated guild of Kenyan craftsmen
-                and women stands around our own workshop, and their hands carry
-                every collection.
-              </p>
-              <Link
-                href="/story"
-                className="eyebrow mt-8 inline-block border-b border-current pb-1 transition-opacity hover:opacity-70"
-              >
-                Read our story
-              </Link>
-            </Reveal>
-            <ClipReveal className="sm:col-span-2">
-              <div className="relative aspect-[3/4] max-w-sm overflow-hidden">
-                <Image
-                  src="/images/story/workshop-fundi.jpg"
-                  alt="A Savannah Space fundi shaping wood with a router in the Nairobi workshop"
-                  fill
-                  sizes="(max-width: 640px) 100vw, 40vw"
-                  className="object-cover"
-                />
-              </div>
-            </ClipReveal>
+          <div className="mt-16 lg:mt-8">
+            <CraftWalkthrough />
           </div>
+          <Reveal className="mt-16 border-t border-bone/20 pt-10 lg:mt-8">
+            <p className="max-w-2xl font-display text-xl leading-relaxed sm:text-2xl">
+              Thirteen fundis. A guild of some fifteen artisan partners —
+              weavers, carvers, welders. Five to eight weeks, made for you.
+            </p>
+            <Link
+              href="/story"
+              className="eyebrow mt-8 inline-block border-b border-current pb-1 transition-opacity hover:opacity-70"
+            >
+              Read our story
+            </Link>
+          </Reveal>
         </div>
       </TonalBand>
 

@@ -105,6 +105,13 @@ either missing, contradictory, or required a documented judgment call.
 
 ## Other
 
+33. **Pitch ask — process photography.** The home page's "The Build" walkthrough is
+    assembled from catalogue photos that happen to show workshop/build stages (raw
+    timber racks, bare bed frames, the router shot, a maker carrying a finished
+    table). Real process photography from the client — sawing, joinery, sanding,
+    finishing, delivery — would make this section substantially stronger in the paid
+    engagement.
+
 31. **Custom rugs** (Rugs p4): designs/sizes not in the catalogue are priced at
     Ksh 1,800 + VAT per sq ft (does not apply to colour customisations) — copy for
     /how-to-order in Phase 3.
