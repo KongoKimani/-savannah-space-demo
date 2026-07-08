@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+/*
+  Design tokens — CLAUDE.md §3 starting values, adjusted against hexes sampled
+  from the catalogue PDFs during setup:
+  - bone:      catalogue pages render #FFF6F6 (furniture) / #F7F2EB (rugs);
+               #F9F3EC sits between them and keeps the warm paper feel.
+  - chocolate: sampled from the wordmark on the Home Bars cover (#6D4412).
+  - marigold:  sampled from the cover background (#ECC22B).
+  - crimson:   the PDFs use a plain #FF1616 for functional notes; kept at the
+               brief's calmer #B23A2E — functional notes only.
+*/
+@theme {
+  --color-bone: #f9f3ec;
+  --color-blush: #f6e7de;
+  --color-chocolate: #6d4412;
+  --color-ink: #2b221b;
+  --color-terracotta: #a85a38;
+  --color-marigold: #ecc22b;
+  --color-crimson: #b23a2e;
+  --color-charcoal: #191410;
+  --color-line: #e7d9cc;
+
+  --font-display: var(--font-cormorant), Georgia, serif;
+  --font-body: var(--font-manrope), system-ui, sans-serif;
+}
+
+body {
+  background-color: var(--color-bone);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* House-style eyebrow: uppercase, wide tracking ("M A D E  I N  K E N Y A") */
+.eyebrow {
+  font-family: var(--font-body);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  font-size: 0.6875rem;
+}
