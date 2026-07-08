@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import CraftWalkthrough from "@/components/CraftWalkthrough";
 import TonalBand from "@/components/motion/TonalBand";
-import { ClipReveal, Parallax, Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
+import { Parallax, Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
 import { COLLECTIONS, getAllPieces, getPiecesInCollection, priceInfo } from "@/lib/products";
 import { SITE, formatKsh, whatsappLink } from "@/lib/site";
 
@@ -79,19 +79,15 @@ export default function HomePage() {
             <span className="italic text-terracotta">Every name has a maker.</span>
           </p>
         </Reveal>
+        {/* Even flex gaps, no trailing separators — wraps cleanly at any width */}
         <Reveal delay={0.1} className="mx-auto mt-12 max-w-2xl border-y border-line py-6">
-          <p className="eyebrow text-[0.625rem] leading-loose text-ink/70">
-            {WOODS.map((wood, i) => (
-              <span key={wood} className="inline-block whitespace-nowrap">
+          <ul className="flex flex-wrap items-baseline justify-center gap-x-7 gap-y-3">
+            {WOODS.map((wood) => (
+              <li key={wood} className="eyebrow whitespace-nowrap text-[0.625rem] text-ink/70">
                 {wood}
-                {i < WOODS.length - 1 && (
-                  <span aria-hidden className="mx-3 text-terracotta">
-                    ·
-                  </span>
-                )}
-              </span>
+              </li>
             ))}
-          </p>
+          </ul>
         </Reveal>
       </section>
 
@@ -100,22 +96,24 @@ export default function HomePage() {
         const { price, isFrom } = priceInfo(piece);
         return (
           <section key={piece.slug} className="relative">
+            {/* The scene image is always visible — full-viewport content must
+                not depend on scroll-reveal JS (it reads as a blank band when
+                the reveal hasn't fired). Only the caption animates. */}
             <Link href={`/pieces/${piece.slug}`} className="group block">
-              <ClipReveal>
-                <div className="relative h-[72dvh] overflow-hidden bg-blush sm:h-[88dvh]">
-                  <Image
-                    src={piece.images[0]}
-                    alt={`${piece.name}, handcrafted in Kenya by Savannah Space`}
-                    fill
-                    sizes="100vw"
-                    className="object-cover transition-transform duration-700 group-hover:scale-[1.03]"
-                  />
-                  <div
-                    aria-hidden
-                    className="absolute inset-0 bg-gradient-to-t from-charcoal/90 via-charcoal/60 to-charcoal/10"
-                  />
-                  <div className="absolute inset-x-0 bottom-0 px-6 pb-10 sm:px-10 sm:pb-14">
-                    <div className="mx-auto max-w-6xl">
+              <div className="relative h-[72dvh] overflow-hidden bg-blush sm:h-[88dvh]">
+                <Image
+                  src={piece.images[0]}
+                  alt={`${piece.name}, handcrafted in Kenya by Savannah Space`}
+                  fill
+                  sizes="100vw"
+                  className="object-cover transition-transform duration-700 group-hover:scale-[1.03]"
+                />
+                <div
+                  aria-hidden
+                  className="absolute inset-0 bg-gradient-to-t from-charcoal/90 via-charcoal/60 to-charcoal/10"
+                />
+                <div className="absolute inset-x-0 bottom-0 px-6 pb-10 sm:px-10 sm:pb-14">
+                  <Reveal className="mx-auto max-w-6xl">
                       <p className="eyebrow text-[0.625rem] text-bone/90">
                         <span className="text-marigold">
                           {String(i + 1).padStart(2, "0")}
@@ -140,10 +138,9 @@ export default function HomePage() {
                       <span className="eyebrow mt-6 inline-block border-b border-bone/70 pb-1 text-bone transition-colors group-hover:border-bone">
                         View the piece
                       </span>
-                    </div>
-                  </div>
+                  </Reveal>
                 </div>
-              </ClipReveal>
+              </div>
             </Link>
           </section>
         );
