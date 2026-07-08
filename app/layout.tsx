@@ -79,6 +79,33 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className={`${cormorant.variable} ${manrope.variable}`}>
       <body className="flex min-h-screen flex-col">
+        {/* Manual font preloads: Next 15.5 builds preload-flagged (.p.woff2)
+            font files but emits no <link> tags for them, so the LCP headline
+            waits on the CSS->font chain. The hashes are content-hashes of the
+            Google font data — stable across builds; if a font update ever
+            changes them, the stale hint 404s harmlessly. React hoists these
+            to <head>. Re-derive via: grep -o '/_next/static/media/[a-z0-9]*-s\.p\.woff2' .next/static/css/*.css */}
+        <link
+          rel="preload"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
+          href="/_next/static/media/1ecca39927ee9e6f-s.p.woff2"
+        />
+        <link
+          rel="preload"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
+          href="/_next/static/media/ff4bfb11aeec83f5-s.p.woff2"
+        />
+        <link
+          rel="preload"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
+          href="/_next/static/media/4c9affa5bc8f420e-s.p.woff2"
+        />
         <JsonLd data={localBusiness} />
         {GA_ID && (
           <>
