@@ -32,6 +32,8 @@ export interface Collection {
   slug: string;
   name: string;
   intro: string;
+  /** Longer editorial treatment, rendered between intro and grid (Bars only for now). */
+  editorial?: string[];
 }
 
 const pieces = raw as unknown as Piece[];
@@ -91,6 +93,10 @@ export const COLLECTIONS: Collection[] = [
     name: "Home Bars",
     intro:
       "Drinks cabinets and bar carts handcrafted to order in Nairobi — from the Mvule Oromo Bar to the Kahawa Bar in Meru Oak with recycled Scandinavian pine interiors. Customisable by wood and colour, from Ksh 91,000.",
+    editorial: [
+      "Every bar here is named — Oromo, Simona, Braided, Oya, Kuba, Kahawa (Swahili for coffee), Aoro, Ambo — and every one is built only after it is ordered. Cabinets come in solid Mvule, Mango and Meru Oak, or in painted block board finished in Duracoat colours like Pond Moss and Aqua Electra over interiors of recycled Scandinavian pine.",
+      "Doors open onto fitted wine racks and stemware rails; metal legs can be added to most designs for Ksh 2,500. Choose your wood, choose your colour, and allow five to eight weeks from deposit — a bar made for you, not shipped from a warehouse.",
+    ],
   },
   {
     slug: "drawer-chests-bedside-tables",

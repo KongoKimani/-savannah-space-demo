@@ -77,9 +77,9 @@ either missing, contradictory, or required a documented judgment call.
 
 ## Featured pieces
 
-25. Brief wants 3 featured pieces: The Oromo Bar and The Khadija Drawer Chest are set
-    (`featured: true`). The third ("strongest remaining image") is left for Phase 3 /
-    client review — suggest The Kahawa Bar or The Asili Sofa.
+25. ~~Resolved in Phase 3~~ — The Kahawa Bar was chosen as the third featured piece
+    (strong open-door photo showing the wine rack and Mocha Bisque interior, and its
+    name annotation is a pitch hook). Swap for another piece if the client prefers.
 
 ## Image quality
 
@@ -108,6 +108,9 @@ either missing, contradictory, or required a documented judgment call.
 31. **Custom rugs** (Rugs p4): designs/sizes not in the catalogue are priced at
     Ksh 1,800 + VAT per sq ft (does not apply to colour customisations) — copy for
     /how-to-order in Phase 3.
-32. Brand bird mark extracted cleanly from the rug-catalogue cover →
-    `public/images/brand/bird-mark.png` (355x355, transparent). Workshop photo (fundi at
-    router table) → `public/images/story/workshop-fundi.jpg`.
+32. Brand mark: the only extractable asset (rug-catalogue cover, 355x355 →
+    `public/images/brand/bird-mark.png`) is the **dark badge lockup** (gold bird +
+    wordmark on a baked black square, no transparency), not a clean crop of the bird.
+    Per brief §3 the footer therefore uses the text wordmark only; ask the client for
+    the original vector mark. Workshop photo (fundi at router table) →
+    `public/images/story/workshop-fundi.jpg`.

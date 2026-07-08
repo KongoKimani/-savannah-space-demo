@@ -60,6 +60,18 @@ export default async function CollectionPage({
       <p className="mt-5 max-w-2xl text-sm leading-relaxed text-ink/80 sm:text-base">
         {collection.intro}
       </p>
+      {collection.editorial && (
+        <div className="mt-8 max-w-2xl space-y-4 border-l-2 border-terracotta pl-5 sm:pl-6">
+          {collection.editorial.map((paragraph) => (
+            <p
+              key={paragraph.slice(0, 24)}
+              className="font-display text-lg leading-relaxed text-ink/85 sm:text-xl"
+            >
+              {paragraph}
+            </p>
+          ))}
+        </div>
+      )}
       <div className="mt-10 grid grid-cols-2 gap-x-6 gap-y-10 sm:grid-cols-3 lg:grid-cols-4">
         {pieces.map((piece, i) => (
           <PieceCard key={piece.slug} piece={piece} priority={i < 4} />

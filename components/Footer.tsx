@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import { SITE, whatsappLink } from "@/lib/site";
 
@@ -11,14 +10,9 @@ export default function Footer() {
           <span className="font-display text-lg uppercase tracking-[0.24em] text-chocolate">
             Savannah Space
           </span>
+          {/* Bird mark omitted: the only extractable asset is the dark badge
+              lockup, not a clean crop — brief §3 says text-only in that case. */}
           <p className="mt-3 max-w-xs text-sm text-ink/70">{SITE.tagline}</p>
-          <Image
-            src="/images/brand/bird-mark.png"
-            alt="Savannah Space bird mark"
-            width={40}
-            height={40}
-            className="mt-4"
-          />
         </div>
         <div>
           <p className="eyebrow text-ink/70">Showroom</p>
