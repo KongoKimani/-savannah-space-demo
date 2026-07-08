@@ -43,7 +43,7 @@ export default function CollectionsPage() {
                 <h2 className="font-display text-xl uppercase tracking-[0.06em] text-chocolate">
                   {collection.name}
                 </h2>
-                <span className="eyebrow text-[0.625rem] text-ink/50">
+                <span className="eyebrow text-[0.625rem] text-ink/70">
                   {pieces.length} pieces
                 </span>
               </div>

@@ -94,7 +94,7 @@ export default function OrderPanel({ piece }: { piece: Piece }) {
       <div className="mt-6">
         <p className="font-display text-2xl text-ink">{formatKsh(price)}</p>
         {piece.price_notes.map((n) => (
-          <p key={n} className="text-xs text-ink/60">
+          <p key={n} className="text-xs text-ink/70">
             {n}
           </p>
         ))}

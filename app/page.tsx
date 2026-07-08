@@ -69,20 +69,20 @@ export default function HomePage() {
           aria-hidden
           className="pointer-events-none absolute inset-3 border border-bone/30 sm:inset-5"
         />
+        {/* No entrance animation here: the statement is the LCP element, and
+            an opacity-0 initial state defers LCP by seconds on mobile. */}
         <div className="relative mx-auto w-full max-w-6xl px-6 text-center sm:px-8">
-          <Reveal>
-            <p className="eyebrow tracking-[0.3em] text-bone/90">
-              Made in Kenya · Since 2018
-            </p>
-            <h1 className="mx-auto mt-7 max-w-5xl font-display text-[2.75rem] leading-[1.12] text-bone sm:text-6xl lg:text-8xl">
-              Where African heritage{" "}
-              <span className="italic">lives in design.</span>
-            </h1>
-            <p className="mx-auto mt-6 max-w-md text-base leading-relaxed text-bone/80">
-              Furniture built to order by thirteen fundis and a guild of Kenyan
-              artisans — never shipped from a warehouse.
-            </p>
-          </Reveal>
+          <p className="eyebrow tracking-[0.3em] text-bone/90">
+            Made in Kenya · Since 2018
+          </p>
+          <h1 className="mx-auto mt-7 max-w-5xl font-display text-[2.75rem] leading-[1.12] text-bone sm:text-6xl lg:text-8xl">
+            Where African heritage{" "}
+            <span className="italic">lives in design.</span>
+          </h1>
+          <p className="mx-auto mt-6 max-w-md text-base leading-relaxed text-bone/80">
+            Furniture built to order by thirteen fundis and a guild of Kenyan
+            artisans — never shipped from a warehouse.
+          </p>
         </div>
         <div className="absolute inset-x-0 bottom-8 flex flex-col items-center gap-3 sm:bottom-10">
           <span className="eyebrow text-[0.5625rem] text-bone/70">Scroll</span>
@@ -108,7 +108,7 @@ export default function HomePage() {
             </p>
           </Reveal>
           <Reveal delay={0.1} className="lg:col-span-4 lg:col-start-9">
-            <p className="eyebrow text-ink/60">The woods</p>
+            <p className="eyebrow text-ink/70">The woods</p>
             <ul className="mt-5 grid grid-cols-2 gap-x-8 border-b border-line lg:grid-cols-1 lg:gap-x-0">
               {WOODS.map((wood) => (
                 <li
@@ -245,7 +245,7 @@ export default function HomePage() {
                       {piece.name_note}
                     </p>
                   )}
-                  <p className="eyebrow mt-4 text-[0.625rem] text-ink/60">
+                  <p className="eyebrow mt-4 text-[0.625rem] text-ink/70">
                     {piece.materials.join(" · ")}
                   </p>
                   <p className="mt-5 font-display text-xl text-ink">
@@ -323,7 +323,7 @@ export default function HomePage() {
                   <p className="mt-3 font-display text-base uppercase leading-tight tracking-[0.06em] text-chocolate">
                     {c.name}
                   </p>
-                  <p className="eyebrow mt-1 text-[0.5625rem] text-ink/50">
+                  <p className="eyebrow mt-1 text-[0.5625rem] text-ink/70">
                     {getPiecesInCollection(c.slug).length} pieces
                   </p>
                 </Link>

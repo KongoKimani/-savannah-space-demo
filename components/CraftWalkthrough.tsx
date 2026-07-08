@@ -100,6 +100,7 @@ function ImageStack({ active, sizes }: { active: number; sizes: string }) {
           alt={i === active ? stage.alt : ""}
           fill
           sizes={sizes}
+          quality={60}
           className="object-cover transition-opacity duration-700 ease-out"
           style={{ opacity: i === active ? 1 : 0 }}
         />

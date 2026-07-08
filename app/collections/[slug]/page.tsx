@@ -46,7 +46,7 @@ export default async function CollectionPage({
   return (
     <div className="mx-auto max-w-6xl px-4 py-12 sm:py-16">
       <JsonLd data={breadcrumbs} />
-      <nav className="eyebrow text-[0.625rem] text-ink/50">
+      <nav className="eyebrow text-[0.625rem] text-ink/70">
         <Link href="/collections" className="hover:text-chocolate">
           Collections
         </Link>

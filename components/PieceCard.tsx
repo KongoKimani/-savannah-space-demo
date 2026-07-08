@@ -26,7 +26,7 @@ export default function PieceCard({ piece, priority = false }: { piece: Piece; p
         <h3 className="font-display text-lg uppercase tracking-[0.06em] text-chocolate">
           {piece.name}
         </h3>
-        <p className="eyebrow mt-1 text-[0.625rem] text-ink/60">
+        <p className="eyebrow mt-1 text-[0.625rem] text-ink/70">
           {piece.materials.slice(0, 2).join(" · ")}
         </p>
         <p className="mt-1 font-display text-base text-ink">

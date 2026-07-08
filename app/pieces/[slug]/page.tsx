@@ -86,12 +86,16 @@ export default async function PiecePage({
             highPrice: Math.max(...prices),
             offerCount: prices.length,
             availability: "https://schema.org/MadeToOrder",
+            itemCondition: "https://schema.org/NewCondition",
+            url: `${SITE.url}/pieces/${piece.slug}`,
           }
         : {
             "@type": "Offer",
             priceCurrency: "KES",
             price: prices[0],
             availability: "https://schema.org/MadeToOrder",
+            itemCondition: "https://schema.org/NewCondition",
+            url: `${SITE.url}/pieces/${piece.slug}`,
           },
   };
 
@@ -110,7 +114,7 @@ export default async function PiecePage({
       <JsonLd data={productJsonLd} />
       <JsonLd data={breadcrumbs} />
 
-      <nav className="eyebrow text-[0.625rem] text-ink/50">
+      <nav className="eyebrow text-[0.625rem] text-ink/70">
         <Link href="/collections" className="hover:text-chocolate">Collections</Link>
         <span className="mx-2">/</span>
         <Link href={`/collections/${piece.collection}`} className="hover:text-chocolate">
@@ -132,16 +136,16 @@ export default async function PiecePage({
 
           {/* Spec table */}
           <div className="mt-10 border-t border-line pt-6">
-            <p className="eyebrow text-ink/70">Details</p>
+            <h2 className="eyebrow text-ink/70">Details</h2>
             <dl className="mt-3 divide-y divide-line text-sm">
               <div className="flex justify-between gap-6 py-2">
-                <dt className="text-ink/60">Materials</dt>
+                <dt className="text-ink/70">Materials</dt>
                 <dd className="text-right">{piece.materials.join(", ")}</dd>
               </div>
               {piece.dimensions &&
                 Object.entries(piece.dimensions).map(([key, value]) => (
                   <div key={key} className="flex justify-between gap-6 py-2">
-                    <dt className="text-ink/60">{dimensionLabel(key)}</dt>
+                    <dt className="text-ink/70">{dimensionLabel(key)}</dt>
                     <dd className="text-right">{value} cm</dd>
                   </div>
                 ))}
@@ -150,7 +154,7 @@ export default async function PiecePage({
                   .filter((v) => v.dimensions)
                   .map((v) => (
                     <div key={v.label} className="flex justify-between gap-6 py-2">
-                      <dt className="text-ink/60">{v.label}</dt>
+                      <dt className="text-ink/70">{v.label}</dt>
                       <dd className="text-right">
                         {Object.entries(v.dimensions!)
                           .map(([k, val]) => `${dimensionLabel(k)} ${val} cm`)
@@ -159,7 +163,7 @@ export default async function PiecePage({
                     </div>
                   ))}
               <div className="flex justify-between gap-6 py-2">
-                <dt className="text-ink/60">Turnaround</dt>
+                <dt className="text-ink/70">Turnaround</dt>
                 <dd className="text-right">
                   {piece.turnaround_weeks
                     ? `About ${piece.turnaround_weeks.replace("-", "–")} weeks from deposit`
@@ -171,7 +175,7 @@ export default async function PiecePage({
 
           {piece.notes.length > 0 && (
             <div className="mt-8">
-              <p className="eyebrow text-ink/70">Please note</p>
+              <h2 className="eyebrow text-ink/70">Please note</h2>
               <ul className="mt-3 space-y-2 text-base leading-relaxed text-ink/80">
                 {piece.notes.map((note) => (
                   <li key={note} className="flex gap-2">
@@ -187,7 +191,7 @@ export default async function PiecePage({
 
       {/* Mini "how ordering works" */}
       <section className="mt-16 border-t border-line pt-10">
-        <p className="eyebrow text-ink/70">How ordering works</p>
+        <h2 className="eyebrow text-ink/70">How ordering works</h2>
         <ol className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {ORDER_STEPS.map(([title, body], i) => (
             <li key={title}>
@@ -204,7 +208,7 @@ export default async function PiecePage({
 
       {related.length > 0 && (
         <section className="mt-16 border-t border-line pt-10">
-          <p className="eyebrow text-ink/70">More from {collection?.name}</p>
+          <h2 className="eyebrow text-ink/70">More from {collection?.name}</h2>
           <div className="mt-6 grid grid-cols-2 gap-6 sm:grid-cols-3">
             {related.map((p) => (
               <PieceCard key={p.slug} piece={p} />

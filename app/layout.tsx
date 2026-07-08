@@ -9,9 +9,11 @@ import LenisProvider from "@/components/motion/LenisProvider";
 import { SITE } from "@/lib/site";
 import "./globals.css";
 
+// Only the weights actually used — every extra face is a preloaded file
+// competing with the LCP text paint on mobile.
 const cormorant = Cormorant_Garamond({
   subsets: ["latin"],
-  weight: ["400", "500", "600"],
+  weight: ["400"],
   style: ["normal", "italic"],
   variable: "--font-cormorant",
 });
@@ -33,6 +35,18 @@ export const metadata: Metadata = {
     siteName: "Savannah Space",
     type: "website",
     locale: "en_KE",
+    // default OG image — piece pages override with their own photo
+    images: [
+      {
+        url: "/images/editorial/hero.jpg",
+        width: 1512,
+        height: 1134,
+        alt: "Handwoven rugs and print baskets in the Savannah Space studio, Nairobi",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
   },
 };
 
@@ -45,6 +59,8 @@ const localBusiness = {
     "Furniture and home decor handcrafted to order in Nairobi, Kenya. Founded in 2018.",
   slogan: SITE.tagline,
   url: SITE.url,
+  image: `${SITE.url}/images/editorial/hero.jpg`,
+  priceRange: "Ksh 16,000 - Ksh 330,000",
   telephone: SITE.phonePrimary.replace(/\s/g, ""),
   email: SITE.email,
   address: {
