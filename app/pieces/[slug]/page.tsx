@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import Gallery from "@/components/Gallery";
 import JsonLd from "@/components/JsonLd";
+import { getBlur } from "@/lib/blur";
 import Nameplate from "@/components/Nameplate";
 import OrderPanel from "@/components/OrderPanel";
 import PieceCard from "@/components/PieceCard";
@@ -62,6 +63,7 @@ export default async function PiecePage({
   const related = getRelatedPieces(piece, 3);
   const { price, isFrom } = priceInfo(piece);
   const alts = piece.images.map((_, i) => pieceAlt(piece, i));
+  const blurs = piece.images.map((src) => getBlur(src));
 
   const prices = piece.variants.length
     ? piece.variants.map((v) => v.price_ksh)
@@ -119,7 +121,7 @@ export default async function PiecePage({
       </nav>
 
       <div className="mt-6 grid gap-10 lg:grid-cols-2">
-        <Gallery images={piece.images} alts={alts} />
+        <Gallery images={piece.images} alts={alts} blurs={blurs} />
 
         <div>
           <Nameplate piece={piece} />

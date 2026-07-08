@@ -3,7 +3,14 @@ import Link from "next/link";
 import CraftWalkthrough from "@/components/CraftWalkthrough";
 import TonalBand from "@/components/motion/TonalBand";
 import { Parallax, Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
-import { COLLECTIONS, getAllPieces, getPiecesInCollection, priceInfo } from "@/lib/products";
+import { blurProps } from "@/lib/blur";
+import {
+  COLLECTIONS,
+  collectionCover,
+  getAllPieces,
+  getPiecesInCollection,
+  priceInfo,
+} from "@/lib/products";
 import { SITE, formatKsh, whatsappLink } from "@/lib/site";
 
 const WOODS = [
@@ -17,6 +24,11 @@ const WOODS = [
   "Indian Teak",
   "Recycled Scandinavian Pine",
 ];
+
+/* Curated home feature shots (index into piece.images): styled interiors only. */
+const FEATURE_IMAGE: Record<string, number> = {
+  "khadija-drawer-chest": 2,
+};
 
 const HOW_IT_WORKS = [
   ["Enquire", "WhatsApp, Instagram or email us with the piece you'd like."],
@@ -40,11 +52,17 @@ export default function HomePage() {
             priority
             sizes="100vw"
             className="scale-110 object-cover"
+            {...blurProps("/images/editorial/hero.jpg")}
           />
         </Parallax>
         <div
           aria-hidden
           className="absolute inset-0 bg-gradient-to-t from-charcoal/80 via-charcoal/35 to-charcoal/20"
+        />
+        {/* top gradient keeps the transparent header legible over light image areas */}
+        <div
+          aria-hidden
+          className="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-charcoal/60 to-transparent"
         />
         {/* hairline frame, inset like a plate mark */}
         <div
@@ -53,8 +71,10 @@ export default function HomePage() {
         />
         <div className="relative mx-auto w-full max-w-6xl px-6 text-center sm:px-8">
           <Reveal>
-            <p className="eyebrow text-bone/90">Made in Kenya · Since 2018</p>
-            <h1 className="mx-auto mt-6 max-w-4xl font-display text-4xl leading-[1.15] text-bone sm:text-6xl lg:text-7xl">
+            <p className="eyebrow tracking-[0.3em] text-bone/90">
+              Made in Kenya · Since 2018
+            </p>
+            <h1 className="mx-auto mt-7 max-w-5xl font-display text-[2.75rem] leading-[1.12] text-bone sm:text-6xl lg:text-8xl">
               Where African heritage{" "}
               <span className="italic">lives in design.</span>
             </h1>
@@ -70,25 +90,37 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ---- Statement interlude + wood index ---- */}
-      <section className="px-6 py-20 text-center sm:py-28">
-        <Reveal className="mx-auto max-w-3xl">
-          <p className="font-display text-3xl leading-snug text-chocolate sm:text-5xl">
-            Every piece has a name.
-            <br />
-            <span className="italic text-terracotta">Every name has a maker.</span>
-          </p>
-        </Reveal>
-        {/* Even flex gaps, no trailing separators — wraps cleanly at any width */}
-        <Reveal delay={0.1} className="mx-auto mt-12 max-w-2xl border-y border-line py-6">
-          <ul className="flex flex-wrap items-baseline justify-center gap-x-7 gap-y-3">
-            {WOODS.map((wood) => (
-              <li key={wood} className="eyebrow whitespace-nowrap text-[0.625rem] text-ink/70">
-                {wood}
-              </li>
-            ))}
-          </ul>
-        </Reveal>
+      {/* ---- Statement + woods index · asymmetric editorial spread ---- */}
+      <section className="mx-auto max-w-6xl px-6 py-24 sm:px-8 sm:py-32">
+        <div className="grid gap-14 lg:grid-cols-12 lg:gap-8">
+          <Reveal className="lg:col-span-7">
+            <p className="eyebrow text-terracotta">The atelier</p>
+            <p className="mt-6 font-display text-4xl leading-[1.15] text-chocolate sm:text-5xl lg:text-6xl">
+              Every piece has a name.
+              <br />
+              <span className="italic text-terracotta">
+                Every name has a maker.
+              </span>
+            </p>
+            <p className="mt-8 max-w-md text-base leading-relaxed text-ink/70">
+              Mbura, Ngunia, Khadija, Diani, Kahawa — a catalogue of named
+              designs, each built to order in the wood you choose.
+            </p>
+          </Reveal>
+          <Reveal delay={0.1} className="lg:col-span-4 lg:col-start-9">
+            <p className="eyebrow text-ink/60">The woods</p>
+            <ul className="mt-5 grid grid-cols-2 gap-x-8 border-b border-line lg:grid-cols-1 lg:gap-x-0">
+              {WOODS.map((wood) => (
+                <li
+                  key={wood}
+                  className="eyebrow border-t border-line py-3.5 text-[0.6875rem] text-ink/80"
+                >
+                  {wood}
+                </li>
+              ))}
+            </ul>
+          </Reveal>
+        </div>
       </section>
 
       {/* ---- The build · charcoal tonal band with craft walkthrough ---- */}
@@ -96,7 +128,7 @@ export default function HomePage() {
         <div className="mx-auto max-w-6xl px-6 sm:px-8">
           <Reveal className="max-w-3xl">
             <p className="eyebrow opacity-70">The workshop</p>
-            <h2 className="mt-5 font-display text-3xl leading-snug sm:text-5xl">
+            <h2 className="mt-5 font-display text-3xl leading-snug sm:text-5xl lg:text-6xl">
               Nothing here is pulled from a shelf.{" "}
               <span className="italic opacity-90">Watch it become yours.</span>
             </h2>
@@ -126,6 +158,8 @@ export default function HomePage() {
       <section className="py-6 lg:py-14">
         {featured.map((piece, i) => {
           const { price, isFrom } = priceInfo(piece);
+          // curated home shots: styled interiors only (galleries keep page order)
+          const img = piece.images[FEATURE_IMAGE[piece.slug] ?? 0];
           return (
             <article key={piece.slug}>
               {/* Mobile scene — image always visible, only the caption animates */}
@@ -135,11 +169,12 @@ export default function HomePage() {
               >
                 <div className="relative h-[72dvh] overflow-hidden bg-blush">
                   <Image
-                    src={piece.images[0]}
+                    src={img}
                     alt={`${piece.name}, handcrafted in Kenya by Savannah Space`}
                     fill
                     sizes="100vw"
                     className="object-cover transition-transform duration-700 group-hover:scale-[1.03]"
+                    {...blurProps(img)}
                   />
                   <div
                     aria-hidden
@@ -185,11 +220,12 @@ export default function HomePage() {
                 <Link href={`/pieces/${piece.slug}`} className="group block">
                   <div className="relative aspect-[3/4] overflow-hidden bg-blush">
                     <Image
-                      src={piece.images[0]}
+                      src={img}
                       alt={`${piece.name}, handcrafted in Kenya by Savannah Space`}
                       fill
                       sizes="(min-width: 1024px) 45vw, 100vw"
                       className="object-cover transition-transform duration-700 group-hover:scale-[1.03]"
+                      {...blurProps(img)}
                     />
                   </div>
                 </Link>
@@ -234,7 +270,7 @@ export default function HomePage() {
         <div className="mx-auto max-w-6xl px-6 py-20 sm:px-8 sm:py-24">
           <Reveal>
             <p className="eyebrow text-terracotta">Built to order</p>
-            <h2 className="mt-3 font-display text-3xl text-chocolate sm:text-4xl">
+            <h2 className="mt-3 font-display text-3xl text-chocolate sm:text-5xl">
               How it works
             </h2>
           </Reveal>
@@ -262,25 +298,25 @@ export default function HomePage() {
       <section className="mx-auto max-w-6xl px-6 py-20 sm:px-8 sm:py-24">
         <Reveal>
           <p className="eyebrow text-terracotta">The catalogue</p>
-          <h2 className="mt-3 font-display text-3xl text-chocolate sm:text-4xl">
+          <h2 className="mt-3 font-display text-3xl text-chocolate sm:text-5xl">
             Ten collections
           </h2>
         </Reveal>
         <Stagger className="mt-10 grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-3 lg:grid-cols-5">
           {COLLECTIONS.map((c) => {
-            const pieces = getPiecesInCollection(c.slug);
-            const cover = pieces.find((p) => p.featured) ?? pieces[0];
+            const cover = collectionCover(c);
             return (
               <StaggerItem key={c.slug}>
                 <Link href={`/collections/${c.slug}`} className="group block py-1">
                   <div className="relative aspect-[3/4] overflow-hidden bg-blush">
-                    {cover?.images[0] && (
+                    {cover && (
                       <Image
-                        src={cover.images[0]}
+                        src={cover}
                         alt={`${c.name} by Savannah Space`}
                         fill
                         sizes="(max-width: 640px) 50vw, 20vw"
-                        className="object-cover transition-transform duration-500 group-hover:scale-[1.04]"
+                        className="object-cover transition-transform duration-700 group-hover:scale-[1.04]"
+                        {...blurProps(cover)}
                       />
                     )}
                   </div>
@@ -288,7 +324,7 @@ export default function HomePage() {
                     {c.name}
                   </p>
                   <p className="eyebrow mt-1 text-[0.5625rem] text-ink/50">
-                    {pieces.length} pieces
+                    {getPiecesInCollection(c.slug).length} pieces
                   </p>
                 </Link>
               </StaggerItem>
@@ -301,7 +337,7 @@ export default function HomePage() {
       <section className="bg-blush">
         <div className="mx-auto max-w-6xl px-6 py-20 text-center sm:px-8 sm:py-28">
           <Reveal>
-            <p className="mx-auto max-w-2xl font-display text-3xl leading-snug text-chocolate sm:text-5xl">
+            <p className="mx-auto max-w-2xl font-display text-3xl leading-snug text-chocolate sm:text-6xl">
               Built for your home.{" "}
               <span className="italic text-terracotta">Not for a warehouse.</span>
             </p>

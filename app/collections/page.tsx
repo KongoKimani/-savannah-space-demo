@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { COLLECTIONS, getPiecesInCollection } from "@/lib/products";
+import { blurProps } from "@/lib/blur";
+import { COLLECTIONS, collectionCover, getPiecesInCollection } from "@/lib/products";
 
 export const metadata: Metadata = {
   title: "Collections",
@@ -19,7 +20,7 @@ export default function CollectionsPage() {
       <div className="mt-10 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
         {COLLECTIONS.map((collection) => {
           const pieces = getPiecesInCollection(collection.slug);
-          const cover = pieces.find((p) => p.featured) ?? pieces[0];
+          const cover = collectionCover(collection);
           return (
             <Link
               key={collection.slug}
@@ -27,13 +28,14 @@ export default function CollectionsPage() {
               className="group block"
             >
               <div className="relative aspect-[4/3] overflow-hidden bg-blush">
-                {cover?.images[0] && (
+                {cover && (
                   <Image
-                    src={cover.images[0]}
+                    src={cover}
                     alt={`${collection.name} — handcrafted in Kenya by Savannah Space`}
                     fill
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                    className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                    className="object-cover transition-transform duration-700 group-hover:scale-[1.03]"
+                    {...blurProps(cover)}
                   />
                 )}
               </div>

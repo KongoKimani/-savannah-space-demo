@@ -33,6 +33,17 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+/* Micro-details: on-palette selection + focus states */
+::selection {
+  background-color: var(--color-chocolate);
+  color: var(--color-bone);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-chocolate);
+  outline-offset: 3px;
+}
+
 /* House-style eyebrow: uppercase, wide tracking ("M A D E  I N  K E N Y A") */
 .eyebrow {
   font-family: var(--font-body);

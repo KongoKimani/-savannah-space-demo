@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { blurProps } from "@/lib/blur";
 import { Piece, pieceAlt, priceInfo } from "@/lib/products";
 import { formatKsh } from "@/lib/site";
 
@@ -16,7 +17,8 @@ export default function PieceCard({ piece, priority = false }: { piece: Piece; p
             fill
             priority={priority}
             sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
-            className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+            className="object-cover transition-transform duration-700 group-hover:scale-[1.03]"
+            {...blurProps(piece.images[0])}
           />
         )}
       </div>

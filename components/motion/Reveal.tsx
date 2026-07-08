@@ -24,7 +24,7 @@ export function Reveal({
       initial={{ opacity: 0, y: 24 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={VIEWPORT}
-      transition={{ duration: 0.6, delay, ease: EASE }}
+      transition={{ duration: 0.8, delay, ease: EASE }}
     >
       {children}
     </motion.div>
@@ -68,7 +68,7 @@ export function StaggerItem({
       className={className}
       variants={{
         hidden: { opacity: 0, y: 20 },
-        visible: { opacity: 1, y: 0, transition: { duration: 0.55, ease: EASE } },
+        visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: EASE } },
       }}
     >
       {children}

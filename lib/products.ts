@@ -34,6 +34,17 @@ export interface Collection {
   intro: string;
   /** Longer editorial treatment, rendered between intro and grid (Bars only for now). */
   editorial?: string[];
+  /** Curated tile image (styled shots only on editorial surfaces); falls back
+      to the featured/first piece photo. */
+  cover?: string;
+}
+
+/** Curated tile image for a collection. */
+export function collectionCover(collection: Collection): string | undefined {
+  if (collection.cover) return collection.cover;
+  const pieces = getPiecesInCollection(collection.slug);
+  const piece = pieces.find((p) => p.featured) ?? pieces[0];
+  return piece?.images[0];
 }
 
 const pieces = raw as unknown as Piece[];
@@ -42,6 +53,7 @@ const pieces = raw as unknown as Piece[];
 export const COLLECTIONS: Collection[] = [
   {
     slug: "storage-media-units",
+    cover: "/images/pieces/oya-sideboard/09.jpg",
     name: "Storage & Media Units",
     intro:
       "Sideboards, TV stands, cabinets and shelving, handcrafted to order in Savannah Space's Nairobi workshop from woods like Mvule, Sudanese Teak, Mango and Camphor. Every unit can be customised by wood, colour and dimensions, with prices from Ksh 41,000.",
@@ -54,6 +66,7 @@ export const COLLECTIONS: Collection[] = [
   },
   {
     slug: "armchairs-benches",
+    cover: "/images/pieces/pierre-jeanneret-chair/01.jpg",
     name: "Armchairs & Benches",
     intro:
       "Lounge chairs, accent chairs, rocking chairs and benches handmade in Kenya, upholstered in the fabric of your choice over frames of recycled Scandinavian pine, Mvule and Camphor. Each piece is built to order, from Ksh 35,000.",
@@ -66,12 +79,14 @@ export const COLLECTIONS: Collection[] = [
   },
   {
     slug: "dining-tables-chairs",
+    cover: "/images/pieces/nemali-dining-table/01.jpg",
     name: "Dining Tables & Chairs",
     intro:
       "Six- and eight-seater dining tables, chairs and bar stools built to order by Savannah Space's Nairobi fundis, including live-edge and irregular-edge mango slab tables where no two pieces are the same. Dining chairs start at Ksh 30,000.",
   },
   {
     slug: "sofas",
+    cover: "/images/pieces/kitur-sofa/03.jpg",
     name: "Sofas",
     intro:
       "Nine sofa designs handmade in Nairobi on cypress and recycled Scandinavian pine frames, with high-density foam, spring pockets and Dacron lining. Upholstered in the fabric of your choice and built to order, from Ksh 123,200.",
