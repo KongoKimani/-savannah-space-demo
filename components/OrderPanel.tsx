@@ -53,7 +53,7 @@ export default function OrderPanel({ piece }: { piece: Piece }) {
                 key={v.label}
                 type="button"
                 onClick={() => setVariant(v)}
-                className={`border px-3 py-1.5 text-sm transition-colors ${
+                className={`min-h-11 border px-4 py-2 text-sm transition-colors ${
                   variant?.label === v.label
                     ? "border-chocolate bg-chocolate text-bone"
                     : "border-line bg-transparent text-ink hover:border-chocolate"
@@ -75,7 +75,7 @@ export default function OrderPanel({ piece }: { piece: Piece }) {
                 key={w}
                 type="button"
                 onClick={() => selectWood(w)}
-                className={`border px-3 py-1.5 text-sm transition-colors ${
+                className={`min-h-11 border px-4 py-2 text-sm transition-colors ${
                   wood === w
                     ? "border-chocolate bg-chocolate text-bone"
                     : "border-line bg-transparent text-ink hover:border-chocolate"
@@ -111,14 +111,14 @@ export default function OrderPanel({ piece }: { piece: Piece }) {
           target="_blank"
           rel="noopener noreferrer"
           onClick={() => trackEnquiryClick(piece.name, wood, "whatsapp")}
-          className="bg-chocolate px-6 py-3 text-center text-sm font-medium tracking-wide text-bone transition-opacity hover:opacity-90"
+          className="bg-chocolate px-6 py-4 text-center text-base font-medium tracking-wide text-bone transition-opacity hover:opacity-90"
         >
           Enquire on WhatsApp
         </a>
         <a
           href={emailLink(piece.name)}
           onClick={() => trackEnquiryClick(piece.name, wood, "email")}
-          className="border border-chocolate px-6 py-3 text-center text-sm font-medium tracking-wide text-chocolate transition-colors hover:bg-blush"
+          className="border border-chocolate px-6 py-4 text-center text-base font-medium tracking-wide text-chocolate transition-colors hover:bg-blush"
         >
           Enquire by email
         </a>

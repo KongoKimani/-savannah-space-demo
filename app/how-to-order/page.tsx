@@ -94,7 +94,7 @@ export default function HowToOrderPage() {
         <h1 className="mt-4 font-display text-4xl uppercase tracking-[0.08em] text-chocolate sm:text-6xl">
           How to Order
         </h1>
-        <p className="mt-6 max-w-2xl text-sm leading-relaxed text-ink/80 sm:text-lg">
+        <p className="mt-6 max-w-2xl text-base leading-relaxed text-ink/80 sm:text-lg">
           Nothing we make sits in a warehouse. You choose a piece, we take a
           70% deposit, and our fundis begin. Five to eight weeks later it
           arrives — made for you.
@@ -111,7 +111,7 @@ export default function HowToOrderPage() {
             <StaggerItem key={title}>
               <p className="font-display text-4xl text-terracotta">{i + 1}</p>
               <h3 className="mt-3 font-display text-xl text-chocolate">{title}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-ink/70">{body}</p>
+              <p className="mt-2 text-base leading-relaxed text-ink/70">{body}</p>
             </StaggerItem>
           ))}
         </Stagger>
@@ -129,7 +129,7 @@ export default function HowToOrderPage() {
           {CUSTOMISATION.map(([axis, body]) => (
             <StaggerItem key={axis}>
               <h3 className="eyebrow text-chocolate">{axis}</h3>
-              <p className="mt-3 text-sm leading-relaxed text-ink/70">{body}</p>
+              <p className="mt-3 text-base leading-relaxed text-ink/70">{body}</p>
             </StaggerItem>
           ))}
         </Stagger>
@@ -154,7 +154,7 @@ export default function HowToOrderPage() {
           {FAQ.map(([question, answer]) => (
             <Reveal key={question}>
               <h3 className="font-display text-xl text-chocolate">{question}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-ink/75">{answer}</p>
+              <p className="mt-2 text-base leading-relaxed text-ink/75">{answer}</p>
             </Reveal>
           ))}
         </div>

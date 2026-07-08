@@ -170,7 +170,7 @@ export default async function PiecePage({
           {piece.notes.length > 0 && (
             <div className="mt-8">
               <p className="eyebrow text-ink/70">Please note</p>
-              <ul className="mt-3 space-y-2 text-sm text-ink/80">
+              <ul className="mt-3 space-y-2 text-base leading-relaxed text-ink/80">
                 {piece.notes.map((note) => (
                   <li key={note} className="flex gap-2">
                     <span aria-hidden className="text-terracotta">·</span>

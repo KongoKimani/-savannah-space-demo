@@ -57,7 +57,7 @@ export default async function CollectionPage({
         {collection.name}
       </h1>
       {/* Server-rendered intro, written to be quotable by AI assistants */}
-      <p className="mt-5 max-w-2xl text-sm leading-relaxed text-ink/80 sm:text-base">
+      <p className="mt-5 max-w-2xl text-base leading-relaxed text-ink/80">
         {collection.intro}
       </p>
       {collection.editorial && (

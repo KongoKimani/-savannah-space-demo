@@ -30,7 +30,7 @@ export default function StoryPage() {
           </h1>
         </Reveal>
         <Reveal delay={0.15} className="mt-8 max-w-2xl">
-          <p className="text-sm leading-relaxed text-ink/80 sm:text-lg">
+          <p className="text-base leading-relaxed text-ink/80 sm:text-lg">
             Savannah Space was founded in Nairobi in 2018 by Cherie Kihato, who
             started the business with KSh 20,000 in savings. What began as a
             single idea — furniture that celebrates the vibrancy and beauty of
@@ -59,14 +59,14 @@ export default function StoryPage() {
           <h2 className="mt-4 font-display text-3xl leading-snug text-chocolate sm:text-4xl">
             Thirteen fundis
           </h2>
-          <p className="mt-5 text-sm leading-relaxed text-ink/80 sm:text-base">
+          <p className="mt-5 text-base leading-relaxed text-ink/80">
             Our own workshop in Nairobi is home to thirteen carpenters — our
             fundis. They shape Mvule, Sudanese Teak, Mango, Camphor, Meru Oak
             and Muringa into the pieces in every catalogue, and they build each
             one only after it is ordered. That is why a Savannah Space piece
             takes five to eight weeks: it is being made, by hand, for you.
           </p>
-          <p className="mt-4 text-sm leading-relaxed text-ink/80 sm:text-base">
+          <p className="mt-4 text-base leading-relaxed text-ink/80">
             Nothing here is mass-produced. Grain varies. End-grain tops repeat
             no pattern twice. We think that is the point.
           </p>
@@ -93,7 +93,7 @@ export default function StoryPage() {
             ))}
           </Stagger>
           <Reveal className="mt-8 max-w-2xl">
-            <p className="text-sm leading-relaxed text-ink/80 sm:text-base">
+            <p className="text-base leading-relaxed text-ink/80">
               The handwoven rugs, the Tonga baskets set into side tables, the
               woven seats and metal legs — these come from a curated circle of
               craftsmen and women around Kenya. Every purchase has a trickle-down
