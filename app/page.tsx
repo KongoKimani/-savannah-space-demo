@@ -91,61 +91,6 @@ export default function HomePage() {
         </Reveal>
       </section>
 
-      {/* ---- Chapters 01–03 · Featured pieces as immersive scenes ---- */}
-      {featured.map((piece, i) => {
-        const { price, isFrom } = priceInfo(piece);
-        return (
-          <section key={piece.slug} className="relative">
-            {/* The scene image is always visible — full-viewport content must
-                not depend on scroll-reveal JS (it reads as a blank band when
-                the reveal hasn't fired). Only the caption animates. */}
-            <Link href={`/pieces/${piece.slug}`} className="group block">
-              <div className="relative h-[72dvh] overflow-hidden bg-blush sm:h-[88dvh]">
-                <Image
-                  src={piece.images[0]}
-                  alt={`${piece.name}, handcrafted in Kenya by Savannah Space`}
-                  fill
-                  sizes="100vw"
-                  className="object-cover transition-transform duration-700 group-hover:scale-[1.03]"
-                />
-                <div
-                  aria-hidden
-                  className="absolute inset-0 bg-gradient-to-t from-charcoal/90 via-charcoal/60 to-charcoal/10"
-                />
-                <div className="absolute inset-x-0 bottom-0 px-6 pb-10 sm:px-10 sm:pb-14">
-                  <Reveal className="mx-auto max-w-6xl">
-                      <p className="eyebrow text-[0.625rem] text-bone/90">
-                        <span className="text-marigold">
-                          {String(i + 1).padStart(2, "0")}
-                        </span>{" "}
-                        — The pieces
-                      </p>
-                      <h2 className="mt-3 font-display text-3xl uppercase tracking-[0.08em] text-bone sm:text-5xl">
-                        {piece.name}
-                      </h2>
-                      {piece.name_note && (
-                        <p className="mt-2 font-display text-base italic text-bone/80 sm:text-lg">
-                          {piece.name_note}
-                        </p>
-                      )}
-                      <p className="eyebrow mt-3 text-[0.5625rem] text-bone/70 sm:text-[0.625rem]">
-                        {piece.materials.join(" · ")}
-                      </p>
-                      <p className="mt-4 font-display text-lg text-bone sm:text-xl">
-                        Built to order · {isFrom && "from "}
-                        {formatKsh(price)}
-                      </p>
-                      <span className="eyebrow mt-6 inline-block border-b border-bone/70 pb-1 text-bone transition-colors group-hover:border-bone">
-                        View the piece
-                      </span>
-                  </Reveal>
-                </div>
-              </div>
-            </Link>
-          </section>
-        );
-      })}
-
       {/* ---- The build · charcoal tonal band with craft walkthrough ---- */}
       <TonalBand className="py-24 sm:py-32">
         <div className="mx-auto max-w-6xl px-6 sm:px-8">
@@ -173,6 +118,116 @@ export default function HomePage() {
           </Reveal>
         </div>
       </TonalBand>
+
+      {/* ---- Chapters 01–03 · Featured pieces (proof, after the build story).
+              Mobile: immersive full-bleed scenes (portrait photos fill a phone
+              naturally). Desktop: alternating editorial gallery rows — the
+              portrait photo at its natural 3:4, uncropped and sharp. ---- */}
+      <section className="py-6 lg:py-14">
+        {featured.map((piece, i) => {
+          const { price, isFrom } = priceInfo(piece);
+          return (
+            <article key={piece.slug}>
+              {/* Mobile scene — image always visible, only the caption animates */}
+              <Link
+                href={`/pieces/${piece.slug}`}
+                className="group block lg:hidden"
+              >
+                <div className="relative h-[72dvh] overflow-hidden bg-blush">
+                  <Image
+                    src={piece.images[0]}
+                    alt={`${piece.name}, handcrafted in Kenya by Savannah Space`}
+                    fill
+                    sizes="100vw"
+                    className="object-cover transition-transform duration-700 group-hover:scale-[1.03]"
+                  />
+                  <div
+                    aria-hidden
+                    className="absolute inset-0 bg-gradient-to-t from-charcoal/90 via-charcoal/60 to-charcoal/10"
+                  />
+                  <div className="absolute inset-x-0 bottom-0 px-6 pb-10">
+                    <Reveal>
+                      <p className="eyebrow text-[0.625rem] text-bone/90">
+                        <span className="text-marigold">
+                          {String(i + 1).padStart(2, "0")}
+                        </span>{" "}
+                        — The pieces
+                      </p>
+                      <h2 className="mt-3 font-display text-3xl uppercase tracking-[0.08em] text-bone">
+                        {piece.name}
+                      </h2>
+                      {piece.name_note && (
+                        <p className="mt-2 font-display text-base italic text-bone/80">
+                          {piece.name_note}
+                        </p>
+                      )}
+                      <p className="eyebrow mt-3 text-[0.5625rem] text-bone/70">
+                        {piece.materials.join(" · ")}
+                      </p>
+                      <p className="mt-4 font-display text-lg text-bone">
+                        Built to order · {isFrom && "from "}
+                        {formatKsh(price)}
+                      </p>
+                      <span className="eyebrow mt-6 inline-block border-b border-bone/70 pb-1 text-bone">
+                        View the piece
+                      </span>
+                    </Reveal>
+                  </div>
+                </div>
+              </Link>
+
+              {/* Desktop gallery row */}
+              <div
+                className={`mx-auto hidden max-w-6xl grid-cols-2 items-center gap-x-20 px-8 py-14 lg:grid ${
+                  i % 2 === 1 ? "[&>*:first-child]:order-2" : ""
+                }`}
+              >
+                <Link href={`/pieces/${piece.slug}`} className="group block">
+                  <div className="relative aspect-[3/4] overflow-hidden bg-blush">
+                    <Image
+                      src={piece.images[0]}
+                      alt={`${piece.name}, handcrafted in Kenya by Savannah Space`}
+                      fill
+                      sizes="(min-width: 1024px) 45vw, 100vw"
+                      className="object-cover transition-transform duration-700 group-hover:scale-[1.03]"
+                    />
+                  </div>
+                </Link>
+                <Reveal>
+                  {/* terracotta numeral here — marigold fails contrast on bone */}
+                  <p className="eyebrow text-[0.625rem] text-ink/70">
+                    <span className="text-terracotta">
+                      {String(i + 1).padStart(2, "0")}
+                    </span>{" "}
+                    — The pieces
+                  </p>
+                  <h2 className="mt-4 font-display text-4xl uppercase tracking-[0.08em] text-chocolate xl:text-5xl">
+                    {piece.name}
+                  </h2>
+                  {piece.name_note && (
+                    <p className="mt-3 font-display text-lg italic text-terracotta">
+                      {piece.name_note}
+                    </p>
+                  )}
+                  <p className="eyebrow mt-4 text-[0.625rem] text-ink/60">
+                    {piece.materials.join(" · ")}
+                  </p>
+                  <p className="mt-5 font-display text-xl text-ink">
+                    Built to order · {isFrom && "from "}
+                    {formatKsh(price)}
+                  </p>
+                  <Link
+                    href={`/pieces/${piece.slug}`}
+                    className="eyebrow mt-8 inline-block border-b border-chocolate pb-1 text-chocolate transition-colors hover:text-terracotta"
+                  >
+                    View the piece
+                  </Link>
+                </Reveal>
+              </div>
+            </article>
+          );
+        })}
+      </section>
 
       {/* ---- How it works · vertical rhythm on mobile ---- */}
       <section className="border-b border-line">

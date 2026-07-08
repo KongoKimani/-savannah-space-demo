@@ -3,6 +3,7 @@ import { Cormorant_Garamond, Manrope } from "next/font/google";
 import Script from "next/script";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import FloatingActions from "@/components/FloatingActions";
 import JsonLd from "@/components/JsonLd";
 import LenisProvider from "@/components/motion/LenisProvider";
 import { SITE } from "@/lib/site";
@@ -81,6 +82,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <Header />
           <main className="flex-1">{children}</main>
           <Footer />
+          <FloatingActions />
         </LenisProvider>
       </body>
     </html>
