@@ -1,0 +1,7197 @@
+[
+  {
+    "slug": "oromo-bar",
+    "name": "The Oromo Bar",
+    "collection": "home-bars",
+    "name_note": null,
+    "materials": [
+      "Mvule"
+    ],
+    "dimensions": {
+      "height_cm": 180,
+      "length_cm": 90,
+      "total_depth_cm": 45
+    },
+    "wood_options": [
+      "Camphor",
+      "Sudanese Teak",
+      "Mango wood",
+      "Meru Oak",
+      "Muringa"
+    ],
+    "price_ksh": 234000,
+    "price_notes": [
+      "Excluding delivery"
+    ],
+    "turnaround_weeks": null,
+    "notes": [
+      "Doors appear bent to the eye when open due to 'steps' on the doors — they are not bent.",
+      "Alternative woods subject to availability; price will vary"
+    ],
+    "featured": true,
+    "images": [
+      "/images/pieces/oromo-bar/01.jpg",
+      "/images/pieces/oromo-bar/02.jpg",
+      "/images/pieces/oromo-bar/03.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "slug": "simona-bar",
+    "name": "The Simona Bar",
+    "collection": "home-bars",
+    "name_note": null,
+    "materials": [
+      "Block Board",
+      "Metal legs"
+    ],
+    "dimensions": {
+      "height_cm": 123,
+      "length_cm": 90,
+      "total_depth_cm": 45
+    },
+    "wood_options": [
+      "Camphor",
+      "Sudanese Teak",
+      "Mango wood",
+      "Meru Oak",
+      "Muringa"
+    ],
+    "price_ksh": 124000,
+    "price_notes": [
+      "Excluding delivery",
+      "Ksh 2,500 for metal legs"
+    ],
+    "turnaround_weeks": null,
+    "notes": [
+      "Available in custom colours",
+      "Available with wooden legs",
+      "Pictured colour: Duracoat Pond Moss 2616C",
+      "Alternative woods subject to availability; price will vary"
+    ],
+    "featured": false,
+    "images": [
+      "/images/pieces/simona-bar/01.jpg",
+      "/images/pieces/simona-bar/02.jpg",
+      "/images/pieces/simona-bar/03.jpg",
+      "/images/pieces/simona-bar/04.jpg",
+      "/images/pieces/simona-bar/05.jpg",
+      "/images/pieces/simona-bar/06.jpg",
+      "/images/pieces/simona-bar/07.jpg",
+      "/images/pieces/simona-bar/08.jpg"
+    ],
+    "variants": [
+      {
+        "label": "Block Board",
+        "price_ksh": 124000
+      },
+      {
+        "label": "Teak interiors",
+        "price_ksh": 130000,
+        "notes": [
+          "Block board with Sudanese Teak interiors",
+          "Also available in all recycled Scandinavian pine",
+          "Pictured interior colour: Duracoat Aqua Electra 2468D — appears different in person"
+        ]
+      },
+      {
+        "label": "Mango wood",
+        "price_ksh": 144000
+      }
+    ]
+  },
+  {
+    "slug": "braided-bar",
+    "name": "The Braided Bar",
+    "collection": "home-bars",
+    "name_note": null,
+    "materials": [
+      "Mango wood",
+      "Metal legs"
+    ],
+    "dimensions": {
+      "height_cm": 123,
+      "length_cm": 90,
+      "total_depth_cm": 45
+    },
+    "wood_options": [
+      "Camphor",
+      "Sudanese Teak",
+      "Mango wood",
+      "Meru Oak",
+      "Muringa"
+    ],
+    "price_ksh": 144000,
+    "price_notes": [
+      "Excluding delivery",
+      "Ksh 2,500 for metal legs"
+    ],
+    "turnaround_weeks": null,
+    "notes": [
+      "Alternative woods subject to availability; price will vary"
+    ],
+    "featured": false,
+    "images": [
+      "/images/pieces/braided-bar/01.jpg",
+      "/images/pieces/braided-bar/02.jpg",
+      "/images/pieces/braided-bar/03.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "slug": "oya-bar",
+    "name": "The Oya Bar",
+    "collection": "home-bars",
+    "name_note": null,
+    "materials": [
+      "Muringa wood",
+      "Metal legs"
+    ],
+    "dimensions": {
+      "height_cm": 110,
+      "length_cm": 106,
+      "total_depth_cm": 45
+    },
+    "wood_options": [
+      "Camphor",
+      "Sudanese Teak",
+      "Mango wood",
+      "Meru Oak",
+      "Muringa"
+    ],
+    "price_ksh": 162000,
+    "price_notes": [
+      "Excluding delivery",
+      "Ksh 2,500 for metal legs"
+    ],
+    "turnaround_weeks": null,
+    "notes": [
+      "Alternative woods subject to availability; price will vary"
+    ],
+    "featured": false,
+    "images": [
+      "/images/pieces/oya-bar/01.jpg",
+      "/images/pieces/oya-bar/02.jpg",
+      "/images/pieces/oya-bar/03.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "slug": "kuba-bar",
+    "name": "The Kuba Bar",
+    "collection": "home-bars",
+    "name_note": null,
+    "materials": [
+      "Mango wood"
+    ],
+    "dimensions": {
+      "height_cm": 109,
+      "length_cm": 106,
+      "total_depth_cm": 45
+    },
+    "wood_options": [
+      "Camphor",
+      "Sudanese Teak",
+      "Mango wood",
+      "Meru Oak",
+      "Muringa"
+    ],
+    "price_ksh": 144000,
+    "price_notes": [
+      "Excluding delivery",
+      "Ksh 2,500 for metal legs"
+    ],
+    "turnaround_weeks": null,
+    "notes": [
+      "Available with metal legs",
+      "Alternative woods subject to availability; price will vary"
+    ],
+    "featured": false,
+    "images": [
+      "/images/pieces/kuba-bar/01.jpg",
+      "/images/pieces/kuba-bar/02.jpg",
+      "/images/pieces/kuba-bar/03.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "slug": "kahawa-bar",
+    "name": "The Kahawa Bar",
+    "collection": "home-bars",
+    "name_note": "kahawa — Swahili: coffee",
+    "materials": [
+      "Meru Oak exterior",
+      "Recycled Scandinavian Pine interior"
+    ],
+    "dimensions": {
+      "height_cm": 109,
+      "length_cm": 106,
+      "total_depth_cm": 45
+    },
+    "wood_options": [
+      "Camphor",
+      "Sudanese Teak",
+      "Mango wood",
+      "Meru Oak",
+      "Muringa"
+    ],
+    "price_ksh": 205000,
+    "price_notes": [
+      "Excluding delivery",
+      "Ksh 2,500 for metal legs"
+    ],
+    "turnaround_weeks": null,
+    "notes": [
+      "Available with metal legs",
+      "Pictured interior colour: Duracoat Mocha Bisque 2891C — appears different in person",
+      "Alternative woods subject to availability; price will vary"
+    ],
+    "featured": false,
+    "images": [
+      "/images/pieces/kahawa-bar/01.jpg",
+      "/images/pieces/kahawa-bar/02.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "slug": "aoro-bar",
+    "name": "The Aoro Bar",
+    "collection": "home-bars",
+    "name_note": null,
+    "materials": [
+      "Block Board",
+      "Sudanese Teak"
+    ],
+    "dimensions": {
+      "height_cm": 123,
+      "length_cm": 90,
+      "total_depth_cm": 45
+    },
+    "wood_options": [
+      "Camphor",
+      "Sudanese Teak",
+      "Mango wood",
+      "Meru Oak",
+      "Muringa"
+    ],
+    "price_ksh": 124000,
+    "price_notes": [
+      "Excluding delivery",
+      "Ksh 2,500 for metal legs"
+    ],
+    "turnaround_weeks": null,
+    "notes": [
+      "Alternative woods subject to availability; price will vary"
+    ],
+    "featured": false,
+    "images": [
+      "/images/pieces/aoro-bar/01.jpg",
+      "/images/pieces/aoro-bar/02.jpg",
+      "/images/pieces/aoro-bar/03.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "slug": "ambo-bar",
+    "name": "The Ambo Bar",
+    "collection": "home-bars",
+    "name_note": null,
+    "materials": [
+      "Mango wood",
+      "Metal legs"
+    ],
+    "dimensions": {
+      "height_cm": 123,
+      "length_cm": 90,
+      "total_depth_cm": 45
+    },
+    "wood_options": [
+      "Camphor",
+      "Sudanese Teak",
+      "Mango wood",
+      "Meru Oak",
+      "Muringa"
+    ],
+    "price_ksh": 144000,
+    "price_notes": [
+      "Excluding delivery",
+      "Ksh 2,500 for metal legs"
+    ],
+    "turnaround_weeks": null,
+    "notes": [
+      "Available in custom colours",
+      "Available with wooden legs",
+      "Alternative woods subject to availability; price will vary"
+    ],
+    "featured": false,
+    "images": [
+      "/images/pieces/ambo-bar/01.jpg",
+      "/images/pieces/ambo-bar/02.jpg",
+      "/images/pieces/ambo-bar/03.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "slug": "barcart",
+    "name": "The Barcart",
+    "collection": "home-bars",
+    "name_note": null,
+    "materials": [
+      "Mango wood",
+      "Recycled Scandinavian Pine",
+      "Metal"
+    ],
+    "dimensions": {
+      "height_cm": 90,
+      "length_cm": 100,
+      "total_depth_cm": 45
+    },
+    "wood_options": [
+      "Camphor",
+      "Sudanese Teak",
+      "Mango wood",
+      "Meru Oak",
+      "Muringa"
+    ],
+    "price_ksh": 91000,
+    "price_notes": [
+      "Excluding delivery",
+      "Ksh 2,500 for metal legs"
+    ],
+    "turnaround_weeks": null,
+    "notes": [
+      "Alternative woods subject to availability; price will vary"
+    ],
+    "featured": false,
+    "images": [
+      "/images/pieces/barcart/01.jpg",
+      "/images/pieces/barcart/02.jpg"
+    ],
+    "variants": [
+      {
+        "label": "Mango · Small",
+        "price_ksh": 91000,
+        "dimensions": {
+          "height_cm": 90,
+          "length_cm": 100,
+          "total_depth_cm": 45
+        }
+      },
+      {
+        "label": "Mango · Large",
+        "price_ksh": 97000,
+        "dimensions": {
+          "height_cm": 90,
+          "length_cm": 120,
+          "total_depth_cm": 45
+        }
+      },
+      {
+        "label": "Mvule · Small",
+        "price_ksh": 114000,
+        "dimensions": {
+          "height_cm": 90,
+          "length_cm": 100,
+          "total_depth_cm": 45
+        },
+        "notes": [
+          "Mvule with Recycled Scandinavian Pine and metal"
+        ]
+      },
+      {
+        "label": "Mvule · Large",
+        "price_ksh": 122000,
+        "dimensions": {
+          "height_cm": 90,
+          "length_cm": 120,
+          "total_depth_cm": 45
+        },
+        "notes": [
+          "Mvule with Recycled Scandinavian Pine and metal"
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "kitui-tv-stand",
+    "name": "The Kitui TV Stand",
+    "collection": "storage-media-units",
+    "name_note": null,
+    "materials": [
+      "Mvule"
+    ],
+    "dimensions": {
+      "height_cm": 80,
+      "length_cm": 241,
+      "total_depth_cm": 45
+    },
+    "wood_options": [
+      "Sudanese Teak",
+      "Mango wood",
+      "Meru Oak",
+      "Duom Palm",
+      "Mvule"
+    ],
+    "price_ksh": 194000,
+    "price_notes": [
+      "Excluding delivery"
+    ],
+    "turnaround_weeks": null,
+    "notes": [
+      "Alternative woods subject to availability; price will vary"
+    ],
+    "featured": false,
+    "images": [
+      "/images/pieces/kitui-tv-stand/01.jpg",
+      "/images/pieces/kitui-tv-stand/02.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "slug": "floating-fluted-tv-stand",
+    "name": "The Floating Fluted TV Stand",
+    "collection": "storage-media-units",
+    "name_note": null,
+    "materials": [
+      "Mvule"
+    ],
+    "dimensions": {
+      "cabinet_height_cm": 40,
+      "height_with_top_shelf_cm": 55,
+      "length_cm": 240,
+      "total_depth_cm": 35
+    },
+    "wood_options": [
+      "Sudanese Teak",
+      "Mango wood",
+      "Meru Oak",
+      "Mvule"
+    ],
+    "price_ksh": 235000,
+    "price_notes": [
+      "Excluding delivery"
+    ],
+    "turnaround_weeks": null,
+    "notes": [
+      "Alternative woods subject to availability; price will vary"
+    ],
+    "featured": false,
+    "images": [
+      "/images/pieces/floating-fluted-tv-stand/01.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "slug": "cowrie-tv-stand",
+    "name": "The Cowrie TV Stand",
+    "collection": "storage-media-units",
+    "name_note": null,
+    "materials": [
+      "Mango"
+    ],
+    "dimensions": {
+      "length_cm": 190,
+      "depth_cm": 40,
+      "height_cm": 50
+    },
+    "wood_options": [
+      "Sudanese Teak",
+      "Mango wood",
+      "Meru Oak",
+      "Mvule"
+    ],
+    "price_ksh": 201000,
+    "price_notes": [
+      "Excluding delivery"
+    ],
+    "turnaround_weeks": null,
+    "notes": [
+      "Alternative woods subject to availability; price will vary"
+    ],
+    "featured": false,
+    "images": [
+      "/images/pieces/cowrie-tv-stand/01.jpg",
+      "/images/pieces/cowrie-tv-stand/02.jpg",
+      "/images/pieces/cowrie-tv-stand/03.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "slug": "liya-floating-tv-stand",
+    "name": "The Liya Floating TV Stand",
+    "collection": "storage-media-units",
+    "name_note": null,
+    "materials": [
+      "Mango"
+    ],
+    "dimensions": {
+      "cabinet_height_cm": 40,
+      "height_with_top_shelf_cm": 55,
+      "length_cm": 244,
+      "total_depth_cm": 45
+    },
+    "wood_options": [
+      "Sudanese Teak",
+      "Mango wood",
+      "Meru Oak",
+      "Duom Palm",
+      "Mvule"
+    ],
+    "price_ksh": 152000,
+    "price_notes": [
+      "Excluding delivery"
+    ],
+    "turnaround_weeks": null,
+    "notes": [
+      "Mango wood comes in varying grains — your TV stand will not look exactly like the image; sometimes mango has strong grains, sometimes it does not.",
+      "The board shown behind the unit is not included — it demonstrates how the unit floats.",
+      "Alternative woods subject to availability; price will vary"
+    ],
+    "featured": false,
+    "images": [
+      "/images/pieces/liya-floating-tv-stand/01.jpg",
+      "/images/pieces/liya-floating-tv-stand/02.jpg",
+      "/images/pieces/liya-floating-tv-stand/03.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "slug": "tembo-sideboard",
+    "name": "The Tembo Sideboard",
+    "collection": "storage-media-units",
+    "name_note": null,
+    "materials": [
+      "Sudanese Teak",
+      "Mango legs"
+    ],
+    "dimensions": {
+      "height_cm": 81,
+      "length_cm": 183,
+      "total_depth_cm": 45,
+      "leg_height_cm": 30
+    },
+    "wood_options": [
+      "Sudanese Teak",
+      "Mango wood",
+      "Meru Oak",
+      "Duom Palm",
+      "Mvule"
+    ],
+    "price_ksh": 290000,
+    "price_notes": [
+      "Excluding delivery"
+    ],
+    "turnaround_weeks": null,
+    "notes": [
+      "Alternative woods subject to availability; price will vary"
+    ],
+    "featured": false,
+    "images": [
+      "/images/pieces/tembo-sideboard/01.jpg",
+      "/images/pieces/tembo-sideboard/02.jpg",
+      "/images/pieces/tembo-sideboard/03.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "slug": "cowrie-sideboard",
+    "name": "The Cowrie Sideboard",
+    "collection": "storage-media-units",
+    "name_note": null,
+    "materials": [
+      "Mango wood"
+    ],
+    "dimensions": {
+      "height_cm": 90,
+      "length_cm": 300,
+      "total_depth_cm": 46
+    },
+    "wood_options": [
+      "Sudanese Teak",
+      "Mango wood",
+      "Meru Oak",
+      "Mvule"
+    ],
+    "price_ksh": 290000,
+    "price_notes": [
+      "Excluding delivery"
+    ],
+    "turnaround_weeks": null,
+    "notes": [
+      "Alternative woods subject to availability; price will vary"
+    ],
+    "featured": false,
+    "images": [
+      "/images/pieces/cowrie-sideboard/01.jpg",
+      "/images/pieces/cowrie-sideboard/02.jpg",
+      "/images/pieces/cowrie-sideboard/03.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "slug": "oya-sideboard",
+    "name": "The Oya Sideboard",
+    "collection": "storage-media-units",
+    "name_note": null,
+    "materials": [
+      "Muringa",
+      "Plywood back"
+    ],
+    "dimensions": {
+      "height_cm": 91.5,
+      "length_cm": 152.5,
+      "total_depth_cm": 43
+    },
+    "wood_options": [
+      "Camphor",
+      "Sudanese Teak",
+      "Mango wood",
+      "Meru Oak",
+      "Muringa"
+    ],
+    "price_ksh": 107000,
+    "price_notes": [
+      "Excluding delivery"
+    ],
+    "turnaround_weeks": null,
+    "notes": [
+      "Alternative woods subject to availability; price will vary"
+    ],
+    "featured": false,
+    "images": [
+      "/images/pieces/oya-sideboard/01.jpg",
+      "/images/pieces/oya-sideboard/02.jpg",
+      "/images/pieces/oya-sideboard/03.jpg",
+      "/images/pieces/oya-sideboard/04.jpg",
+      "/images/pieces/oya-sideboard/05.jpg",
+      "/images/pieces/oya-sideboard/06.jpg",
+      "/images/pieces/oya-sideboard/07.jpg",
+      "/images/pieces/oya-sideboard/08.jpg",
+      "/images/pieces/oya-sideboard/09.jpg",
+      "/images/pieces/oya-sideboard/10.jpg"
+    ],
+    "variants": [
+      {
+        "label": "Muringa",
+        "price_ksh": 161000
+      },
+      {
+        "label": "Sudanese Teak",
+        "price_ksh": 225000
+      },
+      {
+        "label": "Mini · Muringa",
+        "price_ksh": 107000,
+        "dimensions": {
+          "height_cm": 91.5,
+          "length_cm": 106,
+          "total_depth_cm": 43
+        }
+      },
+      {
+        "label": "Mini · Camphor",
+        "price_ksh": 123000,
+        "dimensions": {
+          "height_cm": 91.5,
+          "length_cm": 106,
+          "total_depth_cm": 43
+        }
+      }
+    ]
+  },
+  {
+    "slug": "aoro-sideboard",
+    "name": "The Aoro Sideboard",
+    "collection": "storage-media-units",
+    "name_note": null,
+    "materials": [
+      "Block Board",
+      "Plywood back",
+      "Sudanese Teak knobs and legs"
+    ],
+    "dimensions": {
+      "height_cm": 90,
+      "length_cm": 190,
+      "total_depth_cm": 50
+    },
+    "wood_options": [
+      "Camphor",
+      "Sudanese Teak",
+      "Mango wood",
+      "Meru Oak",
+      "Muringa"
+    ],
+    "price_ksh": 114000,
+    "price_notes": [
+      "Excluding delivery",
+      "Ksh 2,500 for metal legs"
+    ],
+    "turnaround_weeks": null,
+    "notes": [
+      "Available in various colours",
+      "Pictured colour: Conifer 2490C — appears lighter on image",
+      "Alternative woods subject to availability; price will vary"
+    ],
+    "featured": false,
+    "images": [
+      "/images/pieces/aoro-sideboard/01.jpg",
+      "/images/pieces/aoro-sideboard/02.jpg",
+      "/images/pieces/aoro-sideboard/03.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "slug": "simona-cabinet",
+    "name": "The Simona Cabinet",
+    "collection": "storage-media-units",
+    "name_note": null,
+    "materials": [
+      "Block Board",
+      "Metal legs"
+    ],
+    "dimensions": {
+      "height_cm": 123,
+      "length_cm": 90,
+      "total_depth_cm": 45
+    },
+    "wood_options": [
+      "Camphor",
+      "Sudanese Teak",
+      "Mango wood",
+      "Meru Oak",
+      "Muringa"
+    ],
+    "price_ksh": 92000,
+    "price_notes": [
+      "Excluding delivery",
+      "Ksh 2,500 for metal legs"
+    ],
+    "turnaround_weeks": null,
+    "notes": [
+      "Available in custom colours",
+      "Available with wooden legs",
+      "Pictured colours: Duracoat Dark Conifer 2490C (standard), Duracoat Aqua Electra 2468D (mini)",
+      "Alternative woods subject to availability; price will vary"
+    ],
+    "featured": false,
+    "images": [
+      "/images/pieces/simona-cabinet/01.jpg",
+      "/images/pieces/simona-cabinet/02.jpg",
+      "/images/pieces/simona-cabinet/03.jpg",
+      "/images/pieces/simona-cabinet/04.jpg",
+      "/images/pieces/simona-cabinet/05.jpg",
+      "/images/pieces/simona-cabinet/06.jpg"
+    ],
+    "variants": [
+      {
+        "label": "Standard",
+        "price_ksh": 106000
+      },
+      {
+        "label": "Mini",
+        "price_ksh": 92000,
+        "dimensions": {
+          "height_cm": 90,
+          "length_cm": 110,
+          "total_depth_cm": 40
+        }
+      }
+    ]
+  },
+  {
+    "slug": "oya-tv-stand",
+    "name": "The Oya TV Stand",
+    "collection": "storage-media-units",
+    "name_note": null,
+    "materials": [
+      "Camphor"
+    ],
+    "dimensions": {
+      "height_cm": 55,
+      "length_cm": 200,
+      "total_depth_cm": 40
+    },
+    "wood_options": [
+      "Camphor",
+      "Sudanese Teak",
+      "Mango wood",
+      "Meru Oak",
+      "Muringa"
+    ],
+    "price_ksh": 231000,
+    "price_notes": [
+      "Excluding delivery",
+      "Ksh 2,500 for metal legs"
+    ],
+    "turnaround_weeks": null,
+    "notes": [
+      "Alternative woods subject to availability; price will vary"
+    ],
+    "featured": false,
+    "images": [
+      "/images/pieces/oya-tv-stand/01.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "slug": "wakio-tv-stand",
+    "name": "The Wakio TV Stand",
+    "collection": "storage-media-units",
+    "name_note": null,
+    "materials": [
+      "Block Board",
+      "Plywood back",
+      "Metal legs"
+    ],
+    "dimensions": {
+      "total_length_cm": 152,
+      "total_height_cm": 66,
+      "total_depth_cm": 40
+    },
+    "wood_options": [
+      "Camphor",
+      "Sudanese Teak",
+      "Mango wood",
+      "Meru Oak",
+      "Muringa"
+    ],
+    "price_ksh": 100000,
+    "price_notes": [
+      "Excluding delivery",
+      "Ksh 2,500 for metal legs"
+    ],
+    "turnaround_weeks": null,
+    "notes": [
+      "Available in custom colours",
+      "Pictured colour: Duracoat Dark Conifer 2490C",
+      "Alternative woods subject to availability; price will vary"
+    ],
+    "featured": false,
+    "images": [
+      "/images/pieces/wakio-tv-stand/01.jpg",
+      "/images/pieces/wakio-tv-stand/02.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "slug": "midcentury-sideboard",
+    "name": "The Midcentury Sideboard",
+    "collection": "storage-media-units",
+    "name_note": null,
+    "materials": [
+      "Mvule"
+    ],
+    "dimensions": {
+      "height_cm": 82,
+      "length_cm": 180,
+      "total_depth_cm": 45
+    },
+    "wood_options": [
+      "Camphor",
+      "Sudanese Teak",
+      "Mango wood",
+      "Meru Oak",
+      "Muringa"
+    ],
+    "price_ksh": 161000,
+    "price_notes": [
+      "Excluding delivery"
+    ],
+    "turnaround_weeks": null,
+    "notes": [
+      "Alternative woods subject to availability; price will vary"
+    ],
+    "featured": false,
+    "images": [
+      "/images/pieces/midcentury-sideboard/01.jpg",
+      "/images/pieces/midcentury-sideboard/02.jpg",
+      "/images/pieces/midcentury-sideboard/03.jpg",
+      "/images/pieces/midcentury-sideboard/04.jpg",
+      "/images/pieces/midcentury-sideboard/05.jpg"
+    ],
+    "variants": [
+      {
+        "label": "Standard",
+        "price_ksh": 161000
+      },
+      {
+        "label": "With drawers",
+        "price_ksh": 186000,
+        "dimensions": {
+          "height_cm": 100,
+          "length_cm": 180,
+          "total_depth_cm": 45
+        }
+      }
+    ]
+  },
+  {
+    "slug": "midcentury-tv-stand",
+    "name": "The Midcentury TV Stand",
+    "collection": "storage-media-units",
+    "name_note": null,
+    "materials": [
+      "Block Board",
+      "Sudanese Teak"
+    ],
+    "dimensions": {
+      "height_cm": 70,
+      "length_cm": 188,
+      "total_depth_cm": 45
+    },
+    "wood_options": [
+      "Camphor",
+      "Sudanese Teak",
+      "Mango wood",
+      "Meru Oak",
+      "Muringa"
+    ],
+    "price_ksh": 122000,
+    "price_notes": [
+      "Excluding delivery"
+    ],
+    "turnaround_weeks": null,
+    "notes": [
+      "Alternative woods subject to availability; price will vary"
+    ],
+    "featured": false,
+    "images": [
+      "/images/pieces/midcentury-tv-stand/01.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "slug": "tonga-sideboard",
+    "name": "The Tonga Sideboard",
+    "collection": "storage-media-units",
+    "name_note": "tonga — the handwoven basket of the BaTonga people",
+    "materials": [
+      "Block Board",
+      "Camphor legs"
+    ],
+    "dimensions": {
+      "height_cm": 78,
+      "length_cm": 152,
+      "total_depth_cm": 40
+    },
+    "wood_options": [
+      "Camphor",
+      "Sudanese Teak",
+      "Mango wood",
+      "Meru Oak",
+      "Muringa"
+    ],
+    "price_ksh": 106000,
+    "price_notes": [
+      "Excluding delivery",
+      "Ksh 2,500 for metal legs"
+    ],
+    "turnaround_weeks": null,
+    "notes": [
+      "Available in custom colours",
+      "Tonga basket designs vary — we cannot guarantee the same basket design as in the image.",
+      "Pictured colour: Duracoat Conifer 2490C",
+      "Alternative woods subject to availability; price will vary"
+    ],
+    "featured": false,
+    "images": [
+      "/images/pieces/tonga-sideboard/01.jpg",
+      "/images/pieces/tonga-sideboard/02.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "slug": "naeku-shelf",
+    "name": "The Naeku Shelf",
+    "collection": "storage-media-units",
+    "name_note": null,
+    "materials": [
+      "Mango wood"
+    ],
+    "dimensions": {
+      "total_height_cm": 182,
+      "total_length_cm": 152,
+      "total_depth_cm": 34,
+      "shelf_depth_cm": 25
+    },
+    "wood_options": [
+      "Sudanese Teak",
+      "Mango wood",
+      "Meru Oak",
+      "Duom Palm",
+      "Mvule"
+    ],
+    "price_ksh": 67000,
+    "price_notes": [
+      "Excluding delivery"
+    ],
+    "turnaround_weeks": null,
+    "notes": [
+      "Alternative woods subject to availability; price will vary"
+    ],
+    "featured": false,
+    "images": [
+      "/images/pieces/naeku-shelf/01.jpg",
+      "/images/pieces/naeku-shelf/02.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "slug": "siri-cabinet",
+    "name": "The Siri Cabinet",
+    "collection": "storage-media-units",
+    "name_note": null,
+    "materials": [
+      "Metal",
+      "Ribbed Glass"
+    ],
+    "dimensions": {
+      "total_height_cm": 168,
+      "total_length_cm": 71,
+      "total_depth_cm": 39.5
+    },
+    "wood_options": [],
+    "price_ksh": 125000,
+    "price_notes": [
+      "Excluding delivery"
+    ],
+    "turnaround_weeks": null,
+    "notes": [
+      "Available in custom colours"
+    ],
+    "featured": false,
+    "images": [
+      "/images/pieces/siri-cabinet/01.jpg",
+      "/images/pieces/siri-cabinet/02.jpg",
+      "/images/pieces/siri-cabinet/03.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "slug": "teak-cabinet",
+    "name": "The Teak Cabinet",
+    "collection": "storage-media-units",
+    "name_note": null,
+    "materials": [
+      "Sudanese Teak"
+    ],
+    "dimensions": {
+      "total_height_cm": 182,
+      "total_length_cm": 91,
+      "total_depth_cm": 34
+    },
+    "wood_options": [
+      "Camphor",
+      "Sudanese Teak",
+      "Mango wood",
+      "Meru Oak",
+      "Muringa"
+    ],
+    "price_ksh": 167000,
+    "price_notes": [
+      "Excluding delivery"
+    ],
+    "turnaround_weeks": null,
+    "notes": [
+      "Alternative woods subject to availability; price will vary"
+    ],
+    "featured": false,
+    "images": [
+      "/images/pieces/teak-cabinet/01.jpg",
+      "/images/pieces/teak-cabinet/02.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "slug": "ladder-shelf",
+    "name": "The Ladder Shelf",
+    "collection": "storage-media-units",
+    "name_note": null,
+    "materials": [
+      "Sudanese Teak (pictured)"
+    ],
+    "dimensions": {
+      "bottom_shelf_depth_cm": 34
+    },
+    "wood_options": [
+      "Sudanese Teak",
+      "Mango wood"
+    ],
+    "price_ksh": 41000,
+    "price_notes": [
+      "Excluding delivery"
+    ],
+    "turnaround_weeks": null,
+    "notes": [
+      "Sizes are in feet (width x height)",
+      "Alternative woods subject to availability; price will vary"
+    ],
+    "featured": false,
+    "images": [
+      "/images/pieces/ladder-shelf/01.jpg",
+      "/images/pieces/ladder-shelf/02.jpg"
+    ],
+    "variants": [
+      {
+        "label": "Sudanese Teak · 5x3ft",
+        "price_ksh": 57000
+      },
+      {
+        "label": "Sudanese Teak · 6x3ft",
+        "price_ksh": 62000
+      },
+      {
+        "label": "Sudanese Teak · 7x4ft",
+        "price_ksh": 78000
+      },
+      {
+        "label": "Mango wood · 5x3ft",
+        "price_ksh": 41000
+      },
+      {
+        "label": "Mango wood · 6x3ft",
+        "price_ksh": 44000
+      },
+      {
+        "label": "Mango wood · 7x4ft",
+        "price_ksh": 56000
+      }
+    ]
+  },
+  {
+    "slug": "mbura-drawer-chest",
+    "name": "The Mbura Drawer Chest",
+    "collection": "drawer-chests-bedside-tables",
+    "name_note": null,
+    "materials": [
+      "Block Board",
+      "Sudanese Teak"
+    ],
+    "dimensions": {
+      "height_cm": 94,
+      "length_cm": 89,
+      "total_depth_cm": 61
+    },
+    "wood_options": [
+      "Recycled Scandinavian Pine",
+      "Camphor",
+      "Sudanese Teak",
+      "Mango wood",
+      "Muringa"
+    ],
+    "price_ksh": 129000,
+    "price_notes": [
+      "Excluding delivery",
+      "Ksh 2,500 for metal legs"
+    ],
+    "turnaround_weeks": null,
+    "notes": [
+      "Alternative woods subject to availability; price will vary"
+    ],
+    "featured": false,
+    "images": [
+      "/images/pieces/mbura-drawer-chest/01.jpg",
+      "/images/pieces/mbura-drawer-chest/02.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "slug": "ngunia-drawer-chest",
+    "name": "The Ngunia Drawer Chest",
+    "collection": "drawer-chests-bedside-tables",
+    "name_note": null,
+    "materials": [
+      "Mango wood",
+      "Hessian fabric"
+    ],
+    "dimensions": {
+      "height_cm": 92,
+      "length_cm": 162,
+      "total_depth_cm": 45
+    },
+    "wood_options": [
+      "Recycled Scandinavian Pine",
+      "Camphor",
+      "Sudanese Teak",
+      "Mango wood",
+      "Muringa"
+    ],
+    "price_ksh": 149000,
+    "price_notes": [
+      "Excluding delivery"
+    ],
+    "turnaround_weeks": null,
+    "notes": [
+      "Alternative woods subject to availability; price will vary"
+    ],
+    "featured": false,
+    "images": [
+      "/images/pieces/ngunia-drawer-chest/01.jpg",
+      "/images/pieces/ngunia-drawer-chest/02.jpg",
+      "/images/pieces/ngunia-drawer-chest/03.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "slug": "khadija-drawer-chest",
+    "name": "The Khadija Drawer Chest",
+    "collection": "drawer-chests-bedside-tables",
+    "name_note": null,
+    "materials": [
+      "Mango wood",
+      "Plywood back",
+      "Brass knobs"
+    ],
+    "dimensions": {
+      "height_cm": 94,
+      "length_cm": 122,
+      "total_depth_cm": 40.7
+    },
+    "wood_options": [
+      "Mvule",
+      "Mango",
+      "Meru Oak",
+      "Sudanese Teak"
+    ],
+    "price_ksh": 167000,
+    "price_notes": [
+      "Excluding delivery"
+    ],
+    "turnaround_weeks": null,
+    "notes": [
+      "Alternative woods subject to availability; price will vary"
+    ],
+    "featured": true,
+    "images": [
+      "/images/pieces/khadija-drawer-chest/01.jpg",
+      "/images/pieces/khadija-drawer-chest/02.jpg",
+      "/images/pieces/khadija-drawer-chest/03.jpg",
+      "/images/pieces/khadija-drawer-chest/04.jpg"
+    ],
+    "variants": [
+      {
+        "label": "Mango wood",
+        "price_ksh": 167000
+      },
+      {
+        "label": "Mvule",
+        "price_ksh": 226000
+      }
+    ]
+  },
+  {
+    "slug": "diani-drawer-chest",
+    "name": "The Diani Drawer Chest",
+    "collection": "drawer-chests-bedside-tables",
+    "name_note": "diani — a beach town on Kenya's south coast",
+    "materials": [
+      "Sudanese Teak",
+      "Rattan"
+    ],
+    "dimensions": {
+      "height_cm": 91.5,
+      "length_cm": 137,
+      "total_depth_cm": 61
+    },
+    "wood_options": [
+      "Mvule",
+      "Mango",
+      "Meru Oak",
+      "Duom Palm",
+      "Sudanese Teak"
+    ],
+    "price_ksh": 165000,
+    "price_notes": [
+      "Excluding delivery"
+    ],
+    "turnaround_weeks": null,
+    "notes": [
+      "Alternative woods subject to availability; price will vary"
+    ],
+    "featured": false,
+    "images": [
+      "/images/pieces/diani-drawer-chest/01.jpg",
+      "/images/pieces/diani-drawer-chest/02.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "slug": "lokori-drawer-chest",
+    "name": "The Lokori Drawer Chest",
+    "collection": "drawer-chests-bedside-tables",
+    "name_note": null,
+    "materials": [
+      "Mvule base",
+      "Indian Teak end-grain top"
+    ],
+    "dimensions": {
+      "height_cm": 92,
+      "length_cm": 129,
+      "total_depth_cm": 45
+    },
+    "wood_options": [
+      "Mvule",
+      "Mango",
+      "Meru Oak",
+      "Duom Palm",
+      "Sudanese Teak"
+    ],
+    "price_ksh": 221000,
+    "price_notes": [
+      "Excluding delivery"
+    ],
+    "turnaround_weeks": "7-8",
+    "notes": [
+      "Alternative woods subject to availability; price will vary"
+    ],
+    "featured": false,
+    "images": [
+      "/images/pieces/lokori-drawer-chest/01.jpg",
+      "/images/pieces/lokori-drawer-chest/02.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "slug": "aoro-bedside-table",
+    "name": "The Aoro Bedside Table",
+    "collection": "drawer-chests-bedside-tables",
+    "name_note": null,
+    "materials": [
+      "Mvule"
+    ],
+    "dimensions": {
+      "height_cm": 63,
+      "length_cm": 60,
+      "depth_cm": 35
+    },
+    "wood_options": [
+      "Mvule",
+      "Mango",
+      "Meru Oak",
+      "Sudanese Teak"
+    ],
+    "price_ksh": 52000,
+    "price_notes": [
+      "Excluding delivery"
+    ],
+    "turnaround_weeks": null,
+    "notes": [
+      "Alternative woods subject to availability; price will vary"
+    ],
+    "featured": false,
+    "images": [
+      "/images/pieces/aoro-bedside-table/01.jpg",
+      "/images/pieces/aoro-bedside-table/02.jpg",
+      "/images/pieces/aoro-bedside-table/03.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "slug": "lokori-bedside-table",
+    "name": "The Lokori Bedside Table",
+    "collection": "drawer-chests-bedside-tables",
+    "name_note": null,
+    "materials": [
+      "Indian Teak end-grain top",
+      "Mvule bottom"
+    ],
+    "dimensions": {
+      "height_cm": 64,
+      "length_cm": 71,
+      "depth_cm": 40
+    },
+    "wood_options": [
+      "Mvule",
+      "Mango",
+      "Meru Oak",
+      "Duom Palm",
+      "Sudanese Teak"
+    ],
+    "price_ksh": 59000,
+    "price_notes": [
+      "Excluding delivery"
+    ],
+    "turnaround_weeks": null,
+    "notes": [
+      "The top is made from wood end grains — expect grain variation.",
+      "Alternative woods subject to availability; price will vary"
+    ],
+    "featured": false,
+    "images": [
+      "/images/pieces/lokori-bedside-table/01.jpg",
+      "/images/pieces/lokori-bedside-table/02.jpg",
+      "/images/pieces/lokori-bedside-table/03.jpg",
+      "/images/pieces/lokori-bedside-table/04.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "slug": "diani-bedside-table",
+    "name": "The Diani Bedside Table",
+    "collection": "drawer-chests-bedside-tables",
+    "name_note": "diani — a beach town on Kenya's south coast",
+    "materials": [
+      "Mvule"
+    ],
+    "dimensions": {
+      "height_cm": 64,
+      "length_cm": 48,
+      "depth_cm": 37
+    },
+    "wood_options": [
+      "Mvule",
+      "Mango",
+      "Meru Oak",
+      "Duom Palm",
+      "Sudanese Teak"
+    ],
+    "price_ksh": 38000,
+    "price_notes": [
+      "Excluding delivery"
+    ],
+    "turnaround_weeks": null,
+    "notes": [
+      "Alternative woods subject to availability; price will vary"
+    ],
+    "featured": false,
+    "images": [
+      "/images/pieces/diani-bedside-table/01.jpg",
+      "/images/pieces/diani-bedside-table/02.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "slug": "half-moon-side-table",
+    "name": "The Half Moon Side Table",
+    "collection": "drawer-chests-bedside-tables",
+    "name_note": null,
+    "materials": [
+      "Sudanese Teak end-grain top",
+      "Mango bottom"
+    ],
+    "dimensions": {
+      "height_cm": 62,
+      "radius_cm": 31
+    },
+    "wood_options": [
+      "Mvule",
+      "Mango",
+      "Meru Oak",
+      "Duom Palm",
+      "Sudanese Teak",
+      "Muringa"
+    ],
+    "price_ksh": 38000,
+    "price_notes": [
+      "Price per piece",
+      "Excluding delivery"
+    ],
+    "turnaround_weeks": null,
+    "notes": [
+      "The top is made from wood end grains — expect grain variation.",
+      "Alternative woods subject to availability; price will vary"
+    ],
+    "featured": false,
+    "images": [
+      "/images/pieces/half-moon-side-table/01.jpg",
+      "/images/pieces/half-moon-side-table/02.jpg",
+      "/images/pieces/half-moon-side-table/03.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "slug": "mwikali-bedside-table",
+    "name": "The Mwikali Bedside Table",
+    "collection": "drawer-chests-bedside-tables",
+    "name_note": null,
+    "materials": [
+      "Mango wood"
+    ],
+    "dimensions": {
+      "height_cm": 60,
+      "diameter_cm": 45
+    },
+    "wood_options": [
+      "Camphor",
+      "Sudanese Teak",
+      "Mango wood",
+      "Meru Oak",
+      "Muringa"
+    ],
+    "price_ksh": 59000,
+    "price_notes": [
+      "Excluding delivery"
+    ],
+    "turnaround_weeks": null,
+    "notes": [
+      "Alternative woods subject to availability; price will vary"
+    ],
+    "featured": false,
+    "images": [
+      "/images/pieces/mwikali-bedside-table/01.jpg",
+      "/images/pieces/mwikali-bedside-table/02.jpg",
+      "/images/pieces/mwikali-bedside-table/03.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "slug": "oya-bedside-table",
+    "name": "The Oya Bedside Table",
+    "collection": "drawer-chests-bedside-tables",
+    "name_note": null,
+    "materials": [
+      "Mango wood"
+    ],
+    "dimensions": {
+      "length_cm": 66,
+      "depth_cm": 37.5,
+      "height_cm": 64
+    },
+    "wood_options": [
+      "Camphor",
+      "Sudanese Teak",
+      "Mango wood",
+      "Meru Oak",
+      "Muringa"
+    ],
+    "price_ksh": 38000,
+    "price_notes": [
+      "Excluding delivery"
+    ],
+    "turnaround_weeks": null,
+    "notes": [
+      "Alternative woods subject to availability; price will vary"
+    ],
+    "featured": false,
+    "images": [
+      "/images/pieces/oya-bedside-table/01.jpg",
+      "/images/pieces/oya-bedside-table/02.jpg",
+      "/images/pieces/oya-bedside-table/03.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "slug": "ngunia-bedside-table",
+    "name": "The Ngunia Bedside Table",
+    "collection": "drawer-chests-bedside-tables",
+    "name_note": null,
+    "materials": [
+      "Mango wood",
+      "Plywood back"
+    ],
+    "dimensions": {
+      "height_cm": 56,
+      "length_cm": 46,
+      "width_cm": 32.5,
+      "drawer_height_cm": 15,
+      "leg_height_cm": 20
+    },
+    "wood_options": [
+      "Camphor",
+      "Sudanese Teak",
+      "Mango wood",
+      "Meru Oak",
+      "Muringa"
+    ],
+    "price_ksh": 31000,
+    "price_notes": [
+      "Excluding delivery"
+    ],
+    "turnaround_weeks": null,
+    "notes": [
+      "Alternative woods subject to availability; price will vary"
+    ],
+    "featured": false,
+    "images": [
+      "/images/pieces/ngunia-bedside-table/01.jpg",
+      "/images/pieces/ngunia-bedside-table/02.jpg",
+      "/images/pieces/ngunia-bedside-table/03.jpg",
+      "/images/pieces/ngunia-bedside-table/04.jpg",
+      "/images/pieces/ngunia-bedside-table/05.jpg",
+      "/images/pieces/ngunia-bedside-table/06.jpg"
+    ],
+    "variants": [
+      {
+        "label": "Mango wood",
+        "price_ksh": 31000
+      },
+      {
+        "label": "Camphor",
+        "price_ksh": 34000,
+        "notes": [
+          "Camphor may appear lighter in person"
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "ngunia-peg-leg",
+    "name": "The Ngunia Peg Leg",
+    "collection": "drawer-chests-bedside-tables",
+    "name_note": null,
+    "materials": [
+      "Mango wood",
+      "Plywood back"
+    ],
+    "dimensions": {
+      "height_cm": 56,
+      "length_cm": 46,
+      "width_cm": 32.5,
+      "leg_height_cm": 20
+    },
+    "wood_options": [
+      "Camphor",
+      "Sudanese Teak",
+      "Mango wood",
+      "Meru Oak",
+      "Muringa"
+    ],
+    "price_ksh": 30000,
+    "price_notes": [
+      "Excluding delivery"
+    ],
+    "turnaround_weeks": null,
+    "notes": [
+      "Alternative woods subject to availability; price will vary"
+    ],
+    "featured": false,
+    "images": [
+      "/images/pieces/ngunia-peg-leg/01.jpg",
+      "/images/pieces/ngunia-peg-leg/02.jpg",
+      "/images/pieces/ngunia-peg-leg/03.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "slug": "waithera-bedside-table",
+    "name": "The Waithera Bedside Table",
+    "collection": "drawer-chests-bedside-tables",
+    "name_note": null,
+    "materials": [
+      "Muringa"
+    ],
+    "dimensions": {
+      "height_cm": 63,
+      "length_cm": 66,
+      "width_cm": 37,
+      "drawer_height_cm": 13.5,
+      "leg_height_cm": 8,
+      "shelf_height_cm": 33
+    },
+    "wood_options": [
+      "Camphor",
+      "Sudanese Teak",
+      "Mango wood",
+      "Meru Oak",
+      "Muringa"
+    ],
+    "price_ksh": 38000,
+    "price_notes": [
+      "Excluding delivery"
+    ],
+    "turnaround_weeks": null,
+    "notes": [
+      "Alternative woods subject to availability; price will vary"
+    ],
+    "featured": false,
+    "images": [
+      "/images/pieces/waithera-bedside-table/01.jpg",
+      "/images/pieces/waithera-bedside-table/02.jpg",
+      "/images/pieces/waithera-bedside-table/03.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "slug": "inosi-bedside-table",
+    "name": "The Inosi Bedside Table",
+    "collection": "drawer-chests-bedside-tables",
+    "name_note": null,
+    "materials": [
+      "Sudanese Teak"
+    ],
+    "dimensions": {
+      "height_cm": 61,
+      "length_cm": 66,
+      "width_cm": 40
+    },
+    "wood_options": [
+      "Camphor",
+      "Sudanese Teak",
+      "Mango wood",
+      "Meru Oak",
+      "Muringa"
+    ],
+    "price_ksh": 49000,
+    "price_notes": [
+      "Excluding delivery"
+    ],
+    "turnaround_weeks": "5",
+    "notes": [
+      "Alternative woods subject to availability; price will vary"
+    ],
+    "featured": false,
+    "images": [
+      "/images/pieces/inosi-bedside-table/01.jpg",
+      "/images/pieces/inosi-bedside-table/02.jpg",
+      "/images/pieces/inosi-bedside-table/03.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "slug": "zuri-bedside-table",
+    "name": "The Zuri Bedside Table",
+    "collection": "drawer-chests-bedside-tables",
+    "name_note": "zuri — Swahili: beautiful",
+    "materials": [
+      "Camphor"
+    ],
+    "dimensions": {
+      "height_cm": 63,
+      "length_cm": 66,
+      "width_cm": 37
+    },
+    "wood_options": [
+      "Camphor",
+      "Sudanese Teak",
+      "Mango wood",
+      "Meru Oak",
+      "Muringa"
+    ],
+    "price_ksh": 42000,
+    "price_notes": [
+      "Excluding delivery"
+    ],
+    "turnaround_weeks": "5",
+    "notes": [
+      "Alternative woods subject to availability; price will vary"
+    ],
+    "featured": false,
+    "images": [
+      "/images/pieces/zuri-bedside-table/01.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "slug": "tonga-side-table",
+    "name": "The Tonga Side Table",
+    "collection": "drawer-chests-bedside-tables",
+    "name_note": "tonga — the handwoven basket of the BaTonga people",
+    "materials": [
+      "Mango wood",
+      "Plywood back",
+      "Tonga basket"
+    ],
+    "dimensions": {
+      "height_cm": 56,
+      "length_cm": 45.5,
+      "width_cm": 33,
+      "drawer_height_cm": 15,
+      "leg_height_cm": 10,
+      "shelf_height_cm": 30.5
+    },
+    "wood_options": [
+      "Camphor",
+      "Sudanese Teak",
+      "Mango wood",
+      "Meru Oak",
+      "Muringa"
+    ],
+    "price_ksh": 38000,
+    "price_notes": [
+      "Excluding delivery"
+    ],
+    "turnaround_weeks": null,
+    "notes": [
+      "Tonga basket designs vary — we cannot guarantee the exact design in the image.",
+      "Alternative woods subject to availability; price will vary"
+    ],
+    "featured": false,
+    "images": [
+      "/images/pieces/tonga-side-table/01.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "slug": "twiga-coffee-table",
+    "name": "Twiga Coffee Table",
+    "collection": "coffee-tables",
+    "name_note": null,
+    "materials": [
+      "Elgon Teak end grains",
+      "Mango legs"
+    ],
+    "dimensions": {
+      "height_cm": 45,
+      "length_cm": 100,
+      "total_width_cm": 100
+    },
+    "wood_options": [],
+    "price_ksh": 175000,
+    "price_notes": [
+      "Excluding delivery"
+    ],
+    "turnaround_weeks": null,
+    "notes": [
+      "This is an end grain table — no two end grain tables can look the same. Expect variation in colour, pattern and wood grain."
+    ],
+    "featured": false,
+    "images": [
+      "/images/pieces/twiga-coffee-table/01.jpg",
+      "/images/pieces/twiga-coffee-table/02.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "slug": "cowrie-coffee-table",
+    "name": "Cowrie Coffee Table",
+    "collection": "coffee-tables",
+    "name_note": null,
+    "materials": [
+      "Mango wood with black stain"
+    ],
+    "dimensions": {
+      "height_cm": 45,
+      "length_cm": 100,
+      "total_width_cm": 100
+    },
+    "wood_options": [
+      "Mango",
+      "Muringa",
+      "Meru Oak",
+      "Sudanese Teak"
+    ],
+    "price_ksh": 139000,
+    "price_notes": [
+      "Excluding delivery"
+    ],
+    "turnaround_weeks": null,
+    "notes": [
+      "Alternative woods subject to availability; price will vary"
+    ],
+    "featured": false,
+    "images": [
+      "/images/pieces/cowrie-coffee-table/01.jpg",
+      "/images/pieces/cowrie-coffee-table/02.jpg",
+      "/images/pieces/cowrie-coffee-table/03.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "slug": "jua-coffee-table",
+    "name": "Jua Coffee Table",
+    "collection": "coffee-tables",
+    "name_note": null,
+    "materials": [
+      "Elgon Teak end grains",
+      "Mango legs"
+    ],
+    "dimensions": {
+      "height_cm": 45,
+      "length_cm": 100,
+      "total_width_cm": 100
+    },
+    "wood_options": [],
+    "price_ksh": 175000,
+    "price_notes": [
+      "Excluding delivery"
+    ],
+    "turnaround_weeks": null,
+    "notes": [
+      "This is an end grain table — no two end grain tables can look the same. Expect variation in colour, pattern and wood grain."
+    ],
+    "featured": false,
+    "images": [
+      "/images/pieces/jua-coffee-table/01.jpg",
+      "/images/pieces/jua-coffee-table/02.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "slug": "diani-coffee-table",
+    "name": "Diani Coffee Table",
+    "collection": "coffee-tables",
+    "name_note": "diani — a beach town on Kenya's south coast",
+    "materials": [
+      "Mvule"
+    ],
+    "dimensions": {
+      "height_cm": 45,
+      "diameter_cm": 90
+    },
+    "wood_options": [
+      "Mango",
+      "Muringa",
+      "Meru Oak",
+      "Sudanese Teak"
+    ],
+    "price_ksh": 96000,
+    "price_notes": [
+      "Excluding delivery"
+    ],
+    "turnaround_weeks": null,
+    "notes": [
+      "Alternative woods subject to availability; price will vary"
+    ],
+    "featured": false,
+    "images": [
+      "/images/pieces/diani-coffee-table/01.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "slug": "chui-coffee-table",
+    "name": "Chui Coffee Table",
+    "collection": "coffee-tables",
+    "name_note": null,
+    "materials": [
+      "Mango wood"
+    ],
+    "dimensions": {
+      "height_cm": 45,
+      "length_cm": 122,
+      "total_width_cm": 122
+    },
+    "wood_options": [
+      "Mango",
+      "Muringa",
+      "Meru Oak",
+      "Sudanese Teak"
+    ],
+    "price_ksh": 121000,
+    "price_notes": [
+      "Excluding delivery"
+    ],
+    "turnaround_weeks": null,
+    "notes": [
+      "Alternative woods subject to availability; price will vary"
+    ],
+    "featured": false,
+    "images": [
+      "/images/pieces/chui-coffee-table/01.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "slug": "mancala-coffee-table",
+    "name": "The Mancala Coffee Table",
+    "collection": "coffee-tables",
+    "name_note": null,
+    "materials": [
+      "Recycled Scandinavian Pine"
+    ],
+    "dimensions": {
+      "height_cm": 40,
+      "length_cm": 122,
+      "total_width_cm": 56
+    },
+    "wood_options": [
+      "Recycled Scandinavian Pine",
+      "Camphor",
+      "Sudanese Teak",
+      "Mango wood",
+      "Meru Oak",
+      "Muringa"
+    ],
+    "price_ksh": 63000,
+    "price_notes": [
+      "Excluding delivery"
+    ],
+    "turnaround_weeks": null,
+    "notes": [
+      "Available in various colours",
+      "Alternative woods subject to availability; price will vary"
+    ],
+    "featured": false,
+    "images": [
+      "/images/pieces/mancala-coffee-table/01.jpg",
+      "/images/pieces/mancala-coffee-table/02.jpg",
+      "/images/pieces/mancala-coffee-table/03.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "slug": "teak-trio",
+    "name": "The Teak Trio",
+    "collection": "coffee-tables",
+    "name_note": null,
+    "materials": [
+      "Sudanese Teak",
+      "Metal legs"
+    ],
+    "dimensions": null,
+    "wood_options": [
+      "Recycled Scandinavian Pine",
+      "Camphor",
+      "Sudanese Teak",
+      "Mango wood",
+      "Muringa"
+    ],
+    "price_ksh": 98000,
+    "price_notes": [
+      "Excluding delivery"
+    ],
+    "turnaround_weeks": null,
+    "notes": [
+      "Set of three: side table H50cm x D40cm, side table H45cm x D40cm, coffee table H45cm x D60cm.",
+      "Alternative woods subject to availability; price will vary"
+    ],
+    "featured": false,
+    "images": [
+      "/images/pieces/teak-trio/01.jpg",
+      "/images/pieces/teak-trio/02.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "slug": "nalulwe-coffee-table",
+    "name": "The Nalulwe Coffee Table",
+    "collection": "coffee-tables",
+    "name_note": null,
+    "materials": [
+      "Mvule"
+    ],
+    "dimensions": {
+      "height_cm": 40,
+      "length_cm": 122,
+      "total_width_cm": 61
+    },
+    "wood_options": [
+      "Mango",
+      "Muringa",
+      "Meru Oak",
+      "Sudanese Teak"
+    ],
+    "price_ksh": 44000,
+    "price_notes": [
+      "Excluding delivery"
+    ],
+    "turnaround_weeks": null,
+    "notes": [
+      "Alternative woods subject to availability; price will vary"
+    ],
+    "featured": false,
+    "images": [
+      "/images/pieces/nalulwe-coffee-table/01.jpg",
+      "/images/pieces/nalulwe-coffee-table/02.jpg",
+      "/images/pieces/nalulwe-coffee-table/03.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "slug": "block-coffee-table",
+    "name": "The Block Coffee Table",
+    "collection": "coffee-tables",
+    "name_note": null,
+    "materials": [
+      "Mango wood"
+    ],
+    "dimensions": {
+      "height_cm": 46,
+      "length_cm": 122,
+      "total_width_cm": 61
+    },
+    "wood_options": [
+      "Mango",
+      "Muringa",
+      "Meru Oak",
+      "Sudanese Teak"
+    ],
+    "price_ksh": 60000,
+    "price_notes": [
+      "Excluding delivery"
+    ],
+    "turnaround_weeks": null,
+    "notes": [
+      "Alternative woods subject to availability; price will vary"
+    ],
+    "featured": false,
+    "images": [
+      "/images/pieces/block-coffee-table/01.jpg",
+      "/images/pieces/block-coffee-table/02.jpg",
+      "/images/pieces/block-coffee-table/03.jpg",
+      "/images/pieces/block-coffee-table/04.jpg",
+      "/images/pieces/block-coffee-table/05.jpg",
+      "/images/pieces/block-coffee-table/06.jpg"
+    ],
+    "variants": [
+      {
+        "label": "Mango wood",
+        "price_ksh": 60000
+      },
+      {
+        "label": "Mvule",
+        "price_ksh": 75000
+      }
+    ]
+  },
+  {
+    "slug": "kuba-coffee-table",
+    "name": "The Kuba Coffee Table",
+    "collection": "coffee-tables",
+    "name_note": null,
+    "materials": [
+      "Sudanese Teak"
+    ],
+    "dimensions": {
+      "height_cm": 45.7,
+      "diameter_cm": 122
+    },
+    "wood_options": [
+      "Mango",
+      "Muringa",
+      "Meru Oak",
+      "Sudanese Teak"
+    ],
+    "price_ksh": 104000,
+    "price_notes": [
+      "Excluding delivery"
+    ],
+    "turnaround_weeks": null,
+    "notes": [
+      "Alternative woods subject to availability; price will vary"
+    ],
+    "featured": false,
+    "images": [
+      "/images/pieces/kuba-coffee-table/01.jpg",
+      "/images/pieces/kuba-coffee-table/02.jpg",
+      "/images/pieces/kuba-coffee-table/03.jpg",
+      "/images/pieces/kuba-coffee-table/04.jpg",
+      "/images/pieces/kuba-coffee-table/05.jpg"
+    ],
+    "variants": [
+      {
+        "label": "Sudanese Teak",
+        "price_ksh": 104000
+      },
+      {
+        "label": "Glass top · Duom Palm",
+        "price_ksh": 114000,
+        "dimensions": {
+          "height_cm": 45.5,
+          "diameter_cm": 100
+        },
+        "notes": [
+          "Glass top with Duom Palm base"
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "infinity-coffee-table",
+    "name": "The Infinity Coffee Table",
+    "collection": "coffee-tables",
+    "name_note": null,
+    "materials": [
+      "Glass top",
+      "Mvule"
+    ],
+    "dimensions": {
+      "height_cm": 45.5,
+      "diameter_cm": 100
+    },
+    "wood_options": [
+      "Mango",
+      "Muringa",
+      "Meru Oak",
+      "Sudanese Teak"
+    ],
+    "price_ksh": 150000,
+    "price_notes": [
+      "Excluding delivery"
+    ],
+    "turnaround_weeks": null,
+    "notes": [
+      "Alternative woods subject to availability; price will vary"
+    ],
+    "featured": false,
+    "images": [
+      "/images/pieces/infinity-coffee-table/01.jpg",
+      "/images/pieces/infinity-coffee-table/02.jpg",
+      "/images/pieces/infinity-coffee-table/03.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "slug": "bao-coffee-table",
+    "name": "The Bao Coffee Table",
+    "collection": "coffee-tables",
+    "name_note": null,
+    "materials": [
+      "Indian Teak"
+    ],
+    "dimensions": {
+      "length_cm": 122,
+      "width_cm": 75
+    },
+    "wood_options": [
+      "Mango",
+      "Muringa",
+      "Meru Oak",
+      "Sudanese Teak"
+    ],
+    "price_ksh": 330000,
+    "price_notes": [
+      "Excluding delivery"
+    ],
+    "turnaround_weeks": null,
+    "notes": [
+      "Alternative woods subject to availability; price will vary"
+    ],
+    "featured": false,
+    "images": [
+      "/images/pieces/bao-coffee-table/01.jpg",
+      "/images/pieces/bao-coffee-table/02.jpg",
+      "/images/pieces/bao-coffee-table/03.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "slug": "lenzi-coffee-table",
+    "name": "The Lenzi Coffee Table",
+    "collection": "coffee-tables",
+    "name_note": null,
+    "materials": [
+      "Glass top",
+      "Mango base"
+    ],
+    "dimensions": {
+      "height_cm": 45.5,
+      "diameter_cm": 100
+    },
+    "wood_options": [
+      "Mango",
+      "Muringa",
+      "Meru Oak",
+      "Sudanese Teak"
+    ],
+    "price_ksh": 150000,
+    "price_notes": [
+      "Excluding delivery"
+    ],
+    "turnaround_weeks": null,
+    "notes": [
+      "Alternative woods subject to availability; price will vary"
+    ],
+    "featured": false,
+    "images": [
+      "/images/pieces/lenzi-coffee-table/01.jpg",
+      "/images/pieces/lenzi-coffee-table/02.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "slug": "diani-console",
+    "name": "The Diani Console",
+    "collection": "console-tables-desks",
+    "name_note": "diani — a beach town on Kenya's south coast",
+    "materials": [
+      "Mvule"
+    ],
+    "dimensions": {
+      "height_cm": 90,
+      "length_cm": 122,
+      "total_depth_cm": 40
+    },
+    "wood_options": [
+      "Mango",
+      "Mvule",
+      "Sudanese Teak",
+      "Muringa",
+      "Meru Oak",
+      "Duom Palm"
+    ],
+    "price_ksh": 180000,
+    "price_notes": [
+      "Excluding delivery"
+    ],
+    "turnaround_weeks": null,
+    "notes": [
+      "Alternative woods subject to availability; price will vary"
+    ],
+    "featured": false,
+    "images": [
+      "/images/pieces/diani-console/01.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "slug": "nkatha-console",
+    "name": "The Nkatha Console",
+    "collection": "console-tables-desks",
+    "name_note": null,
+    "materials": [
+      "Mvule"
+    ],
+    "dimensions": {
+      "height_cm": 91.5,
+      "length_cm": 150,
+      "total_depth_cm": 40
+    },
+    "wood_options": [
+      "Mango",
+      "Mvule",
+      "Sudanese Teak",
+      "Muringa",
+      "Meru Oak",
+      "Duom Palm"
+    ],
+    "price_ksh": 167000,
+    "price_notes": [
+      "Excluding delivery"
+    ],
+    "turnaround_weeks": null,
+    "notes": [
+      "Alternative woods subject to availability; price will vary"
+    ],
+    "featured": false,
+    "images": [
+      "/images/pieces/nkatha-console/01.jpg",
+      "/images/pieces/nkatha-console/02.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "slug": "swala-console-dining",
+    "name": "The Swala Console/Dining",
+    "collection": "console-tables-desks",
+    "name_note": null,
+    "materials": [
+      "Meru Oak"
+    ],
+    "dimensions": null,
+    "wood_options": [
+      "Mango",
+      "Mvule",
+      "Sudanese Teak",
+      "Muringa",
+      "Meru Oak",
+      "Duom Palm"
+    ],
+    "price_ksh": 158000,
+    "price_notes": [
+      "Excluding delivery"
+    ],
+    "turnaround_weeks": null,
+    "notes": [
+      "A console table that turns into a dining table.",
+      "Console: L140 x W40 x H79cm. Dining table: L140 x W80 x H76.5cm.",
+      "Alternative woods subject to availability; price will vary"
+    ],
+    "featured": false,
+    "images": [
+      "/images/pieces/swala-console-dining/01.jpg",
+      "/images/pieces/swala-console-dining/02.jpg",
+      "/images/pieces/swala-console-dining/03.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "slug": "tugen-table",
+    "name": "The Tugen Table",
+    "collection": "console-tables-desks",
+    "name_note": null,
+    "materials": [
+      "Recycled Scandinavian Pine",
+      "Sudanese Teak top"
+    ],
+    "dimensions": {
+      "height_cm": 80,
+      "length_cm": 120,
+      "total_depth_cm": 40
+    },
+    "wood_options": [
+      "Recycled Scandinavian Pine",
+      "Camphor",
+      "Sudanese Teak",
+      "Mango wood",
+      "Muringa"
+    ],
+    "price_ksh": 68000,
+    "price_notes": [
+      "Excluding delivery"
+    ],
+    "turnaround_weeks": null,
+    "notes": [
+      "Available in various colours",
+      "Pictured colour: Duracoat Conifer 2490C",
+      "Alternative woods subject to availability; price will vary"
+    ],
+    "featured": false,
+    "images": [
+      "/images/pieces/tugen-table/01.jpg",
+      "/images/pieces/tugen-table/02.jpg",
+      "/images/pieces/tugen-table/03.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "slug": "maimuna-desk",
+    "name": "The Maimuna Desk",
+    "collection": "console-tables-desks",
+    "name_note": null,
+    "materials": [
+      "Mango wood",
+      "Plywood back",
+      "Rattan"
+    ],
+    "dimensions": {
+      "height_cm": 76.2,
+      "length_cm": 130,
+      "total_depth_cm": 60
+    },
+    "wood_options": [
+      "Mango",
+      "Mvule",
+      "Sudanese Teak",
+      "Muringa",
+      "Meru Oak",
+      "Duom Palm"
+    ],
+    "price_ksh": 92000,
+    "price_notes": [
+      "Excluding delivery"
+    ],
+    "turnaround_weeks": null,
+    "notes": [
+      "Alternative woods subject to availability; price will vary"
+    ],
+    "featured": false,
+    "images": [
+      "/images/pieces/maimuna-desk/01.jpg",
+      "/images/pieces/maimuna-desk/02.jpg",
+      "/images/pieces/maimuna-desk/03.jpg",
+      "/images/pieces/maimuna-desk/04.jpg",
+      "/images/pieces/maimuna-desk/05.jpg",
+      "/images/pieces/maimuna-desk/06.jpg"
+    ],
+    "variants": [
+      {
+        "label": "Mango wood",
+        "price_ksh": 92000
+      },
+      {
+        "label": "Mvule",
+        "price_ksh": 115000
+      }
+    ]
+  },
+  {
+    "slug": "orma-desk",
+    "name": "The Orma Desk",
+    "collection": "console-tables-desks",
+    "name_note": null,
+    "materials": [
+      "Recycled Scandinavian Pine"
+    ],
+    "dimensions": {
+      "height_cm": 76,
+      "length_cm": 152,
+      "total_depth_cm": 41
+    },
+    "wood_options": [
+      "Recycled Scandinavian Pine",
+      "Camphor",
+      "Sudanese Teak",
+      "Mango wood",
+      "Muringa"
+    ],
+    "price_ksh": 94000,
+    "price_notes": [
+      "Excluding delivery"
+    ],
+    "turnaround_weeks": null,
+    "notes": [
+      "Available in various colours",
+      "Alternative woods subject to availability; price will vary"
+    ],
+    "featured": false,
+    "images": [
+      "/images/pieces/orma-desk/01.jpg",
+      "/images/pieces/orma-desk/02.jpg",
+      "/images/pieces/orma-desk/03.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "slug": "wangui-desk",
+    "name": "The Wangui Desk",
+    "collection": "console-tables-desks",
+    "name_note": null,
+    "materials": [
+      "Camphor"
+    ],
+    "dimensions": {
+      "height_cm": 76,
+      "length_cm": 152,
+      "total_depth_cm": 61
+    },
+    "wood_options": [
+      "Recycled Scandinavian Pine",
+      "Camphor",
+      "Sudanese Teak",
+      "Mango wood",
+      "Muringa"
+    ],
+    "price_ksh": 127000,
+    "price_notes": [
+      "Excluding delivery"
+    ],
+    "turnaround_weeks": null,
+    "notes": [
+      "Available in various colours",
+      "Alternative woods subject to availability; price will vary"
+    ],
+    "featured": false,
+    "images": [
+      "/images/pieces/wangui-desk/01.jpg",
+      "/images/pieces/wangui-desk/02.jpg",
+      "/images/pieces/wangui-desk/03.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "slug": "asuba-desk",
+    "name": "The Asuba Desk",
+    "collection": "console-tables-desks",
+    "name_note": null,
+    "materials": [
+      "Mvule",
+      "Plywood back"
+    ],
+    "dimensions": {
+      "height_floor_to_table_top_cm": 76.5,
+      "total_height_cm": 88,
+      "length_cm": 130,
+      "total_depth_cm": 63
+    },
+    "wood_options": [
+      "Mango",
+      "Mvule",
+      "Sudanese Teak",
+      "Muringa",
+      "Meru Oak",
+      "Duom Palm"
+    ],
+    "price_ksh": 93000,
+    "price_notes": [
+      "Excluding delivery"
+    ],
+    "turnaround_weeks": null,
+    "notes": [
+      "The drawer is not centred but skewed to the left (when facing the desk) for ease of use.",
+      "Alternative woods subject to availability; price will vary"
+    ],
+    "featured": false,
+    "images": [
+      "/images/pieces/asuba-desk/01.jpg",
+      "/images/pieces/asuba-desk/02.jpg",
+      "/images/pieces/asuba-desk/03.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "slug": "saba-saba-lounge-chair",
+    "name": "The Saba Saba Lounge Chair",
+    "collection": "armchairs-benches",
+    "name_note": null,
+    "materials": [
+      "Recycled Scandinavian Pine"
+    ],
+    "dimensions": {
+      "total_height_cm": 86,
+      "floor_to_chair_height_cm": 48.5,
+      "total_width_cm": 47,
+      "total_depth_cm": 67.5
+    },
+    "wood_options": [
+      "Recycled Scandinavian Pine",
+      "Camphor",
+      "Sudanese Teak",
+      "Mango wood",
+      "Meru Oak",
+      "Muringa"
+    ],
+    "price_ksh": 37000,
+    "price_notes": [
+      "Excluding delivery"
+    ],
+    "turnaround_weeks": null,
+    "notes": [
+      "Not recommended as a dining chair — these are lounge chairs.",
+      "Alternative woods subject to availability; price will vary"
+    ],
+    "featured": false,
+    "images": [
+      "/images/pieces/saba-saba-lounge-chair/01.jpg",
+      "/images/pieces/saba-saba-lounge-chair/02.jpg",
+      "/images/pieces/saba-saba-lounge-chair/03.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "slug": "pierre-jeanneret-chair",
+    "name": "The Pierre Jeanneret Chair",
+    "collection": "armchairs-benches",
+    "name_note": null,
+    "materials": [
+      "Mango wood"
+    ],
+    "dimensions": {
+      "total_height_cm": 88,
+      "floor_to_seat_height_cm": 48,
+      "total_width_cm": 53,
+      "total_depth_cm": 50
+    },
+    "wood_options": [
+      "Mango",
+      "Mvule",
+      "Sudanese Teak",
+      "Muringa",
+      "Meru Oak",
+      "Duom Palm"
+    ],
+    "price_ksh": 35000,
+    "price_notes": [
+      "Excluding delivery"
+    ],
+    "turnaround_weeks": null,
+    "notes": [
+      "Alternative woods subject to availability; price will vary"
+    ],
+    "featured": false,
+    "images": [
+      "/images/pieces/pierre-jeanneret-chair/01.jpg",
+      "/images/pieces/pierre-jeanneret-chair/02.jpg",
+      "/images/pieces/pierre-jeanneret-chair/03.jpg",
+      "/images/pieces/pierre-jeanneret-chair/04.jpg",
+      "/images/pieces/pierre-jeanneret-chair/05.jpg"
+    ],
+    "variants": [
+      {
+        "label": "Mango wood",
+        "price_ksh": 35000
+      },
+      {
+        "label": "Mvule",
+        "price_ksh": 41000,
+        "notes": [
+          "Turnaround time: 6 weeks"
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "spindle-bench",
+    "name": "The Spindle Bench",
+    "collection": "armchairs-benches",
+    "name_note": null,
+    "materials": [
+      "Recycled Scandinavian Pine"
+    ],
+    "dimensions": {
+      "total_length_cm": 157,
+      "total_depth_cm": 58,
+      "total_height_cm": 79,
+      "floor_to_seat_height_cm": 45.5
+    },
+    "wood_options": [
+      "Recycled Scandinavian Pine",
+      "Camphor",
+      "Sudanese Teak",
+      "Mango wood",
+      "Meru Oak",
+      "Muringa"
+    ],
+    "price_ksh": 85000,
+    "price_notes": [
+      "Excluding delivery"
+    ],
+    "turnaround_weeks": null,
+    "notes": [
+      "Available in various fabrics",
+      "Alternative woods subject to availability; price will vary"
+    ],
+    "featured": false,
+    "images": [
+      "/images/pieces/spindle-bench/01.jpg",
+      "/images/pieces/spindle-bench/02.jpg",
+      "/images/pieces/spindle-bench/03.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "slug": "lulu-bench",
+    "name": "The Lulu Bench",
+    "collection": "armchairs-benches",
+    "name_note": null,
+    "materials": [
+      "Mango"
+    ],
+    "dimensions": {
+      "total_length_cm": 145,
+      "total_depth_cm": 40,
+      "total_height_cm": 45
+    },
+    "wood_options": [
+      "Mango",
+      "Mvule",
+      "Sudanese Teak",
+      "Muringa",
+      "Meru Oak"
+    ],
+    "price_ksh": 45000,
+    "price_notes": [
+      "Excluding delivery"
+    ],
+    "turnaround_weeks": "4",
+    "notes": [
+      "Available in various fabrics",
+      "Alternative woods subject to availability; price will vary"
+    ],
+    "featured": false,
+    "images": [
+      "/images/pieces/lulu-bench/01.jpg",
+      "/images/pieces/lulu-bench/02.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "slug": "bahari-accent-chair",
+    "name": "The Bahari Accent Chair",
+    "collection": "armchairs-benches",
+    "name_note": null,
+    "materials": [
+      "Recycled Scandinavian Pine frame",
+      "Elastic webbing",
+      "High density foam",
+      "Dacron lining",
+      "Mvule legs"
+    ],
+    "dimensions": {
+      "floor_to_seat_height_cm": 45,
+      "total_length_cm": 80,
+      "total_depth_cm": 85
+    },
+    "wood_options": [],
+    "price_ksh": 75000,
+    "price_notes": [
+      "Excluding delivery"
+    ],
+    "turnaround_weeks": null,
+    "notes": [
+      "Available in various fabrics",
+      "Wood on legs can be customised"
+    ],
+    "featured": false,
+    "images": [
+      "/images/pieces/bahari-accent-chair/01.jpg",
+      "/images/pieces/bahari-accent-chair/02.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "slug": "nimu-accent-chair",
+    "name": "The Nimu Accent Chair",
+    "collection": "armchairs-benches",
+    "name_note": null,
+    "materials": [
+      "Recycled Scandinavian Pine",
+      "Elastic webbing",
+      "High density foam",
+      "Dacron lining"
+    ],
+    "dimensions": {
+      "total_height_cm": 83,
+      "floor_to_seat_height_cm": 40,
+      "total_length_cm": 76,
+      "total_depth_cm": 55
+    },
+    "wood_options": [],
+    "price_ksh": 55000,
+    "price_notes": [
+      "Excluding delivery"
+    ],
+    "turnaround_weeks": null,
+    "notes": [
+      "Available in various fabrics",
+      "Wood on legs can be customised"
+    ],
+    "featured": false,
+    "images": [
+      "/images/pieces/nimu-accent-chair/01.jpg",
+      "/images/pieces/nimu-accent-chair/02.jpg",
+      "/images/pieces/nimu-accent-chair/03.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "slug": "zoya-accent-chair",
+    "name": "The Zoya Accent Chair",
+    "collection": "armchairs-benches",
+    "name_note": null,
+    "materials": [
+      "Mahogany",
+      "Elastic webbing",
+      "High density foam",
+      "Dacron lining"
+    ],
+    "dimensions": {
+      "total_height_cm": 76.5,
+      "floor_to_seat_height_cm": 43.5,
+      "total_length_cm": 71,
+      "total_depth_cm": 61
+    },
+    "wood_options": [
+      "Mango",
+      "Mvule",
+      "Sudanese Teak",
+      "Muringa",
+      "Meru Oak"
+    ],
+    "price_ksh": 75000,
+    "price_notes": [
+      "Excluding delivery"
+    ],
+    "turnaround_weeks": null,
+    "notes": [
+      "Alternative woods subject to availability; price will vary"
+    ],
+    "featured": false,
+    "images": [
+      "/images/pieces/zoya-accent-chair/01.jpg",
+      "/images/pieces/zoya-accent-chair/02.jpg",
+      "/images/pieces/zoya-accent-chair/03.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "slug": "shoma-study-chair",
+    "name": "The Shoma Study Chair",
+    "collection": "armchairs-benches",
+    "name_note": null,
+    "materials": [
+      "Mvule"
+    ],
+    "dimensions": {
+      "total_height_cm": 86,
+      "floor_to_seat_height_cm": 48,
+      "total_length_cm": 60,
+      "total_depth_cm": 58,
+      "inner_depth_cm": 53.5
+    },
+    "wood_options": [
+      "Mango",
+      "Mvule",
+      "Sudanese Teak",
+      "Muringa",
+      "Meru Oak"
+    ],
+    "price_ksh": 67000,
+    "price_notes": [
+      "Excluding delivery"
+    ],
+    "turnaround_weeks": null,
+    "notes": [
+      "Alternative woods subject to availability; price will vary"
+    ],
+    "featured": false,
+    "images": [
+      "/images/pieces/shoma-study-chair/01.jpg",
+      "/images/pieces/shoma-study-chair/02.jpg",
+      "/images/pieces/shoma-study-chair/03.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "slug": "ojuong-armchair",
+    "name": "The Ojuong Armchair",
+    "collection": "armchairs-benches",
+    "name_note": null,
+    "materials": [
+      "Recycled Scandinavian Pine",
+      "Elastic webbing",
+      "High density foam",
+      "Dacron lining"
+    ],
+    "dimensions": {
+      "total_height_cm": 91.5,
+      "floor_to_seat_height_cm": 46,
+      "total_length_cm": 86,
+      "total_depth_cm": 63.5
+    },
+    "wood_options": [],
+    "price_ksh": 86000,
+    "price_notes": [
+      "Excluding delivery"
+    ],
+    "turnaround_weeks": null,
+    "notes": [],
+    "featured": false,
+    "images": [
+      "/images/pieces/ojuong-armchair/01.jpg",
+      "/images/pieces/ojuong-armchair/02.jpg",
+      "/images/pieces/ojuong-armchair/03.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "slug": "guka-armchair",
+    "name": "The Guka Armchair",
+    "collection": "armchairs-benches",
+    "name_note": null,
+    "materials": [
+      "Camphor"
+    ],
+    "dimensions": {
+      "total_height_cm": 91.5,
+      "floor_to_seat_height_cm": 51,
+      "total_length_cm": 66,
+      "total_depth_cm": 56
+    },
+    "wood_options": [
+      "Recycled Scandinavian Pine",
+      "Camphor",
+      "Sudanese Teak",
+      "Mango wood",
+      "Meru Oak",
+      "Muringa"
+    ],
+    "price_ksh": 85000,
+    "price_notes": [
+      "Excluding delivery"
+    ],
+    "turnaround_weeks": null,
+    "notes": [
+      "Alternative woods subject to availability; price will vary"
+    ],
+    "featured": false,
+    "images": [
+      "/images/pieces/guka-armchair/01.jpg",
+      "/images/pieces/guka-armchair/02.jpg",
+      "/images/pieces/guka-armchair/03.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "slug": "sanaipei-rocking-chair",
+    "name": "The Sanaipei Rocking Chair",
+    "collection": "armchairs-benches",
+    "name_note": null,
+    "materials": [
+      "Recycled Scandinavian Pine",
+      "Mango wood legs",
+      "Elastic webbing",
+      "High density foam",
+      "Dacron lining"
+    ],
+    "dimensions": {
+      "total_height_cm": 89,
+      "floor_to_seat_height_cm": 46,
+      "total_width_cm": 82.5,
+      "total_depth_cm": 79
+    },
+    "wood_options": [],
+    "price_ksh": 86000,
+    "price_notes": [
+      "Price may change depending on fabric choice",
+      "Excluding delivery"
+    ],
+    "turnaround_weeks": null,
+    "notes": [],
+    "featured": false,
+    "images": [
+      "/images/pieces/sanaipei-rocking-chair/01.jpg",
+      "/images/pieces/sanaipei-rocking-chair/02.jpg",
+      "/images/pieces/sanaipei-rocking-chair/03.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "slug": "nafula-rocking-chair",
+    "name": "The Nafula Rocking Chair",
+    "collection": "armchairs-benches",
+    "name_note": null,
+    "materials": [
+      "Recycled Scandinavian Pine",
+      "Mango wood legs",
+      "Elastic webbing",
+      "High density foam",
+      "Dacron lining"
+    ],
+    "dimensions": null,
+    "wood_options": [
+      "Recycled Scandinavian Pine",
+      "Camphor",
+      "Sudanese Teak",
+      "Mango wood",
+      "Meru Oak",
+      "Muringa"
+    ],
+    "price_ksh": 85000,
+    "price_notes": [
+      "Price may change depending on fabric choice",
+      "Excluding delivery"
+    ],
+    "turnaround_weeks": null,
+    "notes": [
+      "Alternative woods subject to availability; price will vary"
+    ],
+    "featured": false,
+    "images": [
+      "/images/pieces/nafula-rocking-chair/01.jpg",
+      "/images/pieces/nafula-rocking-chair/02.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "slug": "live-edge-dining-table",
+    "name": "Live Edge Dining Table",
+    "collection": "dining-tables-chairs",
+    "name_note": null,
+    "materials": [
+      "Mango wood"
+    ],
+    "dimensions": {
+      "length_cm": 250,
+      "width_cm": 122,
+      "height_cm": 76.5
+    },
+    "wood_options": [],
+    "price_ksh": 240000,
+    "price_notes": [
+      "Excluding delivery"
+    ],
+    "turnaround_weeks": null,
+    "notes": [
+      "Live edge pieces: expect variations in shape, colour and dimension — no two are the same. Expect various knots and grains.",
+      "Dimensions will not be the same throughout the table.",
+      "Your table will not look exactly like the image."
+    ],
+    "featured": false,
+    "images": [
+      "/images/pieces/live-edge-dining-table/01.jpg",
+      "/images/pieces/live-edge-dining-table/02.jpg"
+    ],
+    "variants": [
+      {
+        "label": "8 seater",
+        "price_ksh": 240000,
+        "dimensions": {
+          "length_cm": 250,
+          "width_cm": 122,
+          "height_cm": 76.5
+        }
+      },
+      {
+        "label": "6 seater",
+        "price_ksh": 278000,
+        "dimensions": {
+          "length_cm": 200,
+          "width_cm": 100,
+          "height_cm": 76.5
+        }
+      }
+    ]
+  },
+  {
+    "slug": "nemali-dining-table",
+    "name": "Nemali Dining Table",
+    "collection": "dining-tables-chairs",
+    "name_note": null,
+    "materials": [
+      "Mango wood"
+    ],
+    "dimensions": {
+      "length_cm": 250,
+      "width_cm": 122,
+      "height_cm": 76.5
+    },
+    "wood_options": [],
+    "price_ksh": 239000,
+    "price_notes": [
+      "Excluding delivery"
+    ],
+    "turnaround_weeks": null,
+    "notes": [
+      "Please expect grain variation"
+    ],
+    "featured": false,
+    "images": [
+      "/images/pieces/nemali-dining-table/01.jpg",
+      "/images/pieces/nemali-dining-table/02.jpg",
+      "/images/pieces/nemali-dining-table/03.jpg"
+    ],
+    "variants": [
+      {
+        "label": "8 seater",
+        "price_ksh": 239000,
+        "dimensions": {
+          "length_cm": 250,
+          "width_cm": 122,
+          "height_cm": 76.5
+        }
+      },
+      {
+        "label": "6 seater",
+        "price_ksh": 277000,
+        "dimensions": {
+          "length_cm": 200,
+          "width_cm": 122,
+          "height_cm": 76.5
+        }
+      }
+    ]
+  },
+  {
+    "slug": "block-dining-table",
+    "name": "Block Dining Table",
+    "collection": "dining-tables-chairs",
+    "name_note": null,
+    "materials": [
+      "Mvule with Dark Walnut stain"
+    ],
+    "dimensions": {
+      "length_cm": 250,
+      "width_cm": 122,
+      "height_cm": 76.5
+    },
+    "wood_options": [],
+    "price_ksh": 269000,
+    "price_notes": [
+      "Excluding delivery"
+    ],
+    "turnaround_weeks": "6-7",
+    "notes": [
+      "Please expect grain variation"
+    ],
+    "featured": false,
+    "images": [
+      "/images/pieces/block-dining-table/01.jpg"
+    ],
+    "variants": [
+      {
+        "label": "8 seater",
+        "price_ksh": 269000,
+        "dimensions": {
+          "length_cm": 250,
+          "width_cm": 122,
+          "height_cm": 76.5
+        }
+      },
+      {
+        "label": "6 seater",
+        "price_ksh": 291000,
+        "dimensions": {
+          "length_cm": 200,
+          "width_cm": 100,
+          "height_cm": 76.5
+        }
+      }
+    ]
+  },
+  {
+    "slug": "diani-dining-table",
+    "name": "Diani Dining Table",
+    "collection": "dining-tables-chairs",
+    "name_note": "diani — a beach town on Kenya's south coast",
+    "materials": [
+      "Mvule"
+    ],
+    "dimensions": {
+      "diameter_cm": 183,
+      "height_cm": 76.5
+    },
+    "wood_options": [],
+    "price_ksh": 213000,
+    "price_notes": [
+      "Excluding delivery"
+    ],
+    "turnaround_weeks": "7",
+    "notes": [
+      "Please expect grain variation"
+    ],
+    "featured": false,
+    "images": [
+      "/images/pieces/diani-dining-table/01.jpg"
+    ],
+    "variants": [
+      {
+        "label": "6 seater",
+        "price_ksh": 213000,
+        "dimensions": {
+          "diameter_cm": 183,
+          "height_cm": 76.5
+        }
+      },
+      {
+        "label": "4 seater",
+        "price_ksh": 245000,
+        "dimensions": {
+          "diameter_cm": 120,
+          "height_cm": 76.5
+        }
+      },
+      {
+        "label": "8 seater",
+        "price_ksh": 270000,
+        "dimensions": {
+          "diameter_cm": 244,
+          "height_cm": 76.5
+        }
+      }
+    ]
+  },
+  {
+    "slug": "kio-dining-table",
+    "name": "The Kio Dining Table",
+    "collection": "dining-tables-chairs",
+    "name_note": null,
+    "materials": [
+      "Palm wood"
+    ],
+    "dimensions": {
+      "length_cm": 200,
+      "width_cm": 100,
+      "height_cm": 76.5
+    },
+    "wood_options": [],
+    "price_ksh": 273000,
+    "price_notes": [
+      "Excluding delivery"
+    ],
+    "turnaround_weeks": null,
+    "notes": [],
+    "featured": false,
+    "images": [
+      "/images/pieces/kio-dining-table/01.jpg",
+      "/images/pieces/kio-dining-table/02.jpg",
+      "/images/pieces/kio-dining-table/03.jpg"
+    ],
+    "variants": [
+      {
+        "label": "6 seater",
+        "price_ksh": 273000,
+        "dimensions": {
+          "length_cm": 200,
+          "width_cm": 100,
+          "height_cm": 76.5
+        }
+      },
+      {
+        "label": "8 seater",
+        "price_ksh": 327000,
+        "dimensions": {
+          "length_cm": 250,
+          "width_cm": 122,
+          "height_cm": 76.5
+        }
+      }
+    ]
+  },
+  {
+    "slug": "swala-dining-table",
+    "name": "The Swala Dining Table",
+    "collection": "dining-tables-chairs",
+    "name_note": null,
+    "materials": [
+      "Mango"
+    ],
+    "dimensions": {
+      "length_cm": 250,
+      "width_cm": 122,
+      "height_cm": 76.5
+    },
+    "wood_options": [],
+    "price_ksh": 161000,
+    "price_notes": [
+      "Excluding delivery"
+    ],
+    "turnaround_weeks": "6",
+    "notes": [
+      "Please expect grain variation"
+    ],
+    "featured": false,
+    "images": [
+      "/images/pieces/swala-dining-table/01.jpg",
+      "/images/pieces/swala-dining-table/02.jpg"
+    ],
+    "variants": [
+      {
+        "label": "8 seater",
+        "price_ksh": 161000,
+        "dimensions": {
+          "length_cm": 250,
+          "width_cm": 122,
+          "height_cm": 76.5
+        }
+      },
+      {
+        "label": "6 seater",
+        "price_ksh": 193000,
+        "dimensions": {
+          "length_cm": 200,
+          "width_cm": 100,
+          "height_cm": 76.5
+        }
+      }
+    ]
+  },
+  {
+    "slug": "iyale-dining-table",
+    "name": "The Iyale Dining Table",
+    "collection": "dining-tables-chairs",
+    "name_note": null,
+    "materials": [
+      "Mango wood"
+    ],
+    "dimensions": {
+      "length_cm": 200,
+      "width_cm": 100,
+      "height_cm": 76.5
+    },
+    "wood_options": [],
+    "price_ksh": 161000,
+    "price_notes": [
+      "Excluding delivery"
+    ],
+    "turnaround_weeks": null,
+    "notes": [],
+    "featured": false,
+    "images": [
+      "/images/pieces/iyale-dining-table/01.jpg",
+      "/images/pieces/iyale-dining-table/02.jpg",
+      "/images/pieces/iyale-dining-table/03.jpg"
+    ],
+    "variants": [
+      {
+        "label": "6 seater",
+        "price_ksh": 161000,
+        "dimensions": {
+          "length_cm": 200,
+          "width_cm": 100,
+          "height_cm": 76.5
+        }
+      },
+      {
+        "label": "8 seater",
+        "price_ksh": 193000,
+        "dimensions": {
+          "length_cm": 250,
+          "width_cm": 122,
+          "height_cm": 76.5
+        }
+      }
+    ]
+  },
+  {
+    "slug": "benga-dining-table",
+    "name": "The Benga Dining Table",
+    "collection": "dining-tables-chairs",
+    "name_note": null,
+    "materials": [
+      "Recycled Scandinavian Pine"
+    ],
+    "dimensions": {
+      "height_cm": 78,
+      "length_cm": 152,
+      "width_cm": 90
+    },
+    "wood_options": [],
+    "price_ksh": 134000,
+    "price_notes": [
+      "Excluding delivery"
+    ],
+    "turnaround_weeks": null,
+    "notes": [
+      "Available in custom sizes",
+      "Available in custom colours"
+    ],
+    "featured": false,
+    "images": [
+      "/images/pieces/benga-dining-table/01.jpg",
+      "/images/pieces/benga-dining-table/02.jpg",
+      "/images/pieces/benga-dining-table/03.jpg",
+      "/images/pieces/benga-dining-table/04.jpg",
+      "/images/pieces/benga-dining-table/05.jpg"
+    ],
+    "variants": [
+      {
+        "label": "Recycled Scandinavian Pine",
+        "price_ksh": 134000
+      },
+      {
+        "label": "Mango wood",
+        "price_ksh": 149000
+      }
+    ]
+  },
+  {
+    "slug": "akida-dining-table",
+    "name": "The Akida Dining Table",
+    "collection": "dining-tables-chairs",
+    "name_note": null,
+    "materials": [
+      "Recycled Scandinavian Pine"
+    ],
+    "dimensions": {
+      "height_cm": 78,
+      "length_cm": 152,
+      "width_cm": 90
+    },
+    "wood_options": [
+      "Recycled Scandinavian Pine",
+      "Camphor",
+      "Sudanese Teak",
+      "Mango wood",
+      "Muringa"
+    ],
+    "price_ksh": 133000,
+    "price_notes": [
+      "Excluding delivery"
+    ],
+    "turnaround_weeks": null,
+    "notes": [
+      "Available in custom sizes",
+      "Alternative woods subject to availability; price will vary"
+    ],
+    "featured": false,
+    "images": [
+      "/images/pieces/akida-dining-table/01.jpg",
+      "/images/pieces/akida-dining-table/02.jpg",
+      "/images/pieces/akida-dining-table/03.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "slug": "mvua-dining-table",
+    "name": "The Mvua Dining Table",
+    "collection": "dining-tables-chairs",
+    "name_note": null,
+    "materials": [
+      "Mango wood"
+    ],
+    "dimensions": {
+      "length_cm": 200,
+      "width_cm": 100,
+      "height_cm": 76.5
+    },
+    "wood_options": [],
+    "price_ksh": 245000,
+    "price_notes": [
+      "Excluding delivery"
+    ],
+    "turnaround_weeks": null,
+    "notes": [
+      "Irregular edge pieces: expect variations in shape, colour and dimension — no two are the same. Expect various knots and grains.",
+      "Dimensions will not be the same throughout the table."
+    ],
+    "featured": false,
+    "images": [
+      "/images/pieces/mvua-dining-table/01.jpg",
+      "/images/pieces/mvua-dining-table/02.jpg"
+    ],
+    "variants": [
+      {
+        "label": "6 seater",
+        "price_ksh": 245000,
+        "dimensions": {
+          "length_cm": 200,
+          "width_cm": 100,
+          "height_cm": 76.5
+        }
+      },
+      {
+        "label": "8 seater",
+        "price_ksh": 284000,
+        "dimensions": {
+          "length_cm": 250,
+          "width_cm": 122,
+          "height_cm": 76.5
+        }
+      }
+    ]
+  },
+  {
+    "slug": "ongoro-chair",
+    "name": "The Ongoro Chair",
+    "collection": "dining-tables-chairs",
+    "name_note": null,
+    "materials": [
+      "Mango wood"
+    ],
+    "dimensions": {
+      "total_length_cm": 53,
+      "total_depth_cm": 45,
+      "total_height_cm": 75,
+      "seat_height_cm": 45
+    },
+    "wood_options": [
+      "Mango",
+      "Sudanese Teak",
+      "Mvule",
+      "Meru Oak",
+      "Duom Palm"
+    ],
+    "price_ksh": 33000,
+    "price_notes": [
+      "Price may change depending on fabric choice",
+      "Excluding delivery"
+    ],
+    "turnaround_weeks": null,
+    "notes": [
+      "Alternative woods subject to availability; price will vary"
+    ],
+    "featured": false,
+    "images": [
+      "/images/pieces/ongoro-chair/01.jpg",
+      "/images/pieces/ongoro-chair/02.jpg",
+      "/images/pieces/ongoro-chair/03.jpg",
+      "/images/pieces/ongoro-chair/04.jpg",
+      "/images/pieces/ongoro-chair/05.jpg"
+    ],
+    "variants": [
+      {
+        "label": "Mango wood",
+        "price_ksh": 33000
+      },
+      {
+        "label": "Mvule",
+        "price_ksh": 39000
+      }
+    ]
+  },
+  {
+    "slug": "njeri-chair",
+    "name": "The Njeri Chair",
+    "collection": "dining-tables-chairs",
+    "name_note": null,
+    "materials": [
+      "Mango"
+    ],
+    "dimensions": {
+      "total_height_cm": 86,
+      "floor_to_seat_height_cm": 48,
+      "total_width_cm": 50,
+      "total_depth_cm": 50
+    },
+    "wood_options": [
+      "Mango",
+      "Sudanese Teak",
+      "Mvule",
+      "Meru Oak",
+      "Duom Palm"
+    ],
+    "price_ksh": 30000,
+    "price_notes": [
+      "Excluding delivery"
+    ],
+    "turnaround_weeks": "4",
+    "notes": [
+      "Alternative woods subject to availability; price will vary"
+    ],
+    "featured": false,
+    "images": [
+      "/images/pieces/njeri-chair/01.jpg",
+      "/images/pieces/njeri-chair/02.jpg",
+      "/images/pieces/njeri-chair/03.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "slug": "diani-chair",
+    "name": "The Diani Chair",
+    "collection": "dining-tables-chairs",
+    "name_note": "diani — a beach town on Kenya's south coast",
+    "materials": [
+      "Mvule"
+    ],
+    "dimensions": {
+      "total_height_cm": 85,
+      "floor_to_seat_height_cm": 45,
+      "total_width_cm": 55,
+      "total_depth_cm": 55
+    },
+    "wood_options": [
+      "Mango",
+      "Sudanese Teak",
+      "Mvule",
+      "Meru Oak",
+      "Duom Palm"
+    ],
+    "price_ksh": 37000,
+    "price_notes": [
+      "Excluding delivery"
+    ],
+    "turnaround_weeks": "5",
+    "notes": [
+      "Alternative woods subject to availability; price will vary"
+    ],
+    "featured": false,
+    "images": [
+      "/images/pieces/diani-chair/01.jpg",
+      "/images/pieces/diani-chair/02.jpg",
+      "/images/pieces/diani-chair/03.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "slug": "kipron-chair",
+    "name": "The Kipron Chair",
+    "collection": "dining-tables-chairs",
+    "name_note": null,
+    "materials": [
+      "Recycled Scandinavian Pine"
+    ],
+    "dimensions": {
+      "total_height_cm": 88,
+      "floor_to_seat_height_cm": 45,
+      "total_length_cm": 50
+    },
+    "wood_options": [
+      "Recycled Scandinavian Pine",
+      "Camphor",
+      "Sudanese Teak",
+      "Mango wood",
+      "Muringa"
+    ],
+    "price_ksh": 30000,
+    "price_notes": [
+      "Excluding delivery"
+    ],
+    "turnaround_weeks": null,
+    "notes": [
+      "Available in various fabrics",
+      "Alternative woods subject to availability; price will vary"
+    ],
+    "featured": false,
+    "images": [
+      "/images/pieces/kipron-chair/01.jpg",
+      "/images/pieces/kipron-chair/02.jpg",
+      "/images/pieces/kipron-chair/03.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "slug": "nakor-chair",
+    "name": "The Nakor Chair",
+    "collection": "dining-tables-chairs",
+    "name_note": null,
+    "materials": [
+      "Mahogany"
+    ],
+    "dimensions": null,
+    "wood_options": [
+      "Recycled Scandinavian Pine",
+      "Camphor",
+      "Sudanese Teak",
+      "Mango wood",
+      "Muringa"
+    ],
+    "price_ksh": 38000,
+    "price_notes": [
+      "Excluding delivery"
+    ],
+    "turnaround_weeks": null,
+    "notes": [
+      "Available in various fabrics",
+      "Alternative woods subject to availability; price will vary"
+    ],
+    "featured": false,
+    "images": [
+      "/images/pieces/nakor-chair/01.jpg",
+      "/images/pieces/nakor-chair/02.jpg",
+      "/images/pieces/nakor-chair/03.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "slug": "ongoro-bar-stool",
+    "name": "The Ongoro Bar Stool",
+    "collection": "dining-tables-chairs",
+    "name_note": null,
+    "materials": [
+      "Mvule"
+    ],
+    "dimensions": {
+      "total_width_cm": 53.5,
+      "total_depth_cm": 50,
+      "total_height_cm": 106,
+      "seat_height_cm": 71,
+      "arm_height_cm": 96
+    },
+    "wood_options": [
+      "Mango",
+      "Sudanese Teak",
+      "Mvule",
+      "Meru Oak",
+      "Duom Palm"
+    ],
+    "price_ksh": 46000,
+    "price_notes": [
+      "Excluding delivery"
+    ],
+    "turnaround_weeks": "4-5",
+    "notes": [
+      "Alternative woods subject to availability; price will vary"
+    ],
+    "featured": false,
+    "images": [
+      "/images/pieces/ongoro-bar-stool/01.jpg",
+      "/images/pieces/ongoro-bar-stool/02.jpg",
+      "/images/pieces/ongoro-bar-stool/03.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "slug": "jipe-bar-stool",
+    "name": "The Jipe Bar Stool",
+    "collection": "dining-tables-chairs",
+    "name_note": null,
+    "materials": [
+      "Mango"
+    ],
+    "dimensions": {
+      "total_length_cm": 50,
+      "total_depth_cm": 34,
+      "total_height_cm": 70
+    },
+    "wood_options": [
+      "Mango",
+      "Sudanese Teak",
+      "Mvule",
+      "Meru Oak",
+      "Duom Palm"
+    ],
+    "price_ksh": 30000,
+    "price_notes": [
+      "Excluding delivery"
+    ],
+    "turnaround_weeks": null,
+    "notes": [
+      "Alternative woods subject to availability; price will vary"
+    ],
+    "featured": false,
+    "images": [
+      "/images/pieces/jipe-bar-stool/01.jpg",
+      "/images/pieces/jipe-bar-stool/02.jpg",
+      "/images/pieces/jipe-bar-stool/03.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "slug": "oya-bed",
+    "name": "The Oya Bed",
+    "collection": "beds",
+    "name_note": null,
+    "materials": [
+      "Muringa",
+      "Block Board base",
+      "Steel support"
+    ],
+    "dimensions": {
+      "width_cm": 183,
+      "length_cm": 200
+    },
+    "wood_options": [
+      "Mango",
+      "Muringa",
+      "Meru Oak",
+      "Sudanese Teak"
+    ],
+    "price_ksh": 167000,
+    "price_notes": [
+      "Excluding delivery"
+    ],
+    "turnaround_weeks": null,
+    "notes": [
+      "Bed pictured is 6x6ft (183x200cm)",
+      "Available in various sizes",
+      "Alternative woods subject to availability; price will vary"
+    ],
+    "featured": false,
+    "images": [
+      "/images/pieces/oya-bed/01.jpg",
+      "/images/pieces/oya-bed/02.jpg",
+      "/images/pieces/oya-bed/03.jpg"
+    ],
+    "variants": [
+      {
+        "label": "5x6ft",
+        "price_ksh": 167000
+      },
+      {
+        "label": "6x6ft",
+        "price_ksh": 196000
+      }
+    ]
+  },
+  {
+    "slug": "diani-bed",
+    "name": "The Diani Bed",
+    "collection": "beds",
+    "name_note": "diani — a beach town on Kenya's south coast",
+    "materials": [
+      "Mvule",
+      "Block Board base"
+    ],
+    "dimensions": null,
+    "wood_options": [
+      "Mango",
+      "Muringa",
+      "Meru Oak",
+      "Sudanese Teak"
+    ],
+    "price_ksh": 145000,
+    "price_notes": [
+      "Excluding delivery"
+    ],
+    "turnaround_weeks": null,
+    "notes": [
+      "Bed pictured is 4x6ft",
+      "Alternative woods subject to availability; price will vary"
+    ],
+    "featured": false,
+    "images": [
+      "/images/pieces/diani-bed/01.jpg",
+      "/images/pieces/diani-bed/02.jpg"
+    ],
+    "variants": [
+      {
+        "label": "4x6ft",
+        "price_ksh": 145000
+      },
+      {
+        "label": "5x6ft",
+        "price_ksh": 173000
+      },
+      {
+        "label": "6x6ft",
+        "price_ksh": 202000
+      }
+    ]
+  },
+  {
+    "slug": "wamiru-bed",
+    "name": "The Wamiru Bed",
+    "collection": "beds",
+    "name_note": null,
+    "materials": [
+      "Mango wood",
+      "Block Board base"
+    ],
+    "dimensions": {
+      "width_cm": 190,
+      "length_cm": 200
+    },
+    "wood_options": [
+      "Mango",
+      "Muringa",
+      "Meru Oak",
+      "Sudanese Teak"
+    ],
+    "price_ksh": 164000,
+    "price_notes": [
+      "Excluding delivery"
+    ],
+    "turnaround_weeks": null,
+    "notes": [
+      "Bed pictured is 6x6ft (190x200cm)",
+      "Alternative woods subject to availability; price will vary"
+    ],
+    "featured": false,
+    "images": [
+      "/images/pieces/wamiru-bed/01.jpg",
+      "/images/pieces/wamiru-bed/02.jpg",
+      "/images/pieces/wamiru-bed/03.jpg"
+    ],
+    "variants": [
+      {
+        "label": "5x6ft",
+        "price_ksh": 164000
+      },
+      {
+        "label": "6x6ft",
+        "price_ksh": 187000
+      }
+    ]
+  },
+  {
+    "slug": "brass-bar-bed",
+    "name": "Brass Bar Bed",
+    "collection": "beds",
+    "name_note": null,
+    "materials": [
+      "Recycled Scandinavian Pine",
+      "Block Board",
+      "Block Board base"
+    ],
+    "dimensions": {
+      "width_cm": 153,
+      "length_cm": 200
+    },
+    "wood_options": [
+      "Mango",
+      "Muringa",
+      "Meru Oak",
+      "Sudanese Teak"
+    ],
+    "price_ksh": 115000,
+    "price_notes": [
+      "Excluding delivery"
+    ],
+    "turnaround_weeks": null,
+    "notes": [
+      "Bed pictured is 5x6ft (153x200cm)",
+      "Available in various sizes",
+      "Alternative woods subject to availability; price will vary"
+    ],
+    "featured": false,
+    "images": [
+      "/images/pieces/brass-bar-bed/01.jpg"
+    ],
+    "variants": [
+      {
+        "label": "5x6ft",
+        "price_ksh": 115000
+      },
+      {
+        "label": "6x6ft",
+        "price_ksh": 125000
+      }
+    ]
+  },
+  {
+    "slug": "spindle-bed",
+    "name": "The Spindle Bed",
+    "collection": "beds",
+    "name_note": null,
+    "materials": [
+      "Camphor",
+      "Block Board base"
+    ],
+    "dimensions": {
+      "width_cm": 153,
+      "length_cm": 200
+    },
+    "wood_options": [
+      "Mango",
+      "Muringa",
+      "Meru Oak",
+      "Sudanese Teak"
+    ],
+    "price_ksh": 126000,
+    "price_notes": [
+      "Excluding delivery"
+    ],
+    "turnaround_weeks": null,
+    "notes": [
+      "Bed pictured is 5x6ft (153x200cm)",
+      "Alternative woods subject to availability; price will vary"
+    ],
+    "featured": false,
+    "images": [
+      "/images/pieces/spindle-bed/01.jpg",
+      "/images/pieces/spindle-bed/02.jpg"
+    ],
+    "variants": [
+      {
+        "label": "Camphor · 5x6ft",
+        "price_ksh": 126000
+      },
+      {
+        "label": "Camphor · 6x6ft",
+        "price_ksh": 137000
+      },
+      {
+        "label": "Mvule · 5x6ft",
+        "price_ksh": 148000
+      },
+      {
+        "label": "Mvule · 6x6ft",
+        "price_ksh": 161000
+      }
+    ]
+  },
+  {
+    "slug": "lemaiyan-bed",
+    "name": "The Lemaiyan Bed",
+    "collection": "beds",
+    "name_note": null,
+    "materials": [
+      "Mvule",
+      "Block Board base",
+      "Steel support"
+    ],
+    "dimensions": {
+      "width_cm": 153,
+      "length_cm": 200
+    },
+    "wood_options": [
+      "Mango",
+      "Muringa",
+      "Meru Oak",
+      "Sudanese Teak"
+    ],
+    "price_ksh": 154000,
+    "price_notes": [
+      "Excluding delivery"
+    ],
+    "turnaround_weeks": null,
+    "notes": [
+      "Bed pictured is 5x6ft (153x200cm)",
+      "Alternative woods subject to availability; price will vary"
+    ],
+    "featured": false,
+    "images": [
+      "/images/pieces/lemaiyan-bed/01.jpg",
+      "/images/pieces/lemaiyan-bed/02.jpg",
+      "/images/pieces/lemaiyan-bed/03.jpg"
+    ],
+    "variants": [
+      {
+        "label": "4x6ft",
+        "price_ksh": 154000
+      },
+      {
+        "label": "5x6ft",
+        "price_ksh": 166000
+      },
+      {
+        "label": "6x6ft",
+        "price_ksh": 189000
+      }
+    ]
+  },
+  {
+    "slug": "kipron-bed",
+    "name": "The Kipron Bed",
+    "collection": "beds",
+    "name_note": null,
+    "materials": [
+      "Mango wood"
+    ],
+    "dimensions": {
+      "width_cm": 190,
+      "length_cm": 200
+    },
+    "wood_options": [
+      "Mango",
+      "Muringa",
+      "Meru Oak",
+      "Sudanese Teak"
+    ],
+    "price_ksh": 128000,
+    "price_notes": [
+      "Excluding delivery"
+    ],
+    "turnaround_weeks": null,
+    "notes": [
+      "Bed pictured is 6x6ft (190x200cm)",
+      "Alternative woods subject to availability; price will vary"
+    ],
+    "featured": false,
+    "images": [
+      "/images/pieces/kipron-bed/01.jpg",
+      "/images/pieces/kipron-bed/02.jpg",
+      "/images/pieces/kipron-bed/03.jpg"
+    ],
+    "variants": [
+      {
+        "label": "5x6ft",
+        "price_ksh": 128000
+      },
+      {
+        "label": "6x6ft",
+        "price_ksh": 139000
+      }
+    ]
+  },
+  {
+    "slug": "kerubo-bed",
+    "name": "The Kerubo Bed",
+    "collection": "beds",
+    "name_note": null,
+    "materials": [
+      "Recycled Scandinavian Pine",
+      "High density foam"
+    ],
+    "dimensions": {
+      "width_cm": 153,
+      "length_cm": 190
+    },
+    "wood_options": [],
+    "price_ksh": 102000,
+    "price_notes": [
+      "Excluding delivery"
+    ],
+    "turnaround_weeks": null,
+    "notes": [
+      "Bed pictured is 5x6ft (153x190cm)",
+      "Available in various fabrics",
+      "Available with wooden legs"
+    ],
+    "featured": false,
+    "images": [
+      "/images/pieces/kerubo-bed/01.jpg",
+      "/images/pieces/kerubo-bed/02.jpg",
+      "/images/pieces/kerubo-bed/03.jpg"
+    ],
+    "variants": [
+      {
+        "label": "5x6ft",
+        "price_ksh": 102000
+      },
+      {
+        "label": "6x6ft",
+        "price_ksh": 110000
+      }
+    ]
+  },
+  {
+    "slug": "osoro-bed",
+    "name": "The Osoro Bed",
+    "collection": "beds",
+    "name_note": null,
+    "materials": [
+      "Muringa wood"
+    ],
+    "dimensions": {
+      "width_cm": 153,
+      "length_cm": 190
+    },
+    "wood_options": [
+      "Mango",
+      "Muringa",
+      "Meru Oak",
+      "Sudanese Teak"
+    ],
+    "price_ksh": 110000,
+    "price_notes": [
+      "Excluding delivery"
+    ],
+    "turnaround_weeks": null,
+    "notes": [
+      "Bed pictured is 5x6ft (153x190cm)",
+      "Available in various sizes",
+      "Available in various fabrics",
+      "Alternative woods subject to availability; price will vary"
+    ],
+    "featured": false,
+    "images": [
+      "/images/pieces/osoro-bed/01.jpg",
+      "/images/pieces/osoro-bed/02.jpg",
+      "/images/pieces/osoro-bed/03.jpg"
+    ],
+    "variants": [
+      {
+        "label": "5x6ft",
+        "price_ksh": 110000
+      },
+      {
+        "label": "6x6ft",
+        "price_ksh": 120000
+      }
+    ]
+  },
+  {
+    "slug": "kitur-sofa",
+    "name": "The Kitur Sofa",
+    "collection": "sofas",
+    "name_note": null,
+    "materials": [
+      "Cypress frame",
+      "Elastic webbing",
+      "High density foam",
+      "Dacron lining"
+    ],
+    "dimensions": {
+      "total_height_cm": 80,
+      "total_length_cm": 270,
+      "total_depth_cm": 100,
+      "floor_to_seat_height_cm": 45,
+      "inside_length_cm": 238,
+      "inside_depth_cm": 83,
+      "arm_height_cm": 38,
+      "leg_height_cm": 8
+    },
+    "wood_options": [],
+    "price_ksh": 217800,
+    "price_notes": [
+      "Excluding delivery"
+    ],
+    "turnaround_weeks": null,
+    "notes": [
+      "This is a deep sofa",
+      "Available in various fabrics",
+      "Wood on legs can be customised"
+    ],
+    "featured": false,
+    "images": [
+      "/images/pieces/kitur-sofa/01.jpg",
+      "/images/pieces/kitur-sofa/02.jpg",
+      "/images/pieces/kitur-sofa/03.jpg",
+      "/images/pieces/kitur-sofa/04.jpg",
+      "/images/pieces/kitur-sofa/05.jpg",
+      "/images/pieces/kitur-sofa/06.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "slug": "asili-sofa",
+    "name": "The Asili Sofa",
+    "collection": "sofas",
+    "name_note": null,
+    "materials": [
+      "Cypress frame",
+      "Spring pockets",
+      "High density foam",
+      "Dacron lining"
+    ],
+    "dimensions": {
+      "total_height_cm": 205,
+      "total_length_cm": 175,
+      "total_depth_cm": 175,
+      "pouf_length_cm": 85,
+      "pouf_width_cm": 85,
+      "pouf_height_cm": 45.5,
+      "floor_to_seat_height_cm": 45,
+      "inside_length_cm": 238,
+      "inside_depth_with_pillow_cm": 60,
+      "inside_depth_without_pillow_cm": 80
+    },
+    "wood_options": [],
+    "price_ksh": 268000,
+    "price_notes": [
+      "Excluding delivery"
+    ],
+    "turnaround_weeks": null,
+    "notes": [
+      "Includes pouf — please see drawing",
+      "Available in various fabrics"
+    ],
+    "featured": false,
+    "images": [
+      "/images/pieces/asili-sofa/01.jpg",
+      "/images/pieces/asili-sofa/02.jpg",
+      "/images/pieces/asili-sofa/03.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "slug": "bora-sofa",
+    "name": "The Bora Sofa",
+    "collection": "sofas",
+    "name_note": null,
+    "materials": [
+      "Cypress frame",
+      "High density foam",
+      "Dacron lining"
+    ],
+    "dimensions": {
+      "total_height_cm": 90,
+      "total_length_cm": 200,
+      "total_depth_cm": 105,
+      "floor_to_seat_height_cm": 45
+    },
+    "wood_options": [],
+    "price_ksh": 205000,
+    "price_notes": [
+      "Excluding delivery"
+    ],
+    "turnaround_weeks": null,
+    "notes": [
+      "Total height slopes down from 90cm to 77cm; total depth reduces from 105cm to 50cm",
+      "Available in various fabrics"
+    ],
+    "featured": false,
+    "images": [
+      "/images/pieces/bora-sofa/01.jpg",
+      "/images/pieces/bora-sofa/02.jpg",
+      "/images/pieces/bora-sofa/03.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "slug": "kendi-sofa",
+    "name": "The Kendi Sofa",
+    "collection": "sofas",
+    "name_note": null,
+    "materials": [
+      "Recycled Scandinavian Pine frame",
+      "Elastic webbing",
+      "High density foam",
+      "Spring pockets",
+      "Dacron lining"
+    ],
+    "dimensions": {
+      "total_height_cm": 91,
+      "total_length_cm": 151,
+      "total_depth_cm": 110,
+      "floor_to_seat_height_cm": 45,
+      "inside_length_cm": 118,
+      "inside_depth_cm": 85,
+      "arm_height_cm": 20,
+      "leg_height_cm": 12.5
+    },
+    "wood_options": [],
+    "price_ksh": 149600,
+    "price_notes": [
+      "Excluding delivery"
+    ],
+    "turnaround_weeks": null,
+    "notes": [
+      "Available in various fabrics",
+      "Wood on legs can be customised"
+    ],
+    "featured": false,
+    "images": [
+      "/images/pieces/kendi-sofa/01.jpg",
+      "/images/pieces/kendi-sofa/02.jpg",
+      "/images/pieces/kendi-sofa/03.jpg",
+      "/images/pieces/kendi-sofa/04.jpg",
+      "/images/pieces/kendi-sofa/05.jpg",
+      "/images/pieces/kendi-sofa/06.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "slug": "mukuhi-sofa",
+    "name": "The Mukuhi Sofa",
+    "collection": "sofas",
+    "name_note": null,
+    "materials": [
+      "Recycled Scandinavian Pine frame",
+      "Elastic webbing",
+      "High density foam",
+      "Spring pockets",
+      "Dacron lining"
+    ],
+    "dimensions": {
+      "total_height_cm": 94,
+      "total_length_cm": 234,
+      "total_depth_cm": 108,
+      "floor_to_seat_height_cm": 48,
+      "inside_length_cm": 200,
+      "inside_depth_cm": 85,
+      "arm_height_cm": 15,
+      "leg_height_cm": 16
+    },
+    "wood_options": [],
+    "price_ksh": 184600,
+    "price_notes": [
+      "Excluding delivery"
+    ],
+    "turnaround_weeks": null,
+    "notes": [
+      "Available in various fabrics",
+      "Wood on legs can be customised"
+    ],
+    "featured": false,
+    "images": [
+      "/images/pieces/mukuhi-sofa/01.jpg",
+      "/images/pieces/mukuhi-sofa/02.jpg",
+      "/images/pieces/mukuhi-sofa/03.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "slug": "matu-sofa",
+    "name": "The Matu Sofa",
+    "collection": "sofas",
+    "name_note": null,
+    "materials": [
+      "Recycled Scandinavian Pine",
+      "Elastic webbing",
+      "High density foam",
+      "Spring pockets",
+      "Dacron lining"
+    ],
+    "dimensions": {
+      "total_height_cm": 68,
+      "floor_to_seat_height_cm": 40,
+      "total_length_cm": 198,
+      "total_depth_cm": 87
+    },
+    "wood_options": [],
+    "price_ksh": 123200,
+    "price_notes": [
+      "Excluding delivery"
+    ],
+    "turnaround_weeks": null,
+    "notes": [
+      "Available in various fabrics",
+      "Wood on legs can be customised"
+    ],
+    "featured": false,
+    "images": [
+      "/images/pieces/matu-sofa/01.jpg",
+      "/images/pieces/matu-sofa/02.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "slug": "sericho-sofa",
+    "name": "The Sericho Sofa",
+    "collection": "sofas",
+    "name_note": null,
+    "materials": [
+      "Recycled Scandinavian Pine",
+      "Elastic webbing",
+      "High density foam",
+      "Spring pockets",
+      "Dacron lining"
+    ],
+    "dimensions": {
+      "total_height_cm": 89,
+      "floor_to_seat_height_cm": 41.5,
+      "height_with_pillows_cm": 89,
+      "total_length_cm": 198,
+      "total_depth_cm": 96.5
+    },
+    "wood_options": [],
+    "price_ksh": 163900,
+    "price_notes": [
+      "Excluding delivery"
+    ],
+    "turnaround_weeks": null,
+    "notes": [
+      "Available in various fabrics",
+      "Wood on legs can be customised"
+    ],
+    "featured": false,
+    "images": [
+      "/images/pieces/sericho-sofa/01.jpg",
+      "/images/pieces/sericho-sofa/02.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "slug": "ekai-sofa",
+    "name": "The Ekai Sofa",
+    "collection": "sofas",
+    "name_note": null,
+    "materials": [
+      "Recycled Scandinavian Pine",
+      "Elastic webbing",
+      "High density foam",
+      "Spring pockets",
+      "Dacron lining"
+    ],
+    "dimensions": {
+      "total_height_cm": 84,
+      "floor_to_seat_height_cm": 46,
+      "total_length_cm": 230,
+      "total_depth_cm": 110,
+      "inside_depth_including_pillows_cm": 76
+    },
+    "wood_options": [],
+    "price_ksh": 195300,
+    "price_notes": [
+      "Excluding delivery"
+    ],
+    "turnaround_weeks": null,
+    "notes": [
+      "Available in various fabrics",
+      "Wood on legs can be customised"
+    ],
+    "featured": false,
+    "images": [
+      "/images/pieces/ekai-sofa/01.jpg",
+      "/images/pieces/ekai-sofa/02.jpg",
+      "/images/pieces/ekai-sofa/03.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "slug": "ajao-sofa",
+    "name": "The Ajao Sofa",
+    "collection": "sofas",
+    "name_note": null,
+    "materials": [
+      "Recycled Scandinavian Pine",
+      "Elastic webbing",
+      "High density foam",
+      "Spring pockets",
+      "Dacron lining"
+    ],
+    "dimensions": {
+      "total_height_cm": 84,
+      "floor_to_seat_height_cm": 46,
+      "total_length_cm": 203,
+      "inside_depth_cm": 78,
+      "inside_depth_including_pillows_cm": 76
+    },
+    "wood_options": [],
+    "price_ksh": 217800,
+    "price_notes": [
+      "Excluding delivery"
+    ],
+    "turnaround_weeks": null,
+    "notes": [
+      "Available in various fabrics",
+      "Legs available in Mango wood, Sudanese Teak, Camphor or Recycled Scandinavian Pine"
+    ],
+    "featured": false,
+    "images": [
+      "/images/pieces/ajao-sofa/01.jpg",
+      "/images/pieces/ajao-sofa/02.jpg",
+      "/images/pieces/ajao-sofa/03.jpg"
+    ],
+    "variants": []
+  },
+  {
+    "slug": "rug-01",
+    "name": "Rug #1",
+    "collection": "woven-rugs",
+    "name_note": null,
+    "materials": [
+      "Handwoven"
+    ],
+    "dimensions": null,
+    "wood_options": [],
+    "price_ksh": 16000,
+    "price_notes": [
+      "Excluding delivery"
+    ],
+    "turnaround_weeks": "5-14",
+    "notes": [
+      "Available in various colours and sizes",
+      "Quote the rug number when placing an order",
+      "Once an order is placed, colour or design cannot be changed",
+      "Expect slight variations in colour — each rug is handmade"
+    ],
+    "featured": false,
+    "images": [
+      "/images/pieces/rug-01/01.jpg",
+      "/images/pieces/rug-01/02.jpg",
+      "/images/pieces/rug-01/03.jpg",
+      "/images/pieces/rug-01/04.jpg"
+    ],
+    "variants": [
+      {
+        "label": "2x4ft",
+        "price_ksh": 16000
+      },
+      {
+        "label": "3x5ft",
+        "price_ksh": 30000
+      },
+      {
+        "label": "4x6ft",
+        "price_ksh": 47000
+      },
+      {
+        "label": "5x7ft",
+        "price_ksh": 69000
+      },
+      {
+        "label": "5x8ft",
+        "price_ksh": 79000
+      },
+      {
+        "label": "7x7ft",
+        "price_ksh": 97000
+      },
+      {
+        "label": "7x10ft",
+        "price_ksh": 138000
+      },
+      {
+        "label": "8x10ft",
+        "price_ksh": 158000
+      },
+      {
+        "label": "2.5x6ft · Runner",
+        "price_ksh": 30000
+      },
+      {
+        "label": "2.5x10ft · Runner",
+        "price_ksh": 49000
+      }
+    ]
+  },
+  {
+    "slug": "rug-02",
+    "name": "Rug #2",
+    "collection": "woven-rugs",
+    "name_note": null,
+    "materials": [
+      "Handwoven"
+    ],
+    "dimensions": null,
+    "wood_options": [],
+    "price_ksh": 16000,
+    "price_notes": [
+      "Excluding delivery"
+    ],
+    "turnaround_weeks": "5-14",
+    "notes": [
+      "Available in various colours and sizes",
+      "Quote the rug number when placing an order",
+      "Once an order is placed, colour or design cannot be changed",
+      "Expect slight variations in colour — each rug is handmade"
+    ],
+    "featured": false,
+    "images": [
+      "/images/pieces/rug-02/01.jpg"
+    ],
+    "variants": [
+      {
+        "label": "2x4ft",
+        "price_ksh": 16000
+      },
+      {
+        "label": "3x5ft",
+        "price_ksh": 30000
+      },
+      {
+        "label": "4x6ft",
+        "price_ksh": 47000
+      },
+      {
+        "label": "5x7ft",
+        "price_ksh": 69000
+      },
+      {
+        "label": "5x8ft",
+        "price_ksh": 79000
+      },
+      {
+        "label": "7x7ft",
+        "price_ksh": 97000
+      },
+      {
+        "label": "7x10ft",
+        "price_ksh": 138000
+      },
+      {
+        "label": "8x10ft",
+        "price_ksh": 158000
+      },
+      {
+        "label": "2.5x6ft · Runner",
+        "price_ksh": 30000
+      },
+      {
+        "label": "2.5x10ft · Runner",
+        "price_ksh": 49000
+      }
+    ]
+  },
+  {
+    "slug": "rug-03",
+    "name": "Rug #3",
+    "collection": "woven-rugs",
+    "name_note": null,
+    "materials": [
+      "Handwoven"
+    ],
+    "dimensions": null,
+    "wood_options": [],
+    "price_ksh": 16000,
+    "price_notes": [
+      "Excluding delivery"
+    ],
+    "turnaround_weeks": "5-14",
+    "notes": [
+      "Available in various colours and sizes",
+      "Quote the rug number when placing an order",
+      "Once an order is placed, colour or design cannot be changed",
+      "Expect slight variations in colour — each rug is handmade"
+    ],
+    "featured": false,
+    "images": [
+      "/images/pieces/rug-03/01.jpg"
+    ],
+    "variants": [
+      {
+        "label": "2x4ft",
+        "price_ksh": 16000
+      },
+      {
+        "label": "3x5ft",
+        "price_ksh": 30000
+      },
+      {
+        "label": "4x6ft",
+        "price_ksh": 47000
+      },
+      {
+        "label": "5x7ft",
+        "price_ksh": 69000
+      },
+      {
+        "label": "5x8ft",
+        "price_ksh": 79000
+      },
+      {
+        "label": "7x7ft",
+        "price_ksh": 97000
+      },
+      {
+        "label": "7x10ft",
+        "price_ksh": 138000
+      },
+      {
+        "label": "8x10ft",
+        "price_ksh": 158000
+      },
+      {
+        "label": "2.5x6ft · Runner",
+        "price_ksh": 30000
+      },
+      {
+        "label": "2.5x10ft · Runner",
+        "price_ksh": 49000
+      }
+    ]
+  },
+  {
+    "slug": "rug-04",
+    "name": "Rug #4",
+    "collection": "woven-rugs",
+    "name_note": null,
+    "materials": [
+      "Handwoven"
+    ],
+    "dimensions": null,
+    "wood_options": [],
+    "price_ksh": 16000,
+    "price_notes": [
+      "Excluding delivery"
+    ],
+    "turnaround_weeks": "5-14",
+    "notes": [
+      "Available in various colours and sizes",
+      "Quote the rug number when placing an order",
+      "Once an order is placed, colour or design cannot be changed",
+      "Expect slight variations in colour — each rug is handmade"
+    ],
+    "featured": false,
+    "images": [
+      "/images/pieces/rug-04/01.jpg"
+    ],
+    "variants": [
+      {
+        "label": "2x4ft",
+        "price_ksh": 16000
+      },
+      {
+        "label": "3x5ft",
+        "price_ksh": 30000
+      },
+      {
+        "label": "4x6ft",
+        "price_ksh": 47000
+      },
+      {
+        "label": "5x7ft",
+        "price_ksh": 69000
+      },
+      {
+        "label": "5x8ft",
+        "price_ksh": 79000
+      },
+      {
+        "label": "7x7ft",
+        "price_ksh": 97000
+      },
+      {
+        "label": "7x10ft",
+        "price_ksh": 138000
+      },
+      {
+        "label": "8x10ft",
+        "price_ksh": 158000
+      },
+      {
+        "label": "2.5x6ft · Runner",
+        "price_ksh": 30000
+      },
+      {
+        "label": "2.5x10ft · Runner",
+        "price_ksh": 49000
+      }
+    ]
+  },
+  {
+    "slug": "rug-05",
+    "name": "Rug #5",
+    "collection": "woven-rugs",
+    "name_note": null,
+    "materials": [
+      "Handwoven"
+    ],
+    "dimensions": null,
+    "wood_options": [],
+    "price_ksh": 16000,
+    "price_notes": [
+      "Excluding delivery"
+    ],
+    "turnaround_weeks": "5-14",
+    "notes": [
+      "Available in various colours and sizes",
+      "Quote the rug number when placing an order",
+      "Once an order is placed, colour or design cannot be changed",
+      "Expect slight variations in colour — each rug is handmade"
+    ],
+    "featured": false,
+    "images": [
+      "/images/pieces/rug-05/01.jpg"
+    ],
+    "variants": [
+      {
+        "label": "2x4ft",
+        "price_ksh": 16000
+      },
+      {
+        "label": "3x5ft",
+        "price_ksh": 30000
+      },
+      {
+        "label": "4x6ft",
+        "price_ksh": 47000
+      },
+      {
+        "label": "5x7ft",
+        "price_ksh": 69000
+      },
+      {
+        "label": "5x8ft",
+        "price_ksh": 79000
+      },
+      {
+        "label": "7x7ft",
+        "price_ksh": 97000
+      },
+      {
+        "label": "7x10ft",
+        "price_ksh": 138000
+      },
+      {
+        "label": "8x10ft",
+        "price_ksh": 158000
+      },
+      {
+        "label": "2.5x6ft · Runner",
+        "price_ksh": 30000
+      },
+      {
+        "label": "2.5x10ft · Runner",
+        "price_ksh": 49000
+      }
+    ]
+  },
+  {
+    "slug": "rug-06",
+    "name": "Rug #6",
+    "collection": "woven-rugs",
+    "name_note": null,
+    "materials": [
+      "Handwoven"
+    ],
+    "dimensions": null,
+    "wood_options": [],
+    "price_ksh": 16000,
+    "price_notes": [
+      "Excluding delivery"
+    ],
+    "turnaround_weeks": "5-14",
+    "notes": [
+      "Available in various colours and sizes",
+      "Quote the rug number when placing an order",
+      "Once an order is placed, colour or design cannot be changed",
+      "Expect slight variations in colour — each rug is handmade"
+    ],
+    "featured": false,
+    "images": [
+      "/images/pieces/rug-06/01.jpg"
+    ],
+    "variants": [
+      {
+        "label": "2x4ft",
+        "price_ksh": 16000
+      },
+      {
+        "label": "3x5ft",
+        "price_ksh": 30000
+      },
+      {
+        "label": "4x6ft",
+        "price_ksh": 47000
+      },
+      {
+        "label": "5x7ft",
+        "price_ksh": 69000
+      },
+      {
+        "label": "5x8ft",
+        "price_ksh": 79000
+      },
+      {
+        "label": "7x7ft",
+        "price_ksh": 97000
+      },
+      {
+        "label": "7x10ft",
+        "price_ksh": 138000
+      },
+      {
+        "label": "8x10ft",
+        "price_ksh": 158000
+      },
+      {
+        "label": "2.5x6ft · Runner",
+        "price_ksh": 30000
+      },
+      {
+        "label": "2.5x10ft · Runner",
+        "price_ksh": 49000
+      }
+    ]
+  },
+  {
+    "slug": "rug-07",
+    "name": "Rug #7",
+    "collection": "woven-rugs",
+    "name_note": null,
+    "materials": [
+      "Handwoven"
+    ],
+    "dimensions": null,
+    "wood_options": [],
+    "price_ksh": 16000,
+    "price_notes": [
+      "Excluding delivery"
+    ],
+    "turnaround_weeks": "5-14",
+    "notes": [
+      "Available in various colours and sizes",
+      "Quote the rug number when placing an order",
+      "Once an order is placed, colour or design cannot be changed",
+      "Expect slight variations in colour — each rug is handmade"
+    ],
+    "featured": false,
+    "images": [
+      "/images/pieces/rug-07/01.jpg"
+    ],
+    "variants": [
+      {
+        "label": "2x4ft",
+        "price_ksh": 16000
+      },
+      {
+        "label": "3x5ft",
+        "price_ksh": 30000
+      },
+      {
+        "label": "4x6ft",
+        "price_ksh": 47000
+      },
+      {
+        "label": "5x7ft",
+        "price_ksh": 69000
+      },
+      {
+        "label": "5x8ft",
+        "price_ksh": 79000
+      },
+      {
+        "label": "7x7ft",
+        "price_ksh": 97000
+      },
+      {
+        "label": "7x10ft",
+        "price_ksh": 138000
+      },
+      {
+        "label": "8x10ft",
+        "price_ksh": 158000
+      },
+      {
+        "label": "2.5x6ft · Runner",
+        "price_ksh": 30000
+      },
+      {
+        "label": "2.5x10ft · Runner",
+        "price_ksh": 49000
+      }
+    ]
+  },
+  {
+    "slug": "rug-08",
+    "name": "Rug #8",
+    "collection": "woven-rugs",
+    "name_note": null,
+    "materials": [
+      "Handwoven"
+    ],
+    "dimensions": null,
+    "wood_options": [],
+    "price_ksh": 16000,
+    "price_notes": [
+      "Excluding delivery"
+    ],
+    "turnaround_weeks": "5-14",
+    "notes": [
+      "Available in various colours and sizes",
+      "Quote the rug number when placing an order",
+      "Once an order is placed, colour or design cannot be changed",
+      "Expect slight variations in colour — each rug is handmade"
+    ],
+    "featured": false,
+    "images": [
+      "/images/pieces/rug-08/01.jpg"
+    ],
+    "variants": [
+      {
+        "label": "2x4ft",
+        "price_ksh": 16000
+      },
+      {
+        "label": "3x5ft",
+        "price_ksh": 30000
+      },
+      {
+        "label": "4x6ft",
+        "price_ksh": 47000
+      },
+      {
+        "label": "5x7ft",
+        "price_ksh": 69000
+      },
+      {
+        "label": "5x8ft",
+        "price_ksh": 79000
+      },
+      {
+        "label": "7x7ft",
+        "price_ksh": 97000
+      },
+      {
+        "label": "7x10ft",
+        "price_ksh": 138000
+      },
+      {
+        "label": "8x10ft",
+        "price_ksh": 158000
+      },
+      {
+        "label": "2.5x6ft · Runner",
+        "price_ksh": 30000
+      },
+      {
+        "label": "2.5x10ft · Runner",
+        "price_ksh": 49000
+      }
+    ]
+  },
+  {
+    "slug": "rug-09",
+    "name": "Rug #9",
+    "collection": "woven-rugs",
+    "name_note": null,
+    "materials": [
+      "Handwoven"
+    ],
+    "dimensions": null,
+    "wood_options": [],
+    "price_ksh": 16000,
+    "price_notes": [
+      "Excluding delivery"
+    ],
+    "turnaround_weeks": "5-14",
+    "notes": [
+      "Available in various colours and sizes",
+      "Quote the rug number when placing an order",
+      "Once an order is placed, colour or design cannot be changed",
+      "Expect slight variations in colour — each rug is handmade"
+    ],
+    "featured": false,
+    "images": [
+      "/images/pieces/rug-09/01.jpg"
+    ],
+    "variants": [
+      {
+        "label": "2x4ft",
+        "price_ksh": 16000
+      },
+      {
+        "label": "3x5ft",
+        "price_ksh": 30000
+      },
+      {
+        "label": "4x6ft",
+        "price_ksh": 47000
+      },
+      {
+        "label": "5x7ft",
+        "price_ksh": 69000
+      },
+      {
+        "label": "5x8ft",
+        "price_ksh": 79000
+      },
+      {
+        "label": "7x7ft",
+        "price_ksh": 97000
+      },
+      {
+        "label": "7x10ft",
+        "price_ksh": 138000
+      },
+      {
+        "label": "8x10ft",
+        "price_ksh": 158000
+      },
+      {
+        "label": "2.5x6ft · Runner",
+        "price_ksh": 30000
+      },
+      {
+        "label": "2.5x10ft · Runner",
+        "price_ksh": 49000
+      }
+    ]
+  },
+  {
+    "slug": "rug-10",
+    "name": "Rug #10",
+    "collection": "woven-rugs",
+    "name_note": null,
+    "materials": [
+      "Handwoven"
+    ],
+    "dimensions": null,
+    "wood_options": [],
+    "price_ksh": 16000,
+    "price_notes": [
+      "Excluding delivery"
+    ],
+    "turnaround_weeks": "5-14",
+    "notes": [
+      "Available in various colours and sizes",
+      "Quote the rug number when placing an order",
+      "Once an order is placed, colour or design cannot be changed",
+      "Expect slight variations in colour — each rug is handmade"
+    ],
+    "featured": false,
+    "images": [
+      "/images/pieces/rug-10/01.jpg"
+    ],
+    "variants": [
+      {
+        "label": "2x4ft",
+        "price_ksh": 16000
+      },
+      {
+        "label": "3x5ft",
+        "price_ksh": 30000
+      },
+      {
+        "label": "4x6ft",
+        "price_ksh": 47000
+      },
+      {
+        "label": "5x7ft",
+        "price_ksh": 69000
+      },
+      {
+        "label": "5x8ft",
+        "price_ksh": 79000
+      },
+      {
+        "label": "7x7ft",
+        "price_ksh": 97000
+      },
+      {
+        "label": "7x10ft",
+        "price_ksh": 138000
+      },
+      {
+        "label": "8x10ft",
+        "price_ksh": 158000
+      },
+      {
+        "label": "2.5x6ft · Runner",
+        "price_ksh": 30000
+      },
+      {
+        "label": "2.5x10ft · Runner",
+        "price_ksh": 49000
+      }
+    ]
+  },
+  {
+    "slug": "rug-11",
+    "name": "Rug #11",
+    "collection": "woven-rugs",
+    "name_note": null,
+    "materials": [
+      "Handwoven"
+    ],
+    "dimensions": null,
+    "wood_options": [],
+    "price_ksh": 16000,
+    "price_notes": [
+      "Excluding delivery"
+    ],
+    "turnaround_weeks": "5-14",
+    "notes": [
+      "Available in various colours and sizes",
+      "Quote the rug number when placing an order",
+      "Once an order is placed, colour or design cannot be changed",
+      "Expect slight variations in colour — each rug is handmade"
+    ],
+    "featured": false,
+    "images": [
+      "/images/pieces/rug-11/01.jpg"
+    ],
+    "variants": [
+      {
+        "label": "2x4ft",
+        "price_ksh": 16000
+      },
+      {
+        "label": "3x5ft",
+        "price_ksh": 30000
+      },
+      {
+        "label": "4x6ft",
+        "price_ksh": 47000
+      },
+      {
+        "label": "5x7ft",
+        "price_ksh": 69000
+      },
+      {
+        "label": "5x8ft",
+        "price_ksh": 79000
+      },
+      {
+        "label": "7x7ft",
+        "price_ksh": 97000
+      },
+      {
+        "label": "7x10ft",
+        "price_ksh": 138000
+      },
+      {
+        "label": "8x10ft",
+        "price_ksh": 158000
+      },
+      {
+        "label": "2.5x6ft · Runner",
+        "price_ksh": 30000
+      },
+      {
+        "label": "2.5x10ft · Runner",
+        "price_ksh": 49000
+      }
+    ]
+  },
+  {
+    "slug": "rug-12",
+    "name": "Rug #12",
+    "collection": "woven-rugs",
+    "name_note": null,
+    "materials": [
+      "Handwoven"
+    ],
+    "dimensions": null,
+    "wood_options": [],
+    "price_ksh": 16000,
+    "price_notes": [
+      "Excluding delivery"
+    ],
+    "turnaround_weeks": "5-14",
+    "notes": [
+      "Available in various colours and sizes",
+      "Quote the rug number when placing an order",
+      "Once an order is placed, colour or design cannot be changed",
+      "Expect slight variations in colour — each rug is handmade"
+    ],
+    "featured": false,
+    "images": [
+      "/images/pieces/rug-12/01.jpg"
+    ],
+    "variants": [
+      {
+        "label": "2x4ft",
+        "price_ksh": 16000
+      },
+      {
+        "label": "3x5ft",
+        "price_ksh": 30000
+      },
+      {
+        "label": "4x6ft",
+        "price_ksh": 47000
+      },
+      {
+        "label": "5x7ft",
+        "price_ksh": 69000
+      },
+      {
+        "label": "5x8ft",
+        "price_ksh": 79000
+      },
+      {
+        "label": "7x7ft",
+        "price_ksh": 97000
+      },
+      {
+        "label": "7x10ft",
+        "price_ksh": 138000
+      },
+      {
+        "label": "8x10ft",
+        "price_ksh": 158000
+      },
+      {
+        "label": "2.5x6ft · Runner",
+        "price_ksh": 30000
+      },
+      {
+        "label": "2.5x10ft · Runner",
+        "price_ksh": 49000
+      }
+    ]
+  },
+  {
+    "slug": "rug-13",
+    "name": "Rug #13",
+    "collection": "woven-rugs",
+    "name_note": null,
+    "materials": [
+      "Handwoven"
+    ],
+    "dimensions": null,
+    "wood_options": [],
+    "price_ksh": 16000,
+    "price_notes": [
+      "Excluding delivery"
+    ],
+    "turnaround_weeks": "5-14",
+    "notes": [
+      "Available in various colours and sizes",
+      "Quote the rug number when placing an order",
+      "Once an order is placed, colour or design cannot be changed",
+      "Expect slight variations in colour — each rug is handmade"
+    ],
+    "featured": false,
+    "images": [
+      "/images/pieces/rug-13/01.jpg"
+    ],
+    "variants": [
+      {
+        "label": "2x4ft",
+        "price_ksh": 16000
+      },
+      {
+        "label": "3x5ft",
+        "price_ksh": 30000
+      },
+      {
+        "label": "4x6ft",
+        "price_ksh": 47000
+      },
+      {
+        "label": "5x7ft",
+        "price_ksh": 69000
+      },
+      {
+        "label": "5x8ft",
+        "price_ksh": 79000
+      },
+      {
+        "label": "7x7ft",
+        "price_ksh": 97000
+      },
+      {
+        "label": "7x10ft",
+        "price_ksh": 138000
+      },
+      {
+        "label": "8x10ft",
+        "price_ksh": 158000
+      },
+      {
+        "label": "2.5x6ft · Runner",
+        "price_ksh": 30000
+      },
+      {
+        "label": "2.5x10ft · Runner",
+        "price_ksh": 49000
+      }
+    ]
+  },
+  {
+    "slug": "rug-14",
+    "name": "Rug #14",
+    "collection": "woven-rugs",
+    "name_note": null,
+    "materials": [
+      "Handwoven"
+    ],
+    "dimensions": null,
+    "wood_options": [],
+    "price_ksh": 16000,
+    "price_notes": [
+      "Excluding delivery"
+    ],
+    "turnaround_weeks": "5-14",
+    "notes": [
+      "Available in various colours and sizes",
+      "Quote the rug number when placing an order",
+      "Once an order is placed, colour or design cannot be changed",
+      "Expect slight variations in colour — each rug is handmade"
+    ],
+    "featured": false,
+    "images": [
+      "/images/pieces/rug-14/01.jpg"
+    ],
+    "variants": [
+      {
+        "label": "2x4ft",
+        "price_ksh": 16000
+      },
+      {
+        "label": "3x5ft",
+        "price_ksh": 30000
+      },
+      {
+        "label": "4x6ft",
+        "price_ksh": 47000
+      },
+      {
+        "label": "5x7ft",
+        "price_ksh": 69000
+      },
+      {
+        "label": "5x8ft",
+        "price_ksh": 79000
+      },
+      {
+        "label": "7x7ft",
+        "price_ksh": 97000
+      },
+      {
+        "label": "7x10ft",
+        "price_ksh": 138000
+      },
+      {
+        "label": "8x10ft",
+        "price_ksh": 158000
+      },
+      {
+        "label": "2.5x6ft · Runner",
+        "price_ksh": 30000
+      },
+      {
+        "label": "2.5x10ft · Runner",
+        "price_ksh": 49000
+      }
+    ]
+  },
+  {
+    "slug": "rug-15",
+    "name": "Rug #15",
+    "collection": "woven-rugs",
+    "name_note": null,
+    "materials": [
+      "Handwoven"
+    ],
+    "dimensions": null,
+    "wood_options": [],
+    "price_ksh": 16000,
+    "price_notes": [
+      "Excluding delivery"
+    ],
+    "turnaround_weeks": "5-14",
+    "notes": [
+      "Available in various colours and sizes",
+      "Quote the rug number when placing an order",
+      "Once an order is placed, colour or design cannot be changed",
+      "Expect slight variations in colour — each rug is handmade"
+    ],
+    "featured": false,
+    "images": [
+      "/images/pieces/rug-15/01.jpg"
+    ],
+    "variants": [
+      {
+        "label": "2x4ft",
+        "price_ksh": 16000
+      },
+      {
+        "label": "3x5ft",
+        "price_ksh": 30000
+      },
+      {
+        "label": "4x6ft",
+        "price_ksh": 47000
+      },
+      {
+        "label": "5x7ft",
+        "price_ksh": 69000
+      },
+      {
+        "label": "5x8ft",
+        "price_ksh": 79000
+      },
+      {
+        "label": "7x7ft",
+        "price_ksh": 97000
+      },
+      {
+        "label": "7x10ft",
+        "price_ksh": 138000
+      },
+      {
+        "label": "8x10ft",
+        "price_ksh": 158000
+      },
+      {
+        "label": "2.5x6ft · Runner",
+        "price_ksh": 30000
+      },
+      {
+        "label": "2.5x10ft · Runner",
+        "price_ksh": 49000
+      }
+    ]
+  },
+  {
+    "slug": "rug-16",
+    "name": "Rug #16",
+    "collection": "woven-rugs",
+    "name_note": null,
+    "materials": [
+      "Handwoven"
+    ],
+    "dimensions": null,
+    "wood_options": [],
+    "price_ksh": 16000,
+    "price_notes": [
+      "Excluding delivery"
+    ],
+    "turnaround_weeks": "5-14",
+    "notes": [
+      "Available in various colours and sizes",
+      "Quote the rug number when placing an order",
+      "Once an order is placed, colour or design cannot be changed",
+      "Expect slight variations in colour — each rug is handmade"
+    ],
+    "featured": false,
+    "images": [
+      "/images/pieces/rug-16/01.jpg"
+    ],
+    "variants": [
+      {
+        "label": "2x4ft",
+        "price_ksh": 16000
+      },
+      {
+        "label": "3x5ft",
+        "price_ksh": 30000
+      },
+      {
+        "label": "4x6ft",
+        "price_ksh": 47000
+      },
+      {
+        "label": "5x7ft",
+        "price_ksh": 69000
+      },
+      {
+        "label": "5x8ft",
+        "price_ksh": 79000
+      },
+      {
+        "label": "7x7ft",
+        "price_ksh": 97000
+      },
+      {
+        "label": "7x10ft",
+        "price_ksh": 138000
+      },
+      {
+        "label": "8x10ft",
+        "price_ksh": 158000
+      },
+      {
+        "label": "2.5x6ft · Runner",
+        "price_ksh": 30000
+      },
+      {
+        "label": "2.5x10ft · Runner",
+        "price_ksh": 49000
+      }
+    ]
+  },
+  {
+    "slug": "rug-17",
+    "name": "Rug #17",
+    "collection": "woven-rugs",
+    "name_note": null,
+    "materials": [
+      "Handwoven"
+    ],
+    "dimensions": null,
+    "wood_options": [],
+    "price_ksh": 16000,
+    "price_notes": [
+      "Excluding delivery"
+    ],
+    "turnaround_weeks": "5-14",
+    "notes": [
+      "Available in various colours and sizes",
+      "Quote the rug number when placing an order",
+      "Once an order is placed, colour or design cannot be changed",
+      "Expect slight variations in colour — each rug is handmade"
+    ],
+    "featured": false,
+    "images": [
+      "/images/pieces/rug-17/01.jpg"
+    ],
+    "variants": [
+      {
+        "label": "2x4ft",
+        "price_ksh": 16000
+      },
+      {
+        "label": "3x5ft",
+        "price_ksh": 30000
+      },
+      {
+        "label": "4x6ft",
+        "price_ksh": 47000
+      },
+      {
+        "label": "5x7ft",
+        "price_ksh": 69000
+      },
+      {
+        "label": "5x8ft",
+        "price_ksh": 79000
+      },
+      {
+        "label": "7x7ft",
+        "price_ksh": 97000
+      },
+      {
+        "label": "7x10ft",
+        "price_ksh": 138000
+      },
+      {
+        "label": "8x10ft",
+        "price_ksh": 158000
+      },
+      {
+        "label": "2.5x6ft · Runner",
+        "price_ksh": 30000
+      },
+      {
+        "label": "2.5x10ft · Runner",
+        "price_ksh": 49000
+      }
+    ]
+  },
+  {
+    "slug": "rug-18",
+    "name": "Rug #18",
+    "collection": "woven-rugs",
+    "name_note": null,
+    "materials": [
+      "Handwoven"
+    ],
+    "dimensions": null,
+    "wood_options": [],
+    "price_ksh": 16000,
+    "price_notes": [
+      "Excluding delivery"
+    ],
+    "turnaround_weeks": "5-14",
+    "notes": [
+      "Available in various colours and sizes",
+      "Quote the rug number when placing an order",
+      "Once an order is placed, colour or design cannot be changed",
+      "Expect slight variations in colour — each rug is handmade"
+    ],
+    "featured": false,
+    "images": [
+      "/images/pieces/rug-18/01.jpg"
+    ],
+    "variants": [
+      {
+        "label": "2x4ft",
+        "price_ksh": 16000
+      },
+      {
+        "label": "3x5ft",
+        "price_ksh": 30000
+      },
+      {
+        "label": "4x6ft",
+        "price_ksh": 47000
+      },
+      {
+        "label": "5x7ft",
+        "price_ksh": 69000
+      },
+      {
+        "label": "5x8ft",
+        "price_ksh": 79000
+      },
+      {
+        "label": "7x7ft",
+        "price_ksh": 97000
+      },
+      {
+        "label": "7x10ft",
+        "price_ksh": 138000
+      },
+      {
+        "label": "8x10ft",
+        "price_ksh": 158000
+      },
+      {
+        "label": "2.5x6ft · Runner",
+        "price_ksh": 30000
+      },
+      {
+        "label": "2.5x10ft · Runner",
+        "price_ksh": 49000
+      }
+    ]
+  },
+  {
+    "slug": "rug-19",
+    "name": "Rug #19",
+    "collection": "woven-rugs",
+    "name_note": null,
+    "materials": [
+      "Handwoven"
+    ],
+    "dimensions": null,
+    "wood_options": [],
+    "price_ksh": 16000,
+    "price_notes": [
+      "Excluding delivery"
+    ],
+    "turnaround_weeks": "5-14",
+    "notes": [
+      "Available in various colours and sizes",
+      "Quote the rug number when placing an order",
+      "Once an order is placed, colour or design cannot be changed",
+      "Expect slight variations in colour — each rug is handmade"
+    ],
+    "featured": false,
+    "images": [
+      "/images/pieces/rug-19/01.jpg"
+    ],
+    "variants": [
+      {
+        "label": "2x4ft",
+        "price_ksh": 16000
+      },
+      {
+        "label": "3x5ft",
+        "price_ksh": 30000
+      },
+      {
+        "label": "4x6ft",
+        "price_ksh": 47000
+      },
+      {
+        "label": "5x7ft",
+        "price_ksh": 69000
+      },
+      {
+        "label": "5x8ft",
+        "price_ksh": 79000
+      },
+      {
+        "label": "7x7ft",
+        "price_ksh": 97000
+      },
+      {
+        "label": "7x10ft",
+        "price_ksh": 138000
+      },
+      {
+        "label": "8x10ft",
+        "price_ksh": 158000
+      },
+      {
+        "label": "2.5x6ft · Runner",
+        "price_ksh": 30000
+      },
+      {
+        "label": "2.5x10ft · Runner",
+        "price_ksh": 49000
+      }
+    ]
+  },
+  {
+    "slug": "rug-20",
+    "name": "Rug #20",
+    "collection": "woven-rugs",
+    "name_note": null,
+    "materials": [
+      "Handwoven"
+    ],
+    "dimensions": null,
+    "wood_options": [],
+    "price_ksh": 16000,
+    "price_notes": [
+      "Excluding delivery"
+    ],
+    "turnaround_weeks": "5-14",
+    "notes": [
+      "Available in various colours and sizes",
+      "Quote the rug number when placing an order",
+      "Once an order is placed, colour or design cannot be changed",
+      "Expect slight variations in colour — each rug is handmade"
+    ],
+    "featured": false,
+    "images": [
+      "/images/pieces/rug-20/01.jpg"
+    ],
+    "variants": [
+      {
+        "label": "2x4ft",
+        "price_ksh": 16000
+      },
+      {
+        "label": "3x5ft",
+        "price_ksh": 30000
+      },
+      {
+        "label": "4x6ft",
+        "price_ksh": 47000
+      },
+      {
+        "label": "5x7ft",
+        "price_ksh": 69000
+      },
+      {
+        "label": "5x8ft",
+        "price_ksh": 79000
+      },
+      {
+        "label": "7x7ft",
+        "price_ksh": 97000
+      },
+      {
+        "label": "7x10ft",
+        "price_ksh": 138000
+      },
+      {
+        "label": "8x10ft",
+        "price_ksh": 158000
+      },
+      {
+        "label": "2.5x6ft · Runner",
+        "price_ksh": 30000
+      },
+      {
+        "label": "2.5x10ft · Runner",
+        "price_ksh": 49000
+      }
+    ]
+  },
+  {
+    "slug": "rug-21",
+    "name": "Rug #21",
+    "collection": "woven-rugs",
+    "name_note": null,
+    "materials": [
+      "Handwoven"
+    ],
+    "dimensions": null,
+    "wood_options": [],
+    "price_ksh": 16000,
+    "price_notes": [
+      "Excluding delivery"
+    ],
+    "turnaround_weeks": "5-14",
+    "notes": [
+      "Available in various colours and sizes",
+      "Quote the rug number when placing an order",
+      "Once an order is placed, colour or design cannot be changed",
+      "Expect slight variations in colour — each rug is handmade"
+    ],
+    "featured": false,
+    "images": [
+      "/images/pieces/rug-21/01.jpg"
+    ],
+    "variants": [
+      {
+        "label": "2x4ft",
+        "price_ksh": 16000
+      },
+      {
+        "label": "3x5ft",
+        "price_ksh": 30000
+      },
+      {
+        "label": "4x6ft",
+        "price_ksh": 47000
+      },
+      {
+        "label": "5x7ft",
+        "price_ksh": 69000
+      },
+      {
+        "label": "5x8ft",
+        "price_ksh": 79000
+      },
+      {
+        "label": "7x7ft",
+        "price_ksh": 97000
+      },
+      {
+        "label": "7x10ft",
+        "price_ksh": 138000
+      },
+      {
+        "label": "8x10ft",
+        "price_ksh": 158000
+      },
+      {
+        "label": "2.5x6ft · Runner",
+        "price_ksh": 30000
+      },
+      {
+        "label": "2.5x10ft · Runner",
+        "price_ksh": 49000
+      }
+    ]
+  },
+  {
+    "slug": "rug-22",
+    "name": "Rug #22",
+    "collection": "woven-rugs",
+    "name_note": null,
+    "materials": [
+      "Handwoven"
+    ],
+    "dimensions": null,
+    "wood_options": [],
+    "price_ksh": 16000,
+    "price_notes": [
+      "Excluding delivery"
+    ],
+    "turnaround_weeks": "5-14",
+    "notes": [
+      "Available in various colours and sizes",
+      "Quote the rug number when placing an order",
+      "Once an order is placed, colour or design cannot be changed",
+      "Expect slight variations in colour — each rug is handmade"
+    ],
+    "featured": false,
+    "images": [
+      "/images/pieces/rug-22/01.jpg"
+    ],
+    "variants": [
+      {
+        "label": "2x4ft",
+        "price_ksh": 16000
+      },
+      {
+        "label": "3x5ft",
+        "price_ksh": 30000
+      },
+      {
+        "label": "4x6ft",
+        "price_ksh": 47000
+      },
+      {
+        "label": "5x7ft",
+        "price_ksh": 69000
+      },
+      {
+        "label": "5x8ft",
+        "price_ksh": 79000
+      },
+      {
+        "label": "7x7ft",
+        "price_ksh": 97000
+      },
+      {
+        "label": "7x10ft",
+        "price_ksh": 138000
+      },
+      {
+        "label": "8x10ft",
+        "price_ksh": 158000
+      },
+      {
+        "label": "2.5x6ft · Runner",
+        "price_ksh": 30000
+      },
+      {
+        "label": "2.5x10ft · Runner",
+        "price_ksh": 49000
+      }
+    ]
+  },
+  {
+    "slug": "rug-23",
+    "name": "Rug #23",
+    "collection": "woven-rugs",
+    "name_note": null,
+    "materials": [
+      "Handwoven"
+    ],
+    "dimensions": null,
+    "wood_options": [],
+    "price_ksh": 16000,
+    "price_notes": [
+      "Excluding delivery"
+    ],
+    "turnaround_weeks": "5-14",
+    "notes": [
+      "Available in various colours and sizes",
+      "Quote the rug number when placing an order",
+      "Once an order is placed, colour or design cannot be changed",
+      "Expect slight variations in colour — each rug is handmade"
+    ],
+    "featured": false,
+    "images": [
+      "/images/pieces/rug-23/01.jpg"
+    ],
+    "variants": [
+      {
+        "label": "2x4ft",
+        "price_ksh": 16000
+      },
+      {
+        "label": "3x5ft",
+        "price_ksh": 30000
+      },
+      {
+        "label": "4x6ft",
+        "price_ksh": 47000
+      },
+      {
+        "label": "5x7ft",
+        "price_ksh": 69000
+      },
+      {
+        "label": "5x8ft",
+        "price_ksh": 79000
+      },
+      {
+        "label": "7x7ft",
+        "price_ksh": 97000
+      },
+      {
+        "label": "7x10ft",
+        "price_ksh": 138000
+      },
+      {
+        "label": "8x10ft",
+        "price_ksh": 158000
+      },
+      {
+        "label": "2.5x6ft · Runner",
+        "price_ksh": 30000
+      },
+      {
+        "label": "2.5x10ft · Runner",
+        "price_ksh": 49000
+      }
+    ]
+  },
+  {
+    "slug": "rug-24",
+    "name": "Rug #24",
+    "collection": "woven-rugs",
+    "name_note": null,
+    "materials": [
+      "Handwoven"
+    ],
+    "dimensions": null,
+    "wood_options": [],
+    "price_ksh": 16000,
+    "price_notes": [
+      "Excluding delivery"
+    ],
+    "turnaround_weeks": "5-14",
+    "notes": [
+      "Available in various colours and sizes",
+      "Quote the rug number when placing an order",
+      "Once an order is placed, colour or design cannot be changed",
+      "Expect slight variations in colour — each rug is handmade"
+    ],
+    "featured": false,
+    "images": [
+      "/images/pieces/rug-24/01.jpg"
+    ],
+    "variants": [
+      {
+        "label": "2x4ft",
+        "price_ksh": 16000
+      },
+      {
+        "label": "3x5ft",
+        "price_ksh": 30000
+      },
+      {
+        "label": "4x6ft",
+        "price_ksh": 47000
+      },
+      {
+        "label": "5x7ft",
+        "price_ksh": 69000
+      },
+      {
+        "label": "5x8ft",
+        "price_ksh": 79000
+      },
+      {
+        "label": "7x7ft",
+        "price_ksh": 97000
+      },
+      {
+        "label": "7x10ft",
+        "price_ksh": 138000
+      },
+      {
+        "label": "8x10ft",
+        "price_ksh": 158000
+      },
+      {
+        "label": "2.5x6ft · Runner",
+        "price_ksh": 30000
+      },
+      {
+        "label": "2.5x10ft · Runner",
+        "price_ksh": 49000
+      }
+    ]
+  },
+  {
+    "slug": "rug-25",
+    "name": "Rug #25",
+    "collection": "woven-rugs",
+    "name_note": null,
+    "materials": [
+      "Handwoven"
+    ],
+    "dimensions": null,
+    "wood_options": [],
+    "price_ksh": 16000,
+    "price_notes": [
+      "Excluding delivery"
+    ],
+    "turnaround_weeks": "5-14",
+    "notes": [
+      "Available in various colours and sizes",
+      "Quote the rug number when placing an order",
+      "Once an order is placed, colour or design cannot be changed",
+      "Expect slight variations in colour — each rug is handmade"
+    ],
+    "featured": false,
+    "images": [
+      "/images/pieces/rug-25/01.jpg"
+    ],
+    "variants": [
+      {
+        "label": "2x4ft",
+        "price_ksh": 16000
+      },
+      {
+        "label": "3x5ft",
+        "price_ksh": 30000
+      },
+      {
+        "label": "4x6ft",
+        "price_ksh": 47000
+      },
+      {
+        "label": "5x7ft",
+        "price_ksh": 69000
+      },
+      {
+        "label": "5x8ft",
+        "price_ksh": 79000
+      },
+      {
+        "label": "7x7ft",
+        "price_ksh": 97000
+      },
+      {
+        "label": "7x10ft",
+        "price_ksh": 138000
+      },
+      {
+        "label": "8x10ft",
+        "price_ksh": 158000
+      },
+      {
+        "label": "2.5x6ft · Runner",
+        "price_ksh": 30000
+      },
+      {
+        "label": "2.5x10ft · Runner",
+        "price_ksh": 49000
+      }
+    ]
+  },
+  {
+    "slug": "rug-26",
+    "name": "Rug #26",
+    "collection": "woven-rugs",
+    "name_note": null,
+    "materials": [
+      "Handwoven"
+    ],
+    "dimensions": null,
+    "wood_options": [],
+    "price_ksh": 16000,
+    "price_notes": [
+      "Excluding delivery"
+    ],
+    "turnaround_weeks": "5-14",
+    "notes": [
+      "Available in various colours and sizes",
+      "Quote the rug number when placing an order",
+      "Once an order is placed, colour or design cannot be changed",
+      "Expect slight variations in colour — each rug is handmade"
+    ],
+    "featured": false,
+    "images": [
+      "/images/pieces/rug-26/01.jpg"
+    ],
+    "variants": [
+      {
+        "label": "2x4ft",
+        "price_ksh": 16000
+      },
+      {
+        "label": "3x5ft",
+        "price_ksh": 30000
+      },
+      {
+        "label": "4x6ft",
+        "price_ksh": 47000
+      },
+      {
+        "label": "5x7ft",
+        "price_ksh": 69000
+      },
+      {
+        "label": "5x8ft",
+        "price_ksh": 79000
+      },
+      {
+        "label": "7x7ft",
+        "price_ksh": 97000
+      },
+      {
+        "label": "7x10ft",
+        "price_ksh": 138000
+      },
+      {
+        "label": "8x10ft",
+        "price_ksh": 158000
+      },
+      {
+        "label": "2.5x6ft · Runner",
+        "price_ksh": 30000
+      },
+      {
+        "label": "2.5x10ft · Runner",
+        "price_ksh": 49000
+      }
+    ]
+  },
+  {
+    "slug": "rug-27",
+    "name": "Rug #27",
+    "collection": "woven-rugs",
+    "name_note": null,
+    "materials": [
+      "Handwoven"
+    ],
+    "dimensions": null,
+    "wood_options": [],
+    "price_ksh": 16000,
+    "price_notes": [
+      "Excluding delivery"
+    ],
+    "turnaround_weeks": "5-14",
+    "notes": [
+      "Available in various colours and sizes",
+      "Quote the rug number when placing an order",
+      "Once an order is placed, colour or design cannot be changed",
+      "Expect slight variations in colour — each rug is handmade"
+    ],
+    "featured": false,
+    "images": [
+      "/images/pieces/rug-27/01.jpg"
+    ],
+    "variants": [
+      {
+        "label": "2x4ft",
+        "price_ksh": 16000
+      },
+      {
+        "label": "3x5ft",
+        "price_ksh": 30000
+      },
+      {
+        "label": "4x6ft",
+        "price_ksh": 47000
+      },
+      {
+        "label": "5x7ft",
+        "price_ksh": 69000
+      },
+      {
+        "label": "5x8ft",
+        "price_ksh": 79000
+      },
+      {
+        "label": "7x7ft",
+        "price_ksh": 97000
+      },
+      {
+        "label": "7x10ft",
+        "price_ksh": 138000
+      },
+      {
+        "label": "8x10ft",
+        "price_ksh": 158000
+      },
+      {
+        "label": "2.5x6ft · Runner",
+        "price_ksh": 30000
+      },
+      {
+        "label": "2.5x10ft · Runner",
+        "price_ksh": 49000
+      }
+    ]
+  },
+  {
+    "slug": "rug-28",
+    "name": "Rug #28",
+    "collection": "woven-rugs",
+    "name_note": null,
+    "materials": [
+      "Handwoven"
+    ],
+    "dimensions": null,
+    "wood_options": [],
+    "price_ksh": 16000,
+    "price_notes": [
+      "Excluding delivery"
+    ],
+    "turnaround_weeks": "5-14",
+    "notes": [
+      "Available in various colours and sizes",
+      "Quote the rug number when placing an order",
+      "Once an order is placed, colour or design cannot be changed",
+      "Expect slight variations in colour — each rug is handmade"
+    ],
+    "featured": false,
+    "images": [
+      "/images/pieces/rug-28/01.jpg"
+    ],
+    "variants": [
+      {
+        "label": "2x4ft",
+        "price_ksh": 16000
+      },
+      {
+        "label": "3x5ft",
+        "price_ksh": 30000
+      },
+      {
+        "label": "4x6ft",
+        "price_ksh": 47000
+      },
+      {
+        "label": "5x7ft",
+        "price_ksh": 69000
+      },
+      {
+        "label": "5x8ft",
+        "price_ksh": 79000
+      },
+      {
+        "label": "7x7ft",
+        "price_ksh": 97000
+      },
+      {
+        "label": "7x10ft",
+        "price_ksh": 138000
+      },
+      {
+        "label": "8x10ft",
+        "price_ksh": 158000
+      },
+      {
+        "label": "2.5x6ft · Runner",
+        "price_ksh": 30000
+      },
+      {
+        "label": "2.5x10ft · Runner",
+        "price_ksh": 49000
+      }
+    ]
+  },
+  {
+    "slug": "rug-29",
+    "name": "Rug #29",
+    "collection": "woven-rugs",
+    "name_note": null,
+    "materials": [
+      "Handwoven"
+    ],
+    "dimensions": null,
+    "wood_options": [],
+    "price_ksh": 16000,
+    "price_notes": [
+      "Excluding delivery"
+    ],
+    "turnaround_weeks": "5-14",
+    "notes": [
+      "Available in various colours and sizes",
+      "Quote the rug number when placing an order",
+      "Once an order is placed, colour or design cannot be changed",
+      "Expect slight variations in colour — each rug is handmade"
+    ],
+    "featured": false,
+    "images": [
+      "/images/pieces/rug-29/01.jpg"
+    ],
+    "variants": [
+      {
+        "label": "2x4ft",
+        "price_ksh": 16000
+      },
+      {
+        "label": "3x5ft",
+        "price_ksh": 30000
+      },
+      {
+        "label": "4x6ft",
+        "price_ksh": 47000
+      },
+      {
+        "label": "5x7ft",
+        "price_ksh": 69000
+      },
+      {
+        "label": "5x8ft",
+        "price_ksh": 79000
+      },
+      {
+        "label": "7x7ft",
+        "price_ksh": 97000
+      },
+      {
+        "label": "7x10ft",
+        "price_ksh": 138000
+      },
+      {
+        "label": "8x10ft",
+        "price_ksh": 158000
+      },
+      {
+        "label": "2.5x6ft · Runner",
+        "price_ksh": 30000
+      },
+      {
+        "label": "2.5x10ft · Runner",
+        "price_ksh": 49000
+      }
+    ]
+  },
+  {
+    "slug": "rug-30",
+    "name": "Rug #30",
+    "collection": "woven-rugs",
+    "name_note": null,
+    "materials": [
+      "Handwoven"
+    ],
+    "dimensions": null,
+    "wood_options": [],
+    "price_ksh": 16000,
+    "price_notes": [
+      "Excluding delivery"
+    ],
+    "turnaround_weeks": "5-14",
+    "notes": [
+      "Available in various colours and sizes",
+      "Quote the rug number when placing an order",
+      "Once an order is placed, colour or design cannot be changed",
+      "Expect slight variations in colour — each rug is handmade"
+    ],
+    "featured": false,
+    "images": [
+      "/images/pieces/rug-30/01.jpg"
+    ],
+    "variants": [
+      {
+        "label": "2x4ft",
+        "price_ksh": 16000
+      },
+      {
+        "label": "3x5ft",
+        "price_ksh": 30000
+      },
+      {
+        "label": "4x6ft",
+        "price_ksh": 47000
+      },
+      {
+        "label": "5x7ft",
+        "price_ksh": 69000
+      },
+      {
+        "label": "5x8ft",
+        "price_ksh": 79000
+      },
+      {
+        "label": "7x7ft",
+        "price_ksh": 97000
+      },
+      {
+        "label": "7x10ft",
+        "price_ksh": 138000
+      },
+      {
+        "label": "8x10ft",
+        "price_ksh": 158000
+      },
+      {
+        "label": "2.5x6ft · Runner",
+        "price_ksh": 30000
+      },
+      {
+        "label": "2.5x10ft · Runner",
+        "price_ksh": 49000
+      }
+    ]
+  },
+  {
+    "slug": "rug-31",
+    "name": "Rug #31",
+    "collection": "woven-rugs",
+    "name_note": null,
+    "materials": [
+      "Handwoven"
+    ],
+    "dimensions": null,
+    "wood_options": [],
+    "price_ksh": 16000,
+    "price_notes": [
+      "Excluding delivery"
+    ],
+    "turnaround_weeks": "5-14",
+    "notes": [
+      "Available in various colours and sizes",
+      "Quote the rug number when placing an order",
+      "Once an order is placed, colour or design cannot be changed",
+      "Expect slight variations in colour — each rug is handmade"
+    ],
+    "featured": false,
+    "images": [
+      "/images/pieces/rug-31/01.jpg"
+    ],
+    "variants": [
+      {
+        "label": "2x4ft",
+        "price_ksh": 16000
+      },
+      {
+        "label": "3x5ft",
+        "price_ksh": 30000
+      },
+      {
+        "label": "4x6ft",
+        "price_ksh": 47000
+      },
+      {
+        "label": "5x7ft",
+        "price_ksh": 69000
+      },
+      {
+        "label": "5x8ft",
+        "price_ksh": 79000
+      },
+      {
+        "label": "7x7ft",
+        "price_ksh": 97000
+      },
+      {
+        "label": "7x10ft",
+        "price_ksh": 138000
+      },
+      {
+        "label": "8x10ft",
+        "price_ksh": 158000
+      },
+      {
+        "label": "2.5x6ft · Runner",
+        "price_ksh": 30000
+      },
+      {
+        "label": "2.5x10ft · Runner",
+        "price_ksh": 49000
+      }
+    ]
+  },
+  {
+    "slug": "rug-32",
+    "name": "Rug #32",
+    "collection": "woven-rugs",
+    "name_note": null,
+    "materials": [
+      "Handwoven"
+    ],
+    "dimensions": null,
+    "wood_options": [],
+    "price_ksh": 16000,
+    "price_notes": [
+      "Excluding delivery"
+    ],
+    "turnaround_weeks": "5-14",
+    "notes": [
+      "Available in various colours and sizes",
+      "Quote the rug number when placing an order",
+      "Once an order is placed, colour or design cannot be changed",
+      "Expect slight variations in colour — each rug is handmade"
+    ],
+    "featured": false,
+    "images": [
+      "/images/pieces/rug-32/01.jpg"
+    ],
+    "variants": [
+      {
+        "label": "2x4ft",
+        "price_ksh": 16000
+      },
+      {
+        "label": "3x5ft",
+        "price_ksh": 30000
+      },
+      {
+        "label": "4x6ft",
+        "price_ksh": 47000
+      },
+      {
+        "label": "5x7ft",
+        "price_ksh": 69000
+      },
+      {
+        "label": "5x8ft",
+        "price_ksh": 79000
+      },
+      {
+        "label": "7x7ft",
+        "price_ksh": 97000
+      },
+      {
+        "label": "7x10ft",
+        "price_ksh": 138000
+      },
+      {
+        "label": "8x10ft",
+        "price_ksh": 158000
+      },
+      {
+        "label": "2.5x6ft · Runner",
+        "price_ksh": 30000
+      },
+      {
+        "label": "2.5x10ft · Runner",
+        "price_ksh": 49000
+      }
+    ]
+  },
+  {
+    "slug": "rug-33",
+    "name": "Rug #33",
+    "collection": "woven-rugs",
+    "name_note": null,
+    "materials": [
+      "Handwoven"
+    ],
+    "dimensions": null,
+    "wood_options": [],
+    "price_ksh": 16000,
+    "price_notes": [
+      "Excluding delivery"
+    ],
+    "turnaround_weeks": "5-14",
+    "notes": [
+      "Available in various colours and sizes",
+      "Quote the rug number when placing an order",
+      "Once an order is placed, colour or design cannot be changed",
+      "Expect slight variations in colour — each rug is handmade"
+    ],
+    "featured": false,
+    "images": [
+      "/images/pieces/rug-33/01.jpg"
+    ],
+    "variants": [
+      {
+        "label": "2x4ft",
+        "price_ksh": 16000
+      },
+      {
+        "label": "3x5ft",
+        "price_ksh": 30000
+      },
+      {
+        "label": "4x6ft",
+        "price_ksh": 47000
+      },
+      {
+        "label": "5x7ft",
+        "price_ksh": 69000
+      },
+      {
+        "label": "5x8ft",
+        "price_ksh": 79000
+      },
+      {
+        "label": "7x7ft",
+        "price_ksh": 97000
+      },
+      {
+        "label": "7x10ft",
+        "price_ksh": 138000
+      },
+      {
+        "label": "8x10ft",
+        "price_ksh": 158000
+      },
+      {
+        "label": "2.5x6ft · Runner",
+        "price_ksh": 30000
+      },
+      {
+        "label": "2.5x10ft · Runner",
+        "price_ksh": 49000
+      }
+    ]
+  },
+  {
+    "slug": "rug-34",
+    "name": "Rug #34",
+    "collection": "woven-rugs",
+    "name_note": null,
+    "materials": [
+      "Handwoven"
+    ],
+    "dimensions": null,
+    "wood_options": [],
+    "price_ksh": 16000,
+    "price_notes": [
+      "Excluding delivery"
+    ],
+    "turnaround_weeks": "5-14",
+    "notes": [
+      "Available in various colours and sizes",
+      "Quote the rug number when placing an order",
+      "Once an order is placed, colour or design cannot be changed",
+      "Expect slight variations in colour — each rug is handmade"
+    ],
+    "featured": false,
+    "images": [
+      "/images/pieces/rug-34/01.jpg"
+    ],
+    "variants": [
+      {
+        "label": "2x4ft",
+        "price_ksh": 16000
+      },
+      {
+        "label": "3x5ft",
+        "price_ksh": 30000
+      },
+      {
+        "label": "4x6ft",
+        "price_ksh": 47000
+      },
+      {
+        "label": "5x7ft",
+        "price_ksh": 69000
+      },
+      {
+        "label": "5x8ft",
+        "price_ksh": 79000
+      },
+      {
+        "label": "7x7ft",
+        "price_ksh": 97000
+      },
+      {
+        "label": "7x10ft",
+        "price_ksh": 138000
+      },
+      {
+        "label": "8x10ft",
+        "price_ksh": 158000
+      },
+      {
+        "label": "2.5x6ft · Runner",
+        "price_ksh": 30000
+      },
+      {
+        "label": "2.5x10ft · Runner",
+        "price_ksh": 49000
+      }
+    ]
+  },
+  {
+    "slug": "rug-35",
+    "name": "Rug #35",
+    "collection": "woven-rugs",
+    "name_note": null,
+    "materials": [
+      "Handwoven"
+    ],
+    "dimensions": null,
+    "wood_options": [],
+    "price_ksh": 16000,
+    "price_notes": [
+      "Excluding delivery"
+    ],
+    "turnaround_weeks": "5-14",
+    "notes": [
+      "Available in various colours and sizes",
+      "Quote the rug number when placing an order",
+      "Once an order is placed, colour or design cannot be changed",
+      "Expect slight variations in colour — each rug is handmade"
+    ],
+    "featured": false,
+    "images": [
+      "/images/pieces/rug-35/01.jpg"
+    ],
+    "variants": [
+      {
+        "label": "2x4ft",
+        "price_ksh": 16000
+      },
+      {
+        "label": "3x5ft",
+        "price_ksh": 30000
+      },
+      {
+        "label": "4x6ft",
+        "price_ksh": 47000
+      },
+      {
+        "label": "5x7ft",
+        "price_ksh": 69000
+      },
+      {
+        "label": "5x8ft",
+        "price_ksh": 79000
+      },
+      {
+        "label": "7x7ft",
+        "price_ksh": 97000
+      },
+      {
+        "label": "7x10ft",
+        "price_ksh": 138000
+      },
+      {
+        "label": "8x10ft",
+        "price_ksh": 158000
+      },
+      {
+        "label": "2.5x6ft · Runner",
+        "price_ksh": 30000
+      },
+      {
+        "label": "2.5x10ft · Runner",
+        "price_ksh": 49000
+      }
+    ]
+  },
+  {
+    "slug": "rug-36",
+    "name": "Rug #36",
+    "collection": "woven-rugs",
+    "name_note": null,
+    "materials": [
+      "Handwoven"
+    ],
+    "dimensions": null,
+    "wood_options": [],
+    "price_ksh": 16000,
+    "price_notes": [
+      "Excluding delivery"
+    ],
+    "turnaround_weeks": "5-14",
+    "notes": [
+      "Available in various colours and sizes",
+      "Quote the rug number when placing an order",
+      "Once an order is placed, colour or design cannot be changed",
+      "Expect slight variations in colour — each rug is handmade"
+    ],
+    "featured": false,
+    "images": [
+      "/images/pieces/rug-36/01.jpg"
+    ],
+    "variants": [
+      {
+        "label": "2x4ft",
+        "price_ksh": 16000
+      },
+      {
+        "label": "3x5ft",
+        "price_ksh": 30000
+      },
+      {
+        "label": "4x6ft",
+        "price_ksh": 47000
+      },
+      {
+        "label": "5x7ft",
+        "price_ksh": 69000
+      },
+      {
+        "label": "5x8ft",
+        "price_ksh": 79000
+      },
+      {
+        "label": "7x7ft",
+        "price_ksh": 97000
+      },
+      {
+        "label": "7x10ft",
+        "price_ksh": 138000
+      },
+      {
+        "label": "8x10ft",
+        "price_ksh": 158000
+      },
+      {
+        "label": "2.5x6ft · Runner",
+        "price_ksh": 30000
+      },
+      {
+        "label": "2.5x10ft · Runner",
+        "price_ksh": 49000
+      }
+    ]
+  },
+  {
+    "slug": "rug-37",
+    "name": "Rug #37",
+    "collection": "woven-rugs",
+    "name_note": null,
+    "materials": [
+      "Handwoven"
+    ],
+    "dimensions": null,
+    "wood_options": [],
+    "price_ksh": 16000,
+    "price_notes": [
+      "Excluding delivery"
+    ],
+    "turnaround_weeks": "5-14",
+    "notes": [
+      "Available in various colours and sizes",
+      "Quote the rug number when placing an order",
+      "Once an order is placed, colour or design cannot be changed",
+      "Expect slight variations in colour — each rug is handmade"
+    ],
+    "featured": false,
+    "images": [
+      "/images/pieces/rug-37/01.jpg"
+    ],
+    "variants": [
+      {
+        "label": "2x4ft",
+        "price_ksh": 16000
+      },
+      {
+        "label": "3x5ft",
+        "price_ksh": 30000
+      },
+      {
+        "label": "4x6ft",
+        "price_ksh": 47000
+      },
+      {
+        "label": "5x7ft",
+        "price_ksh": 69000
+      },
+      {
+        "label": "5x8ft",
+        "price_ksh": 79000
+      },
+      {
+        "label": "7x7ft",
+        "price_ksh": 97000
+      },
+      {
+        "label": "7x10ft",
+        "price_ksh": 138000
+      },
+      {
+        "label": "8x10ft",
+        "price_ksh": 158000
+      },
+      {
+        "label": "2.5x6ft · Runner",
+        "price_ksh": 30000
+      },
+      {
+        "label": "2.5x10ft · Runner",
+        "price_ksh": 49000
+      }
+    ]
+  },
+  {
+    "slug": "rug-38",
+    "name": "Rug #38",
+    "collection": "woven-rugs",
+    "name_note": null,
+    "materials": [
+      "Handwoven"
+    ],
+    "dimensions": null,
+    "wood_options": [],
+    "price_ksh": 16000,
+    "price_notes": [
+      "Excluding delivery"
+    ],
+    "turnaround_weeks": "5-14",
+    "notes": [
+      "Available in various colours and sizes",
+      "Quote the rug number when placing an order",
+      "Once an order is placed, colour or design cannot be changed",
+      "Expect slight variations in colour — each rug is handmade"
+    ],
+    "featured": false,
+    "images": [
+      "/images/pieces/rug-38/01.jpg"
+    ],
+    "variants": [
+      {
+        "label": "2x4ft",
+        "price_ksh": 16000
+      },
+      {
+        "label": "3x5ft",
+        "price_ksh": 30000
+      },
+      {
+        "label": "4x6ft",
+        "price_ksh": 47000
+      },
+      {
+        "label": "5x7ft",
+        "price_ksh": 69000
+      },
+      {
+        "label": "5x8ft",
+        "price_ksh": 79000
+      },
+      {
+        "label": "7x7ft",
+        "price_ksh": 97000
+      },
+      {
+        "label": "7x10ft",
+        "price_ksh": 138000
+      },
+      {
+        "label": "8x10ft",
+        "price_ksh": 158000
+      },
+      {
+        "label": "2.5x6ft · Runner",
+        "price_ksh": 30000
+      },
+      {
+        "label": "2.5x10ft · Runner",
+        "price_ksh": 49000
+      }
+    ]
+  },
+  {
+    "slug": "rug-39",
+    "name": "Rug #39",
+    "collection": "woven-rugs",
+    "name_note": null,
+    "materials": [
+      "Handwoven"
+    ],
+    "dimensions": null,
+    "wood_options": [],
+    "price_ksh": 16000,
+    "price_notes": [
+      "Excluding delivery"
+    ],
+    "turnaround_weeks": "5-14",
+    "notes": [
+      "Available in various colours and sizes",
+      "Quote the rug number when placing an order",
+      "Once an order is placed, colour or design cannot be changed",
+      "Expect slight variations in colour — each rug is handmade"
+    ],
+    "featured": false,
+    "images": [
+      "/images/pieces/rug-39/01.jpg"
+    ],
+    "variants": [
+      {
+        "label": "2x4ft",
+        "price_ksh": 16000
+      },
+      {
+        "label": "3x5ft",
+        "price_ksh": 30000
+      },
+      {
+        "label": "4x6ft",
+        "price_ksh": 47000
+      },
+      {
+        "label": "5x7ft",
+        "price_ksh": 69000
+      },
+      {
+        "label": "5x8ft",
+        "price_ksh": 79000
+      },
+      {
+        "label": "7x7ft",
+        "price_ksh": 97000
+      },
+      {
+        "label": "7x10ft",
+        "price_ksh": 138000
+      },
+      {
+        "label": "8x10ft",
+        "price_ksh": 158000
+      },
+      {
+        "label": "2.5x6ft · Runner",
+        "price_ksh": 30000
+      },
+      {
+        "label": "2.5x10ft · Runner",
+        "price_ksh": 49000
+      }
+    ]
+  }
+]
