@@ -140,7 +140,13 @@ export default function HomePage() {
               statement). Mobile: immersive full-bleed scenes (portrait photos
               fill a phone naturally). Desktop: alternating editorial gallery
               rows — the portrait photo at its natural 3:4, uncropped. ---- */}
-      <section className="py-6 lg:py-14">
+      <section className="pb-6 pt-16 sm:pt-20 lg:pb-14">
+        <Reveal className="mx-auto max-w-6xl px-6 pb-10 sm:px-8 lg:pb-4">
+          <p className="eyebrow text-terracotta">Featured</p>
+          <h2 className="mt-3 font-display text-3xl text-chocolate sm:text-5xl">
+            The pieces
+          </h2>
+        </Reveal>
         {featured.map((piece, i) => {
           const { price, isFrom } = priceInfo(piece);
           // curated home shots: styled interiors only (galleries keep page order)

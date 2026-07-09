@@ -1,17 +1,26 @@
+import Image from "next/image";
 import Link from "next/link";
 import { SITE, whatsappLink } from "@/lib/site";
 
+/* No top margin: every page ends with its own padded section, and on the
+   home page a margin here reads as a stray bone band between the blush
+   closing section and the blush footer. */
 export default function Footer() {
   return (
-    <footer className="mt-20 border-t border-line bg-blush">
+    <footer className="border-t border-line bg-blush">
       <div className="mx-auto grid max-w-6xl gap-10 px-4 py-12 sm:grid-cols-2 lg:grid-cols-4">
         <div>
+          <Image
+            src="/images/brand/bird-mark-chocolate.png"
+            alt=""
+            width={121}
+            height={133}
+            className="mb-3 h-9 w-auto"
+          />
           <span className="eyebrow block text-[0.5625rem] text-chocolate">Made in Kenya</span>
           <span className="font-display text-lg uppercase tracking-[0.24em] text-chocolate">
             Savannah Space
           </span>
-          {/* Bird mark omitted: the only extractable asset is the dark badge
-              lockup, not a clean crop — brief §3 says text-only in that case. */}
           <p className="mt-3 max-w-xs text-sm text-ink/70">{SITE.tagline}</p>
         </div>
         <div>
