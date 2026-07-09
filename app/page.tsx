@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import CraftWalkthrough from "@/components/CraftWalkthrough";
 import TonalBand from "@/components/motion/TonalBand";
-import { Parallax, Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
+import { Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
 import { blurProps } from "@/lib/blur";
 import {
   COLLECTIONS,
@@ -25,10 +25,23 @@ const WOODS = [
   "Recycled Scandinavian Pine",
 ];
 
-/* Curated home feature shots (index into piece.images): styled interiors only. */
+/* The hero is a piece, not a mood shot — the first thing a visitor sees is
+   furniture with a name and a price. The photo's native 605px width is why
+   desktop shows it as a framed plate instead of stretching it full-bleed. */
+const HERO_SLUG = "oromo-bar";
+const HERO_IMAGE = "/images/pieces/oromo-bar/01.jpg";
+
+/* Curated home feature shots (index into piece.images): styled interiors
+   only; the Oromo chapter uses its open-doors shot so it never repeats the
+   hero photo. */
 const FEATURE_IMAGE: Record<string, number> = {
+  "oromo-bar": 1,
   "khadija-drawer-chest": 2,
 };
+
+/* Chapter order: the hero piece closes the run so its open-doors shot never
+   sits back-to-back with the hero photo of the same piece. */
+const FEATURED_ORDER = ["khadija-drawer-chest", "kahawa-bar", "oromo-bar"];
 
 const HOW_IT_WORKS = [
   ["Enquire", "WhatsApp, Instagram or email us with the piece you'd like."],
@@ -38,123 +51,95 @@ const HOW_IT_WORKS = [
 ] as const;
 
 export default function HomePage() {
-  const featured = getAllPieces().filter((p) => p.featured);
+  const pieces = getAllPieces();
+  const chapter = (slug: string) => {
+    const i = FEATURED_ORDER.indexOf(slug);
+    return i === -1 ? FEATURED_ORDER.length : i;
+  };
+  const featured = pieces
+    .filter((p) => p.featured)
+    .sort((a, b) => chapter(a.slug) - chapter(b.slug));
+  const hero = pieces.find((p) => p.slug === HERO_SLUG);
+  const heroPrice = hero ? priceInfo(hero) : null;
 
   return (
     <div>
-      {/* ---- Chapter 0 · Full-viewport statement hero ---- */}
-      <section className="relative flex min-h-[100dvh] items-center overflow-hidden">
-        <Parallax amount={5} className="absolute inset-0">
-          <Image
-            src="/images/editorial/hero.jpg"
-            alt="Handwoven rugs on a display ladder beside African print baskets in the Savannah Space studio"
-            fill
-            priority
-            sizes="100vw"
-            className="scale-110 object-cover"
-            {...blurProps("/images/editorial/hero.jpg")}
-          />
-        </Parallax>
-        <div
-          aria-hidden
-          className="absolute inset-0 bg-gradient-to-t from-charcoal/80 via-charcoal/35 to-charcoal/20"
-        />
-        {/* top gradient keeps the transparent header legible over light image areas */}
-        <div
-          aria-hidden
-          className="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-charcoal/60 to-transparent"
-        />
-        {/* hairline frame, inset like a plate mark */}
-        <div
-          aria-hidden
-          className="pointer-events-none absolute inset-3 border border-bone/30 sm:inset-5"
-        />
-        {/* No entrance animation here: the statement is the LCP element, and
-            an opacity-0 initial state defers LCP by seconds on mobile. */}
-        <div className="relative mx-auto w-full max-w-6xl px-6 text-center sm:px-8">
-          <p className="eyebrow tracking-[0.3em] text-bone/90">
-            Made in Kenya · Since 2018
-          </p>
-          <h1 className="mx-auto mt-7 max-w-5xl font-display text-[2.75rem] leading-[1.12] text-bone sm:text-6xl lg:text-8xl">
-            Where African heritage{" "}
-            <span className="italic">lives in design.</span>
-          </h1>
-          <p className="mx-auto mt-6 max-w-md text-base leading-relaxed text-bone/80">
-            Furniture built to order by thirteen fundis and a guild of Kenyan
-            artisans — never shipped from a warehouse.
-          </p>
-        </div>
-        <div className="absolute inset-x-0 bottom-8 flex flex-col items-center gap-3 sm:bottom-10">
-          <span className="eyebrow text-[0.5625rem] text-bone/70">Scroll</span>
-          <span aria-hidden className="h-10 w-px bg-bone/50" />
-        </div>
-      </section>
-
-      {/* ---- Statement + woods index · asymmetric editorial spread ---- */}
-      <section className="mx-auto max-w-6xl px-6 py-24 sm:px-8 sm:py-32">
-        <div className="grid gap-14 lg:grid-cols-12 lg:gap-8">
-          <Reveal className="lg:col-span-7">
-            <p className="eyebrow text-terracotta">The atelier</p>
-            <p className="mt-6 font-display text-4xl leading-[1.15] text-chocolate sm:text-5xl lg:text-6xl">
-              Every piece has a name.
-              <br />
-              <span className="italic text-terracotta">
-                Every name has a maker.
-              </span>
-            </p>
-            <p className="mt-8 max-w-md text-base leading-relaxed text-ink/70">
-              Mbura, Ngunia, Khadija, Diani, Kahawa — a catalogue of named
-              designs, each built to order in the wood you choose.
-            </p>
-          </Reveal>
-          <Reveal delay={0.1} className="lg:col-span-4 lg:col-start-9">
-            <p className="eyebrow text-ink/70">The woods</p>
-            <ul className="mt-5 grid grid-cols-2 gap-x-8 border-b border-line lg:grid-cols-1 lg:gap-x-0">
-              {WOODS.map((wood) => (
-                <li
-                  key={wood}
-                  className="eyebrow border-t border-line py-3.5 text-[0.6875rem] text-ink/80"
-                >
-                  {wood}
-                </li>
-              ))}
-            </ul>
-          </Reveal>
-        </div>
-      </section>
-
-      {/* ---- The build · charcoal tonal band with craft walkthrough ---- */}
-      <TonalBand className="py-24 sm:py-32">
-        <div className="mx-auto max-w-6xl px-6 sm:px-8">
-          <Reveal className="max-w-3xl">
-            <p className="eyebrow opacity-70">The workshop</p>
-            <h2 className="mt-5 font-display text-3xl leading-snug sm:text-5xl lg:text-6xl">
-              Nothing here is pulled from a shelf.{" "}
-              <span className="italic opacity-90">Watch it become yours.</span>
-            </h2>
-          </Reveal>
-          <div className="mt-16 lg:mt-8">
-            <CraftWalkthrough />
+      {/* ---- Chapter 0 · Statement hero, led by a piece.
+              Mobile: full-bleed immersive scene, statement anchored low.
+              Desktop: charcoal canvas, statement left, the photo at its
+              natural 3:4 as a hairline-framed plate. ---- */}
+      <section className="relative overflow-hidden bg-charcoal text-bone">
+        <div className="relative mx-auto flex min-h-[100dvh] w-full max-w-6xl flex-col justify-end px-6 pb-16 pt-28 sm:px-8 lg:grid lg:grid-cols-12 lg:items-center lg:gap-8 lg:py-32">
+          <div className="absolute inset-0 lg:relative lg:inset-auto lg:col-span-5 lg:col-start-8 lg:row-start-1 lg:aspect-[3/4]">
+            {/* No entrance animation here: the hero is the LCP element, and
+                an opacity-0 initial state defers LCP by seconds on mobile. */}
+            <Image
+              src={HERO_IMAGE}
+              alt="The Oromo Bar — a circular hand-carved drinks cabinet by Savannah Space, styled in a Nairobi interior"
+              fill
+              priority
+              sizes="(min-width: 1024px) 480px, 100vw"
+              className="object-cover"
+              {...blurProps(HERO_IMAGE)}
+            />
+            {/* mobile scene gradients: statement legibility + transparent header */}
+            <div
+              aria-hidden
+              className="absolute inset-0 bg-gradient-to-t from-charcoal/85 via-charcoal/35 to-charcoal/25 lg:hidden"
+            />
+            <div
+              aria-hidden
+              className="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-charcoal/60 to-transparent lg:hidden"
+            />
+            {/* desktop plate mark */}
+            <div
+              aria-hidden
+              className="pointer-events-none absolute -inset-4 hidden border border-bone/30 lg:block"
+            />
           </div>
-          <Reveal className="mt-16 border-t border-bone/20 pt-10 lg:mt-8">
-            <p className="max-w-2xl font-display text-xl leading-relaxed sm:text-2xl">
-              Thirteen fundis. A guild of some fifteen artisan partners —
-              weavers, carvers, welders. Five to eight weeks, made for you.
+          <div className="relative lg:col-span-6 lg:col-start-1 lg:row-start-1">
+            <p className="eyebrow tracking-[0.3em] text-bone/90">
+              Made in Kenya · Since 2018
             </p>
-            <Link
-              href="/story"
-              className="eyebrow mt-8 inline-block border-b border-current pb-1 transition-opacity hover:opacity-70"
-            >
-              Read our story
-            </Link>
-          </Reveal>
+            <h1 className="mt-6 max-w-xl font-display text-[2.75rem] leading-[1.12] sm:text-6xl xl:text-7xl">
+              Where African heritage{" "}
+              <span className="italic">lives in design.</span>
+            </h1>
+            <p className="mt-6 max-w-md text-base leading-relaxed text-bone/80">
+              Furniture built to order in our Nairobi workshop by thirteen
+              fundis and a guild of Kenyan artisans — never shipped from a
+              warehouse.
+            </p>
+            {hero && heroPrice && (
+              <Link
+                href={`/pieces/${hero.slug}`}
+                className="group mt-10 inline-block"
+              >
+                <span className="eyebrow block text-[0.5625rem] text-bone/60">
+                  Pictured
+                </span>
+                <span className="mt-1 block font-display text-lg">
+                  {hero.name} · {heroPrice.isFrom && "from "}
+                  {formatKsh(heroPrice.price)}
+                </span>
+                <span className="eyebrow mt-3 inline-block border-b border-bone/70 pb-1 transition-opacity group-hover:opacity-70">
+                  View the piece
+                </span>
+              </Link>
+            )}
+          </div>
         </div>
-      </TonalBand>
+        {/* hairline frame, inset like a plate mark (mobile scene only) */}
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-3 border border-bone/30 sm:inset-5 lg:hidden"
+        />
+      </section>
 
-      {/* ---- Chapters 01–03 · Featured pieces (proof, after the build story).
-              Mobile: immersive full-bleed scenes (portrait photos fill a phone
-              naturally). Desktop: alternating editorial gallery rows — the
-              portrait photo at its natural 3:4, uncropped and sharp. ---- */}
+      {/* ---- Chapters 01–03 · Featured pieces (proof, straight after the
+              statement). Mobile: immersive full-bleed scenes (portrait photos
+              fill a phone naturally). Desktop: alternating editorial gallery
+              rows — the portrait photo at its natural 3:4, uncropped. ---- */}
       <section className="py-6 lg:py-14">
         {featured.map((piece, i) => {
           const { price, isFrom } = priceInfo(piece);
@@ -265,37 +250,8 @@ export default function HomePage() {
         })}
       </section>
 
-      {/* ---- How it works · vertical rhythm on mobile ---- */}
-      <section className="border-b border-line">
-        <div className="mx-auto max-w-6xl px-6 py-20 sm:px-8 sm:py-24">
-          <Reveal>
-            <p className="eyebrow text-terracotta">Built to order</p>
-            <h2 className="mt-3 font-display text-3xl text-chocolate sm:text-5xl">
-              How it works
-            </h2>
-          </Reveal>
-          <Stagger className="mt-10 grid gap-0 sm:grid-cols-2 sm:gap-x-10 lg:grid-cols-4">
-            {HOW_IT_WORKS.map(([title, body], i) => (
-              <StaggerItem key={title} className="border-t border-line py-6 lg:border-t-0 lg:py-0">
-                <p className="font-display text-3xl text-terracotta">{i + 1}</p>
-                <p className="mt-2 font-display text-xl text-chocolate">{title}</p>
-                <p className="mt-2 text-base leading-relaxed text-ink/70">{body}</p>
-              </StaggerItem>
-            ))}
-          </Stagger>
-          <Reveal className="mt-10">
-            <Link
-              href="/how-to-order"
-              className="eyebrow inline-block border-b border-chocolate pb-2 text-chocolate transition-colors hover:text-terracotta"
-            >
-              The full ordering guide
-            </Link>
-          </Reveal>
-        </div>
-      </section>
-
-      {/* ---- Collections teaser ---- */}
-      <section className="mx-auto max-w-6xl px-6 py-20 sm:px-8 sm:py-24">
+      {/* ---- Collections teaser · the shop window, before the story ---- */}
+      <section className="mx-auto max-w-6xl border-t border-line px-6 py-20 sm:px-8 sm:py-24">
         <Reveal>
           <p className="eyebrow text-terracotta">The catalogue</p>
           <h2 className="mt-3 font-display text-3xl text-chocolate sm:text-5xl">
@@ -331,6 +287,96 @@ export default function HomePage() {
             );
           })}
         </Stagger>
+      </section>
+
+      {/* ---- Statement + woods index · asymmetric editorial spread ---- */}
+      <section className="mx-auto max-w-6xl px-6 py-24 sm:px-8 sm:py-32">
+        <div className="grid gap-14 lg:grid-cols-12 lg:gap-8">
+          <Reveal className="lg:col-span-7">
+            <p className="eyebrow text-terracotta">The atelier</p>
+            <p className="mt-6 font-display text-4xl leading-[1.15] text-chocolate sm:text-5xl lg:text-6xl">
+              Every piece has a name.
+              <br />
+              <span className="italic text-terracotta">
+                Every name has a maker.
+              </span>
+            </p>
+            <p className="mt-8 max-w-md text-base leading-relaxed text-ink/70">
+              Mbura, Ngunia, Khadija, Diani, Kahawa — a catalogue of named
+              designs, each built to order in the wood you choose.
+            </p>
+          </Reveal>
+          <Reveal delay={0.1} className="lg:col-span-4 lg:col-start-9">
+            <p className="eyebrow text-ink/70">The woods</p>
+            <ul className="mt-5 grid grid-cols-2 gap-x-8 border-b border-line lg:grid-cols-1 lg:gap-x-0">
+              {WOODS.map((wood) => (
+                <li
+                  key={wood}
+                  className="eyebrow border-t border-line py-3.5 text-[0.6875rem] text-ink/80"
+                >
+                  {wood}
+                </li>
+              ))}
+            </ul>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* ---- The build · charcoal tonal band with craft walkthrough ---- */}
+      <TonalBand className="py-24 sm:py-32">
+        <div className="mx-auto max-w-6xl px-6 sm:px-8">
+          <Reveal className="max-w-3xl">
+            <p className="eyebrow opacity-70">The workshop</p>
+            <h2 className="mt-5 font-display text-3xl leading-snug sm:text-5xl lg:text-6xl">
+              Nothing here is pulled from a shelf.{" "}
+              <span className="italic opacity-90">Watch it become yours.</span>
+            </h2>
+          </Reveal>
+          <div className="mt-16 lg:mt-8">
+            <CraftWalkthrough />
+          </div>
+          <Reveal className="mt-16 border-t border-bone/20 pt-10 lg:mt-8">
+            <p className="max-w-2xl font-display text-xl leading-relaxed sm:text-2xl">
+              Thirteen fundis. A guild of some fifteen artisan partners —
+              weavers, carvers, welders. Five to eight weeks, made for you.
+            </p>
+            <Link
+              href="/story"
+              className="eyebrow mt-8 inline-block border-b border-current pb-1 transition-opacity hover:opacity-70"
+            >
+              Read our story
+            </Link>
+          </Reveal>
+        </div>
+      </TonalBand>
+
+      {/* ---- How it works · vertical rhythm on mobile ---- */}
+      <section className="border-b border-line">
+        <div className="mx-auto max-w-6xl px-6 py-20 sm:px-8 sm:py-24">
+          <Reveal>
+            <p className="eyebrow text-terracotta">Built to order</p>
+            <h2 className="mt-3 font-display text-3xl text-chocolate sm:text-5xl">
+              How it works
+            </h2>
+          </Reveal>
+          <Stagger className="mt-10 grid gap-0 sm:grid-cols-2 sm:gap-x-10 lg:grid-cols-4">
+            {HOW_IT_WORKS.map(([title, body], i) => (
+              <StaggerItem key={title} className="border-t border-line py-6 lg:border-t-0 lg:py-0">
+                <p className="font-display text-3xl text-terracotta">{i + 1}</p>
+                <p className="mt-2 font-display text-xl text-chocolate">{title}</p>
+                <p className="mt-2 text-base leading-relaxed text-ink/70">{body}</p>
+              </StaggerItem>
+            ))}
+          </Stagger>
+          <Reveal className="mt-10">
+            <Link
+              href="/how-to-order"
+              className="eyebrow inline-block border-b border-chocolate pb-2 text-chocolate transition-colors hover:text-terracotta"
+            >
+              The full ordering guide
+            </Link>
+          </Reveal>
+        </div>
       </section>
 
       {/* ---- Closing statement + showroom ---- */}
