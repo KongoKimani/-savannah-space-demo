@@ -3,21 +3,22 @@
 /*
   The cabinet — the homepage opening.
 
-  Two doors, hinged at the outer edges, carrying the wordmark across a centre
-  seam. Scrolling swings them open onto the collection.
+  A single carved face that irises open from the centre. The rings unwind as
+  it goes: each one turns at its own rate and drifts outward, so the carving
+  spirals apart rather than simply parting.
 
   Everything here is DOM and CSS. There is no canvas, no texture to download
-  and no loading state: the closed doors are in the server-rendered HTML and
-  paint with the first frame. The only client work is writing one number
+  and no loading state: the shut face is in the server-rendered HTML and
+  paints with the first frame. The only client work is writing one number
   (`--open`, 0 to 1) onto the stage each frame; every transform below is a
   `calc()` off that number, so React never re-renders while you scroll.
 
-  The rings are vector, not a photograph of the Oromo Bar — the piece's
-  carving abstracted to line work, so it reads as Savannah's without
+  The carving is vector line work, not a photograph of the Oromo Bar — the
+  piece's turned rings abstracted, so it reads as Savannah's without
   pretending to be a photo of anything.
 */
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, type CSSProperties } from "react";
 import Link from "next/link";
 import { SITE } from "@/lib/site";
 import styles from "./cabinet.module.css";
@@ -26,7 +27,7 @@ import styles from "./cabinet.module.css";
    heights, which is the whole opening — about eight wheel ticks. */
 const SECTION_VH = 220;
 
-/* Held closed at the start so the still frame gets a beat before anything
+/* Held shut at the start so the still frame gets a beat before anything
    moves, and fully clear before the stage releases. */
 const OPEN_FROM = 0.12;
 const OPEN_TO = 0.82;
@@ -35,29 +36,65 @@ const RINGS = 15;
 
 const clamp01 = (v: number) => (v < 0 ? 0 : v > 1 ? 1 : v);
 
-/** Half of the carved disc. Centred on the seam by the CSS, so the two
-    halves meet as whole circles. */
-function Rings() {
-  const circles = [];
+/*
+  The carving.
+
+  Each ring is a near-closed arc, not a circle. That matters: a circle
+  rotated about its own centre is indistinguishable from itself, so
+  concentric circles spinning would look completely static no matter how fast
+  they turned. The break in each ring is what gives the rotation something to
+  show, and staggering those breaks around the face puts a spiral into the
+  shut state before anything has moved.
+*/
+function Carving() {
+  const rings = [];
   for (let i = 0; i < RINGS; i++) {
     // Tighter in the middle, opening out — the way the real piece is turned.
     const r = 6 + Math.pow(i / (RINGS - 1), 0.82) * 44;
-    circles.push(
-      <g key={i}>
+    const circumference = 2 * Math.PI * r;
+    const gap = 0.055;
+    const dash = `${circumference * (1 - gap)} ${circumference * gap}`;
+    // Golden-ish stagger so the breaks never line up into a straight seam.
+    const offset = i * 37;
+
+    const style = {
+      // Inner rings turn furthest — a vortex accelerates toward its centre.
+      "--spin": `${8 + (RINGS - i) * 7}deg`,
+      // Outer rings travel furthest — they have the least distance to leave.
+      "--push": 0.05 + i * 0.03,
+    } as CSSProperties;
+
+    rings.push(
+      <g key={i} className={styles.ring} style={style}>
         {/* carved shadow, then the lit lip a hair above it */}
-        <circle cx="50" cy="50" r={r} className={styles.ringShadow} />
-        <circle cx="50" cy="49.72" r={r} className={styles.ringLight} />
+        <circle
+          className={styles.ringShadow}
+          cx="50"
+          cy="50"
+          r={r}
+          strokeDasharray={dash}
+          transform={`rotate(${offset} 50 50)`}
+        />
+        <circle
+          className={styles.ringLight}
+          cx="50"
+          cy="49.72"
+          r={r}
+          strokeDasharray={dash}
+          transform={`rotate(${offset} 50 49.72)`}
+        />
       </g>
     );
   }
+
   return (
     <svg
-      className={styles.rings}
+      className={styles.carving}
       viewBox="0 0 100 100"
       aria-hidden="true"
       focusable="false"
     >
-      {circles}
+      {rings}
     </svg>
   );
 }
@@ -94,7 +131,7 @@ export default function Cabinet() {
     const stage = stageRef.current;
     if (!section || !stage) return;
 
-    // Reduced motion: the doors are already open, and scrolling does nothing.
+    // Reduced motion: the face is already open, and scrolling does nothing.
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
       stage.style.setProperty("--open", "1");
       stage.dataset.state = "open";
@@ -109,8 +146,8 @@ export default function Cabinet() {
       const t = travel > 0 ? clamp01(-section.getBoundingClientRect().top / travel) : 1;
       const open = clamp01((t - OPEN_FROM) / (OPEN_TO - OPEN_FROM));
 
-      // Weighted easing: slow to start, then away. Heavy doors do not ease
-      // linearly, and linear is what makes a CSS door feel like plastic.
+      // Weighted easing: slow to start, then away. A heavy carved face does
+      // not open linearly, and linear is what makes CSS motion feel plastic.
       const eased = open * open * (3 - 2 * open);
 
       // A small lerp on top so a hard flick still feels like mass moving.
@@ -118,6 +155,17 @@ export default function Cabinet() {
       if (Math.abs(eased - current) < 0.0005) current = eased;
 
       stage.style.setProperty("--open", current.toFixed(4));
+
+      /* The aperture gets its own curve, biased late.
+
+         Driving the hole straight off --open grows it from the very first
+         pixel of scroll, which punches through the wordmark while the
+         wordmark is still at full opacity. Raising it to a power keeps the
+         opening a pinprick until the face has had time to clear its copy,
+         then lets it run. Done here rather than with a CSS pow() so it does
+         not depend on browser support for the maths. */
+      stage.style.setProperty("--ap", Math.pow(current, 1.7).toFixed(4));
+
       stage.dataset.state = current > 0.985 ? "open" : "closed";
 
       raf = requestAnimationFrame(frame);
@@ -139,17 +187,17 @@ export default function Cabinet() {
   return (
     <section ref={sectionRef} className={styles.section} style={{ height: `${SECTION_VH}vh` }}>
       <div ref={stageRef} className={styles.stage}>
-        {/* ---- Inside the cabinet. Server-rendered underneath the doors, so
-                the reveal is a real element being uncovered, not a fade. ---- */}
+        {/* ---- Inside the cabinet. Server-rendered underneath the face, so
+                the reveal is a real element being uncovered. ---- */}
         <div className={styles.interior}>
           <div className={styles.interiorGlow} aria-hidden="true" />
           <div className={styles.interiorContent}>
             <p className={`eyebrow ${styles.interiorEyebrow}`}>
               Made in Kenya · Since 2018
             </p>
-            {/* Deliberately not a repeat of the copy on the closed doors —
-                saying the same line twice in ten seconds is weak. The doors
-                greet; the inside makes the argument. */}
+            {/* Deliberately not a repeat of the copy on the shut face —
+                saying the same line twice in ten seconds is weak. The face
+                greets; the inside makes the argument. */}
             <h1 className={styles.interiorHeading}>
               Furniture built to order.
               <span className={styles.interiorHeadingAccent}>
@@ -166,48 +214,30 @@ export default function Cabinet() {
           </div>
         </div>
 
-        {/* ---- The doors ---- */}
-        <div className={styles.doors} aria-hidden="true">
-          <div className={`${styles.door} ${styles.doorLeft}`}>
-            <div className={styles.doorFace}>
-              <Rings />
-              {/* Two words, not one string: on a phone the mark stacks
-                  rather than shrinking to something illegible or running off
-                  the edge. */}
-              <div className={styles.wordmark}>
-                <span className={styles.wordmarkInner}>
-                  <span className={styles.word}>Savannah</span>
-                  <span className={styles.word}>Space</span>
-                </span>
-              </div>
-              <span className={styles.knob} />
-            </div>
-            <div className={styles.doorEdge} />
-          </div>
+        {/* ---- The carved face. The aperture eats it from the centre out. ---- */}
+        <div className={styles.face} aria-hidden="true">
+          <Carving />
 
-          <div className={`${styles.door} ${styles.doorRight}`}>
-            <div className={styles.doorFace}>
-              <Rings />
-              {/* Two words, not one string: on a phone the mark stacks
-                  rather than shrinking to something illegible or running off
-                  the edge. */}
-              <div className={styles.wordmark}>
-                <span className={styles.wordmarkInner}>
-                  <span className={styles.word}>Savannah</span>
-                  <span className={styles.word}>Space</span>
-                </span>
-              </div>
-              <span className={styles.knob} />
-            </div>
-            <div className={styles.doorEdge} />
-          </div>
+          {/* Brass at the centre. The palette allows roughly three marigold
+              moments sitewide; this is one of them. */}
+          <span className={styles.boss} />
 
-          {/* Warm light in the crack — the detail that says there is something
-              behind this, before anyone has touched it. */}
-          <div className={styles.seam} />
+          <div className={styles.wordmark}>
+            {/* Two words, not one string: on a phone the mark stacks rather
+                than shrinking to something illegible or running off the
+                edge. */}
+            <span className={styles.wordmarkInner}>
+              <span className={styles.word}>Savannah</span>
+              <span className={styles.word}>Space</span>
+            </span>
+          </div>
         </div>
 
-        {/* ---- Standing copy, on the doors while they are closed ---- */}
+        {/* Warm light at the lip of the aperture — the opening is lit from
+            inside, so the edge is where the spill is brightest. */}
+        <div className={styles.rim} aria-hidden="true" />
+
+        {/* ---- Standing copy, on the face while it is shut ---- */}
         <div className={styles.chrome}>
           <p className={`${styles.chromeLine} ${styles.chromeLeft}`}>
             Welcome to Savannah Space.
@@ -219,9 +249,7 @@ export default function Cabinet() {
           <div className={styles.chromeControl}>
             <OpenControl onOpen={openCabinet} />
           </div>
-          <p className={styles.chromeShowroom}>
-            {SITE.showroom.name}, Nairobi
-          </p>
+          <p className={styles.chromeShowroom}>{SITE.showroom.name}, Nairobi</p>
         </div>
       </div>
     </section>

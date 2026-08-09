@@ -1,12 +1,19 @@
 /*
-  Cabinet doors.
+  The carved face and its aperture.
 
   One custom property drives the whole opening: --open, 0 (shut) to 1 (clear).
   Cabinet.tsx writes it once per frame; everything below is a calc() off it,
-  so nothing here costs a React render or a layout pass — only compositing.
+  so nothing here costs a React render or a layout pass.
 */
 
 @property --open {
+  syntax: "<number>";
+  initial-value: 0;
+  inherits: true;
+}
+
+/* The aperture's own eased progress — see the note in Cabinet.tsx. */
+@property --ap {
   syntax: "<number>";
   initial-value: 0;
   inherits: true;
@@ -19,10 +26,13 @@
 
 .stage {
   --open: 0;
-  /* The carved disc, sized off the shorter axis so it stays a circle and
+  --ap: 0;
+  /* The carved face, sized off the shorter axis so it stays a circle and
      stays whole on a phone. */
   --disc: min(78vh, 94vw);
-  --door-w: 50.05%; /* the overlap is what keeps the seam from hairlining */
+  /* Radius of the hole. Runs past the far corner so the face is completely
+     gone by the time the stage releases. */
+  --aperture: calc(var(--ap) * 88vmax);
 
   position: sticky;
   top: 0;
@@ -51,7 +61,7 @@
     rgba(255, 176, 102, 0.26) 0%,
     rgba(255, 176, 102, 0) 72%
   );
-  /* The spill grows as the doors let more light out. */
+  /* The spill grows as the aperture lets more light out. */
   opacity: clamp(0, calc(0.28 + var(--open) * 0.72), 1);
 }
 
@@ -61,8 +71,8 @@
   padding: 0 1.5rem;
   text-align: center;
   color: var(--color-bone);
-  /* Settles from a hair oversize as the doors clear, so the reveal reads as
-     one continuous move rather than a fade layered on a slide. */
+  /* Settles from a hair oversize as the face clears, so the reveal reads as
+     one continuous move rather than a fade layered on a wipe. */
   transform: scale(calc(1.045 - var(--open) * 0.045));
   opacity: clamp(0, calc((var(--open) - 0.52) * 3.2), 1);
 }
@@ -125,134 +135,70 @@
 }
 
 /* ------------------------------------------------------------------ *
- * The doors
+ * The carved face
  * ------------------------------------------------------------------ */
 
-.doors {
+.face {
   position: absolute;
   inset: 0;
-  /* Short enough to foreshorten hard. At 1500px the panels read as sliding;
-     the swing only becomes legible once the near edge is visibly larger
-     than the hinge. */
-  perspective: 1000px;
-  perspective-origin: 50% 50%;
-}
-
-.door {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: var(--door-w);
-  transform-style: preserve-3d;
-  will-change: transform;
-}
-
-.doorLeft {
-  left: 0;
-  transform-origin: left center;
-  /* Stops a couple of degrees short of edge-on so the back of a panel is
-     never turned toward the viewer and no interior face is needed. */
-  transform: rotateY(calc(var(--open) * -86deg));
-}
-
-.doorRight {
-  right: 0;
-  transform-origin: right center;
-  transform: rotateY(calc(var(--open) * 86deg));
-}
-
-.doorFace {
-  position: absolute;
-  inset: 0;
-  overflow: hidden;
-  backface-visibility: hidden;
-  /* Dark wood, lit from the seam outward — the light source is inside the
-     cabinet, so each panel is brightest where it meets its neighbour. */
+  display: grid;
+  place-items: center;
+  /* Dark wood with fine vertical striation — grain, not a texture map. */
   background-color: #2c1b09;
   background-image:
-    /* fine vertical striation — grain, not a texture map */
-    repeating-linear-gradient(
-      90deg,
-      rgb(255 226 190 / 0.022) 0 1px,
-      transparent 1px 4px
-    ),
+    repeating-linear-gradient(90deg, rgb(255 226 190 / 0.022) 0 1px, transparent 1px 4px),
     repeating-linear-gradient(90deg, rgb(0 0 0 / 0.055) 0 1px, transparent 1px 9px),
-    linear-gradient(90deg, #1d1206 0%, #40280f 58%, #573719 100%);
-  /* The face turns away from the light as it swings. */
-  filter: brightness(calc(1 - var(--open) * 0.42));
-}
+    radial-gradient(120% 100% at 50% 50%, #573719 0%, #33200c 55%, #1c1206 100%);
 
-.doorRight .doorFace {
-  background-image:
-    repeating-linear-gradient(
-      90deg,
-      rgb(255 226 190 / 0.022) 0 1px,
-      transparent 1px 4px
-    ),
-    repeating-linear-gradient(90deg, rgb(0 0 0 / 0.055) 0 1px, transparent 1px 9px),
-    linear-gradient(90deg, #573719 0%, #40280f 42%, #1d1206 100%);
-}
+  /* The iris. A hole punched at the centre that grows past the corners.
 
-/* Corners fall away so the eye stays on the carving. */
-.doorFace::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(
-    130% 105% at 50% 50%,
-    rgba(0, 0, 0, 0) 34%,
-    rgba(0, 0, 0, 0.55) 100%
+     A radial-gradient mask rather than blades or a clip-path: it gives a
+     genuinely circular aperture at any radius, needs no geometry to tile
+     seamlessly, and degrades to a plain visible face if masking is
+     unsupported. The soft lip keeps the edge from crawling on low-DPR
+     screens. */
+  -webkit-mask-image: radial-gradient(
+    circle at 50% 50%,
+    transparent 0 var(--aperture),
+    #000 calc(var(--aperture) + 0.35vmin)
   );
-  pointer-events: none;
-}
-
-/* The panel's own thickness, standing at right angles to the face. This is
-   the whole difference between a cabinet and a curtain. */
-.doorEdge {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 26px;
-  background: linear-gradient(90deg, #6b4520 0%, #3a2410 62%, #1a1006 100%);
-  opacity: clamp(0, calc(var(--open) * 6), 1);
-}
-
-.doorLeft .doorEdge {
-  right: 0;
-  transform-origin: right center;
-  transform: rotateY(90deg);
-}
-
-.doorRight .doorEdge {
-  left: 0;
-  transform-origin: left center;
-  transform: rotateY(-90deg);
-  background: linear-gradient(90deg, #1a1006 0%, #3a2410 38%, #6b4520 100%);
+  mask-image: radial-gradient(
+    circle at 50% 50%,
+    transparent 0 var(--aperture),
+    #000 calc(var(--aperture) + 0.35vmin)
+  );
 }
 
 /* ---- The carving ---- */
 
-.rings {
+.carving {
   position: absolute;
   top: 50%;
+  left: 50%;
   width: var(--disc);
   height: var(--disc);
-  margin-top: calc(var(--disc) / -2);
-  /* Each half is centred on the seam, so the two meet as whole circles. */
+  translate: -50% -50%;
+  /* Rings drift outside their own box as they unwind. */
+  overflow: visible;
 }
 
-.doorLeft .rings {
-  right: calc(var(--disc) / -2);
-}
-
-.doorRight .rings {
-  left: calc(var(--disc) / -2);
+/*
+  Each ring turns and drifts on its own clock. Inner rings turn furthest,
+  outer rings travel furthest — together that reads as unwinding rather than
+  as a set of circles all doing the same thing.
+*/
+.ring {
+  transform-box: view-box;
+  transform-origin: 50% 50%;
+  transform: rotate(calc(var(--open) * var(--spin)))
+    scale(calc(1 + var(--open) * var(--push)));
 }
 
 .ringShadow {
   fill: none;
   stroke: rgb(0 0 0 / 0.62);
   stroke-width: 2.4px;
+  stroke-linecap: round;
   vector-effect: non-scaling-stroke;
 }
 
@@ -260,15 +206,38 @@
   fill: none;
   stroke: rgb(255 213 158 / 0.3);
   stroke-width: 1.1px;
+  stroke-linecap: round;
   vector-effect: non-scaling-stroke;
 }
 
-/* ---- The wordmark, split by the seam ---- */
+/* ---- Brass at the centre ---- */
+
+.boss {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: clamp(1.1rem, 2.2vw, 1.9rem);
+  aspect-ratio: 1;
+  translate: -50% -50%;
+  border-radius: 999px;
+  background: radial-gradient(
+    circle at 34% 28%,
+    #f8e39a 0%,
+    var(--color-marigold) 42%,
+    #7d5f0e 100%
+  );
+  box-shadow: 0 2px 6px rgb(0 0 0 / 0.7);
+  /* First thing the aperture reaches, so it goes first. */
+  opacity: clamp(0, calc(1 - var(--open) * 9), 1);
+}
+
+/* ---- The wordmark ---- */
 
 .wordmark {
   position: absolute;
   top: 50%;
-  width: 200%;
+  left: 0;
+  width: 100%;
   translate: 0 -50%;
   text-align: center;
   font-family: var(--font-display);
@@ -277,19 +246,20 @@
   text-transform: uppercase;
   letter-spacing: 0.22em;
   /* Trailing letterspace sits on the right of each glyph; nudge back so the
-     block still reads as optically centred on the seam. */
+     block still reads as optically centred. */
   text-indent: 0.22em;
   color: rgb(252 246 238 / 0.94);
   text-shadow: 0 1px 0 rgb(0 0 0 / 0.6), 0 0 40px rgb(0 0 0 / 0.35);
   white-space: nowrap;
-  /* Out before the doors have turned far enough to start eating letters at
-     the seam. A mangled wordmark is worse than no wordmark.
+  /* Out before the aperture reaches it — a wordmark with a hole through the
+     middle of it is worse than no wordmark.
 
      This has to live on the wrapper, not on the animated element: a keyframe
      animation with fill-mode `both` outranks a normal declaration, so putting
      the intro animation and this opacity on the same element silently pins it
      at the animation's end value and the wordmark never fades at all. */
-  opacity: clamp(0, calc(1 - var(--open) * 10), 1);
+  opacity: clamp(0, calc(1 - var(--open) * 11), 1);
+  transform: scale(calc(1 + var(--open) * 0.16));
 }
 
 /* The arrival — letterspacing settling as the page loads. */
@@ -306,14 +276,6 @@
   margin-left: 0.34em;
 }
 
-.doorLeft .wordmark {
-  left: 0;
-}
-
-.doorRight .wordmark {
-  right: 0;
-}
-
 @keyframes wordmark-settle {
   from {
     letter-spacing: 0.66em;
@@ -325,72 +287,56 @@
   }
 }
 
-/* ---- Brass. The palette allows roughly three marigold moments sitewide;
-        the knobs are one of them. Set below the wordmark so the two never
-        collide. ---- */
+/* ---- The lit lip of the aperture ---- */
 
-.knob {
+.rim {
   position: absolute;
-  top: 63%;
-  width: clamp(0.6rem, 1.05vw, 0.95rem);
+  top: 50%;
+  left: 50%;
+  width: calc(var(--aperture) * 2);
   aspect-ratio: 1;
+  translate: -50% -50%;
+  border-radius: 999px;
+  box-shadow:
+    0 0 6vmin 1vmin rgba(255, 178, 104, 0.28),
+    inset 0 0 4vmin 0.6vmin rgba(255, 196, 132, 0.22);
+  /* Up as the aperture breaks open, gone once it has passed the frame. */
+  opacity: clamp(0, calc(min(var(--ap) * 14, (1 - var(--open)) * 2.6)), 1);
+  pointer-events: none;
+}
+
+/* A point of warm light at dead centre while the face is shut — the aperture
+   opens from exactly there, so the reveal has somewhere to come from. */
+.rim::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 22vmin;
+  aspect-ratio: 1;
+  translate: -50% -50%;
   border-radius: 999px;
   background: radial-gradient(
-    circle at 34% 28%,
-    #f8e39a 0%,
-    var(--color-marigold) 42%,
-    #7d5f0e 100%
+    circle,
+    rgba(255, 198, 134, 0.5) 0%,
+    rgba(255, 176, 102, 0) 68%
   );
-  box-shadow: 0 2px 5px rgb(0 0 0 / 0.7);
   opacity: clamp(0, calc(1 - var(--open) * 6), 1);
+  animation: centre-breathe 5s ease-in-out infinite;
 }
 
-.doorLeft .knob {
-  right: clamp(0.7rem, 1.5vw, 1.4rem);
-}
-
-.doorRight .knob {
-  left: clamp(0.7rem, 1.5vw, 1.4rem);
-}
-
-/* ---- Warm light in the crack ---- */
-
-.seam {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 50%;
-  width: 3px;
-  translate: -50% 0;
-  background: linear-gradient(
-    180deg,
-    rgba(255, 176, 102, 0) 0%,
-    rgba(255, 198, 134, 0.9) 20%,
-    rgba(255, 220, 172, 1) 50%,
-    rgba(255, 198, 134, 0.9) 80%,
-    rgba(255, 176, 102, 0) 100%
-  );
-  filter: blur(4px);
-  /* Breathes at rest so the shut frame is never completely static, then goes
-     out once the doors are doing the work. */
-  animation: seam-breathe 5s ease-in-out infinite;
-  opacity: clamp(0, calc(1 - var(--open) * 5), 1);
-}
-
-@keyframes seam-breathe {
+@keyframes centre-breathe {
   0%,
   100% {
-    filter: blur(4px);
-    scale: 1 1;
+    scale: 0.85;
   }
   50% {
-    filter: blur(7px);
-    scale: 2.6 1;
+    scale: 1.12;
   }
 }
 
 /* ------------------------------------------------------------------ *
- * Standing copy — on the doors while they are shut
+ * Standing copy — on the face while it is shut
  * ------------------------------------------------------------------ */
 
 .chrome {
@@ -398,8 +344,8 @@
   inset: 0;
   pointer-events: none;
   color: var(--color-bone);
-  /* Clears well before the doors do; copy riding an opening door reads as a
-     mistake. */
+  /* Clears well before the face does; copy riding an opening aperture reads
+     as a mistake. */
   opacity: clamp(0, calc(1 - var(--open) * 5), 1);
 }
 
@@ -586,11 +532,12 @@
 }
 
 /* ------------------------------------------------------------------ *
- * Reduced motion — the doors are simply already open.
+ * Reduced motion — the face is simply already open.
  * ------------------------------------------------------------------ */
 
 @media (prefers-reduced-motion: reduce) {
-  .doors,
+  .face,
+  .rim,
   .chrome {
     display: none;
   }
@@ -609,8 +556,7 @@
     transform: none;
   }
 
-  .wordmark,
-  .seam,
+  .wordmarkInner,
   .openRing {
     animation: none;
   }
