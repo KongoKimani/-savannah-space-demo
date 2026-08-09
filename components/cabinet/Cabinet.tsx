@@ -171,8 +171,14 @@ export default function Cabinet() {
           <div className={`${styles.door} ${styles.doorLeft}`}>
             <div className={styles.doorFace}>
               <Rings />
+              {/* Two words, not one string: on a phone the mark stacks
+                  rather than shrinking to something illegible or running off
+                  the edge. */}
               <div className={styles.wordmark}>
-                <span>Savannah Space</span>
+                <span className={styles.wordmarkInner}>
+                  <span className={styles.word}>Savannah</span>
+                  <span className={styles.word}>Space</span>
+                </span>
               </div>
               <span className={styles.knob} />
             </div>
@@ -182,8 +188,14 @@ export default function Cabinet() {
           <div className={`${styles.door} ${styles.doorRight}`}>
             <div className={styles.doorFace}>
               <Rings />
+              {/* Two words, not one string: on a phone the mark stacks
+                  rather than shrinking to something illegible or running off
+                  the edge. */}
               <div className={styles.wordmark}>
-                <span>Savannah Space</span>
+                <span className={styles.wordmarkInner}>
+                  <span className={styles.word}>Savannah</span>
+                  <span className={styles.word}>Space</span>
+                </span>
               </div>
               <span className={styles.knob} />
             </div>
