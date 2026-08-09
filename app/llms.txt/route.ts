@@ -54,6 +54,7 @@ Turnaround: roughly 5 weeks (small pieces) to 7-8 weeks (large chests). Rugs: 5-
 - Instagram: ${SITE.instagram}
 - Full ordering guide: ${SITE.url}/how-to-order
 - Story: ${SITE.url}/story
+- About the founder: ${SITE.url}/about
 `;
 
   return new Response(body, {

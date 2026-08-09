@@ -1,0 +1,532 @@
+/*
+  Cabinet doors.
+
+  One custom property drives the whole opening: --open, 0 (shut) to 1 (clear).
+  Cabinet.tsx writes it once per frame; everything below is a calc() off it,
+  so nothing here costs a React render or a layout pass — only compositing.
+*/
+
+@property --open {
+  syntax: "<number>";
+  initial-value: 0;
+  inherits: true;
+}
+
+.section {
+  position: relative;
+  background-color: var(--color-charcoal);
+}
+
+.stage {
+  --open: 0;
+  /* The carved disc, sized off the shorter axis so it stays a circle and
+     stays whole on a phone. */
+  --disc: min(78vh, 94vw);
+  --door-w: 50.05%; /* the overlap is what keeps the seam from hairlining */
+
+  position: sticky;
+  top: 0;
+  height: 100dvh;
+  overflow: hidden;
+  background-color: #0b0805;
+}
+
+/* ------------------------------------------------------------------ *
+ * Inside
+ * ------------------------------------------------------------------ */
+
+.interior {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background: radial-gradient(115% 85% at 50% 44%, #2a1d11 0%, #150f09 58%, #0b0805 100%);
+}
+
+.interiorGlow {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    44% 38% at 50% 43%,
+    rgba(255, 176, 102, 0.26) 0%,
+    rgba(255, 176, 102, 0) 72%
+  );
+  /* The spill grows as the doors let more light out. */
+  opacity: clamp(0, calc(0.28 + var(--open) * 0.72), 1);
+}
+
+.interiorContent {
+  position: relative;
+  max-width: 44rem;
+  padding: 0 1.5rem;
+  text-align: center;
+  color: var(--color-bone);
+  /* Settles from a hair oversize as the doors clear, so the reveal reads as
+     one continuous move rather than a fade layered on a slide. */
+  transform: scale(calc(1.045 - var(--open) * 0.045));
+  opacity: clamp(0, calc((var(--open) - 0.52) * 3.2), 1);
+}
+
+.interiorEyebrow {
+  color: rgb(249 243 236 / 0.6);
+}
+
+.interiorHeading {
+  margin-top: 1.5rem;
+  font-family: var(--font-display);
+  font-size: clamp(2.25rem, 5.6vw, 4.25rem);
+  font-weight: 400;
+  line-height: 1.12;
+}
+
+.interiorHeadingAccent {
+  display: block;
+  font-style: italic;
+  color: #e3b14a;
+}
+
+.interiorBody {
+  margin: 1.75rem auto 0;
+  max-width: 30rem;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: rgb(249 243 236 / 0.75);
+}
+
+.interiorCta {
+  display: inline-block;
+  margin-top: 2.25rem;
+  padding-bottom: 0.35rem;
+  border-bottom: 1px solid rgb(249 243 236 / 0.7);
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 0.6875rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--color-bone);
+  transition: opacity 0.2s;
+}
+
+.interiorCta:hover {
+  opacity: 0.7;
+}
+
+/* ------------------------------------------------------------------ *
+ * The doors
+ * ------------------------------------------------------------------ */
+
+.doors {
+  position: absolute;
+  inset: 0;
+  /* Short enough to foreshorten hard. At 1500px the panels read as sliding;
+     the swing only becomes legible once the near edge is visibly larger
+     than the hinge. */
+  perspective: 1000px;
+  perspective-origin: 50% 50%;
+}
+
+.door {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: var(--door-w);
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+.doorLeft {
+  left: 0;
+  transform-origin: left center;
+  /* Stops a couple of degrees short of edge-on so the back of a panel is
+     never turned toward the viewer and no interior face is needed. */
+  transform: rotateY(calc(var(--open) * -86deg));
+}
+
+.doorRight {
+  right: 0;
+  transform-origin: right center;
+  transform: rotateY(calc(var(--open) * 86deg));
+}
+
+.doorFace {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  backface-visibility: hidden;
+  /* Dark wood, lit from the seam outward — the light source is inside the
+     cabinet, so each panel is brightest where it meets its neighbour. */
+  background-color: #2c1b09;
+  background-image:
+    /* fine vertical striation — grain, not a texture map */
+    repeating-linear-gradient(
+      90deg,
+      rgb(255 226 190 / 0.022) 0 1px,
+      transparent 1px 4px
+    ),
+    repeating-linear-gradient(90deg, rgb(0 0 0 / 0.055) 0 1px, transparent 1px 9px),
+    linear-gradient(90deg, #1d1206 0%, #40280f 58%, #573719 100%);
+  /* The face turns away from the light as it swings. */
+  filter: brightness(calc(1 - var(--open) * 0.42));
+}
+
+.doorRight .doorFace {
+  background-image:
+    repeating-linear-gradient(
+      90deg,
+      rgb(255 226 190 / 0.022) 0 1px,
+      transparent 1px 4px
+    ),
+    repeating-linear-gradient(90deg, rgb(0 0 0 / 0.055) 0 1px, transparent 1px 9px),
+    linear-gradient(90deg, #573719 0%, #40280f 42%, #1d1206 100%);
+}
+
+/* Corners fall away so the eye stays on the carving. */
+.doorFace::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    130% 105% at 50% 50%,
+    rgba(0, 0, 0, 0) 34%,
+    rgba(0, 0, 0, 0.55) 100%
+  );
+  pointer-events: none;
+}
+
+/* The panel's own thickness, standing at right angles to the face. This is
+   the whole difference between a cabinet and a curtain. */
+.doorEdge {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 26px;
+  background: linear-gradient(90deg, #6b4520 0%, #3a2410 62%, #1a1006 100%);
+  opacity: clamp(0, calc(var(--open) * 6), 1);
+}
+
+.doorLeft .doorEdge {
+  right: 0;
+  transform-origin: right center;
+  transform: rotateY(90deg);
+}
+
+.doorRight .doorEdge {
+  left: 0;
+  transform-origin: left center;
+  transform: rotateY(-90deg);
+  background: linear-gradient(90deg, #1a1006 0%, #3a2410 38%, #6b4520 100%);
+}
+
+/* ---- The carving ---- */
+
+.rings {
+  position: absolute;
+  top: 50%;
+  width: var(--disc);
+  height: var(--disc);
+  margin-top: calc(var(--disc) / -2);
+  /* Each half is centred on the seam, so the two meet as whole circles. */
+}
+
+.doorLeft .rings {
+  right: calc(var(--disc) / -2);
+}
+
+.doorRight .rings {
+  left: calc(var(--disc) / -2);
+}
+
+.ringShadow {
+  fill: none;
+  stroke: rgb(0 0 0 / 0.62);
+  stroke-width: 2.4px;
+  vector-effect: non-scaling-stroke;
+}
+
+.ringLight {
+  fill: none;
+  stroke: rgb(255 213 158 / 0.3);
+  stroke-width: 1.1px;
+  vector-effect: non-scaling-stroke;
+}
+
+/* ---- The wordmark, split by the seam ---- */
+
+.wordmark {
+  position: absolute;
+  top: 50%;
+  width: 200%;
+  translate: 0 -50%;
+  text-align: center;
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 7.4vw, 7rem);
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  /* Trailing letterspace sits on the right of each glyph; nudge back so the
+     block still reads as optically centred on the seam. */
+  text-indent: 0.22em;
+  color: rgb(252 246 238 / 0.94);
+  text-shadow: 0 1px 0 rgb(0 0 0 / 0.6), 0 0 40px rgb(0 0 0 / 0.35);
+  white-space: nowrap;
+  /* Out before the doors have turned far enough to start eating letters at
+     the seam. A mangled wordmark is worse than no wordmark.
+
+     This has to live on the wrapper, not on the animated element: a keyframe
+     animation with fill-mode `both` outranks a normal declaration, so putting
+     the intro animation and this opacity on the same element silently pins it
+     at the animation's end value and the wordmark never fades at all. */
+  opacity: clamp(0, calc(1 - var(--open) * 10), 1);
+}
+
+/* The arrival — letterspacing settling as the page loads. */
+.wordmark span {
+  display: inline-block;
+  animation: wordmark-settle 1500ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.doorLeft .wordmark {
+  left: 0;
+}
+
+.doorRight .wordmark {
+  right: 0;
+}
+
+@keyframes wordmark-settle {
+  from {
+    letter-spacing: 0.66em;
+    opacity: 0;
+  }
+  to {
+    letter-spacing: 0.22em;
+    opacity: 1;
+  }
+}
+
+/* ---- Brass. The palette allows roughly three marigold moments sitewide;
+        the knobs are one of them. Set below the wordmark so the two never
+        collide. ---- */
+
+.knob {
+  position: absolute;
+  top: 63%;
+  width: clamp(0.6rem, 1.05vw, 0.95rem);
+  aspect-ratio: 1;
+  border-radius: 999px;
+  background: radial-gradient(
+    circle at 34% 28%,
+    #f8e39a 0%,
+    var(--color-marigold) 42%,
+    #7d5f0e 100%
+  );
+  box-shadow: 0 2px 5px rgb(0 0 0 / 0.7);
+  opacity: clamp(0, calc(1 - var(--open) * 6), 1);
+}
+
+.doorLeft .knob {
+  right: clamp(0.7rem, 1.5vw, 1.4rem);
+}
+
+.doorRight .knob {
+  left: clamp(0.7rem, 1.5vw, 1.4rem);
+}
+
+/* ---- Warm light in the crack ---- */
+
+.seam {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 3px;
+  translate: -50% 0;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 176, 102, 0) 0%,
+    rgba(255, 198, 134, 0.9) 20%,
+    rgba(255, 220, 172, 1) 50%,
+    rgba(255, 198, 134, 0.9) 80%,
+    rgba(255, 176, 102, 0) 100%
+  );
+  filter: blur(4px);
+  /* Breathes at rest so the shut frame is never completely static, then goes
+     out once the doors are doing the work. */
+  animation: seam-breathe 5s ease-in-out infinite;
+  opacity: clamp(0, calc(1 - var(--open) * 5), 1);
+}
+
+@keyframes seam-breathe {
+  0%,
+  100% {
+    filter: blur(4px);
+    scale: 1 1;
+  }
+  50% {
+    filter: blur(7px);
+    scale: 2.6 1;
+  }
+}
+
+/* ------------------------------------------------------------------ *
+ * Standing copy — on the doors while they are shut
+ * ------------------------------------------------------------------ */
+
+.chrome {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  color: var(--color-bone);
+  /* Clears well before the doors do; copy riding an opening door reads as a
+     mistake. */
+  opacity: clamp(0, calc(1 - var(--open) * 5), 1);
+}
+
+.chromeLine {
+  position: absolute;
+  bottom: clamp(2.5rem, 8vh, 5rem);
+  max-width: 15rem;
+  font-family: var(--font-display);
+  font-size: clamp(1.05rem, 1.7vw, 1.5rem);
+  line-height: 1.35;
+  color: rgb(249 243 236 / 0.92);
+  text-shadow: 0 1px 10px rgb(0 0 0 / 0.7);
+}
+
+.chromeLeft {
+  left: clamp(1.5rem, 4vw, 4rem);
+}
+
+/* Cleared to the left of the floating WhatsApp / email buttons, which are
+   fixed at the right edge on every page. */
+.chromeRight {
+  right: clamp(5.5rem, 8vw, 8.5rem);
+  text-align: right;
+}
+
+.chromeEdge {
+  position: absolute;
+  top: 50%;
+  right: clamp(0.75rem, 1.6vw, 1.75rem);
+  translate: 0 -50%;
+  writing-mode: vertical-rl;
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 0.625rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: rgb(249 243 236 / 0.5);
+}
+
+.chromeShowroom {
+  position: absolute;
+  top: 50%;
+  left: clamp(0.75rem, 1.6vw, 1.75rem);
+  translate: 0 -50%;
+  writing-mode: vertical-rl;
+  rotate: 180deg;
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 0.625rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: rgb(249 243 236 / 0.4);
+}
+
+.chromeControl {
+  position: absolute;
+  bottom: clamp(2rem, 7vh, 4.5rem);
+  left: 50%;
+  translate: -50% 0;
+  pointer-events: auto;
+}
+
+/* ---- The OPEN control ---- */
+
+.openControl {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: clamp(6.5rem, 10vw, 8.5rem);
+  aspect-ratio: 1;
+  border: 0;
+  background: none;
+  color: var(--color-bone);
+  cursor: pointer;
+}
+
+.openControl::before {
+  content: "";
+  position: absolute;
+  inset: 22%;
+  border-radius: 999px;
+  border: 1px solid rgb(249 243 236 / 0.4);
+  background: rgb(11 8 5 / 0.45);
+  transition: border-color 0.25s, background-color 0.25s;
+}
+
+.openControl:hover::before {
+  border-color: rgb(249 243 236 / 0.85);
+  background: rgb(11 8 5 / 0.7);
+}
+
+.openRing {
+  position: absolute;
+  inset: 0;
+  animation: ring-turn 26s linear infinite;
+}
+
+.openRingText {
+  fill: rgb(249 243 236 / 0.62);
+  font-family: var(--font-body);
+  font-size: 6.2px;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.openLabel {
+  position: relative;
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 0.625rem;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+}
+
+@keyframes ring-turn {
+  to {
+    rotate: 360deg;
+  }
+}
+
+/* ------------------------------------------------------------------ *
+ * Reduced motion — the doors are simply already open.
+ * ------------------------------------------------------------------ */
+
+@media (prefers-reduced-motion: reduce) {
+  .doors,
+  .chrome {
+    display: none;
+  }
+
+  .stage {
+    position: static;
+    height: 100dvh;
+  }
+
+  .section {
+    height: 100dvh !important;
+  }
+
+  .interiorContent {
+    opacity: 1;
+    transform: none;
+  }
+
+  .wordmark,
+  .seam,
+  .openRing {
+    animation: none;
+  }
+}

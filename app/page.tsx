@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import CraftWalkthrough from "@/components/CraftWalkthrough";
+import Cabinet from "@/components/cabinet/Cabinet";
 import TonalBand from "@/components/motion/TonalBand";
 import { Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
 import { blurProps } from "@/lib/blur";
@@ -12,24 +12,6 @@ import {
   priceInfo,
 } from "@/lib/products";
 import { SITE, formatKsh, whatsappLink } from "@/lib/site";
-
-const WOODS = [
-  "Mvule",
-  "Sudanese Teak",
-  "Mango",
-  "Camphor",
-  "Meru Oak",
-  "Muringa",
-  "Duom Palm",
-  "Indian Teak",
-  "Recycled Scandinavian Pine",
-];
-
-/* The hero is a piece, not a mood shot — the first thing a visitor sees is
-   furniture with a name and a price. The photo's native 605px width is why
-   desktop shows it as a framed plate instead of stretching it full-bleed. */
-const HERO_SLUG = "oromo-bar";
-const HERO_IMAGE = "/images/pieces/oromo-bar/01.jpg";
 
 /* Curated home feature shots (index into piece.images): styled interiors
    only; the Oromo chapter uses its open-doors shot so it never repeats the
@@ -59,82 +41,14 @@ export default function HomePage() {
   const featured = pieces
     .filter((p) => p.featured)
     .sort((a, b) => chapter(a.slug) - chapter(b.slug));
-  const hero = pieces.find((p) => p.slug === HERO_SLUG);
-  const heroPrice = hero ? priceInfo(hero) : null;
 
   return (
     <div>
-      {/* ---- Chapter 0 · Statement hero, led by a piece.
-              Mobile: full-bleed immersive scene, statement anchored low.
-              Desktop: charcoal canvas, statement left, the photo at its
-              natural 3:4 as a hairline-framed plate. ---- */}
-      <section className="relative overflow-hidden bg-charcoal text-bone">
-        <div className="relative mx-auto flex min-h-[100dvh] w-full max-w-6xl flex-col justify-end px-6 pb-16 pt-28 sm:px-8 lg:grid lg:grid-cols-12 lg:items-center lg:gap-8 lg:py-32">
-          <div className="absolute inset-0 lg:relative lg:inset-auto lg:col-span-5 lg:col-start-8 lg:row-start-1 lg:aspect-[3/4]">
-            {/* No entrance animation here: the hero is the LCP element, and
-                an opacity-0 initial state defers LCP by seconds on mobile. */}
-            <Image
-              src={HERO_IMAGE}
-              alt="The Oromo Bar — a circular hand-carved drinks cabinet by Savannah Space, styled in a Nairobi interior"
-              fill
-              priority
-              sizes="(min-width: 1024px) 480px, 100vw"
-              className="object-cover"
-              {...blurProps(HERO_IMAGE)}
-            />
-            {/* mobile scene gradients: statement legibility + transparent header */}
-            <div
-              aria-hidden
-              className="absolute inset-0 bg-gradient-to-t from-charcoal/85 via-charcoal/35 to-charcoal/25 lg:hidden"
-            />
-            <div
-              aria-hidden
-              className="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-charcoal/60 to-transparent lg:hidden"
-            />
-            {/* desktop plate mark */}
-            <div
-              aria-hidden
-              className="pointer-events-none absolute -inset-4 hidden border border-bone/30 lg:block"
-            />
-          </div>
-          <div className="relative lg:col-span-6 lg:col-start-1 lg:row-start-1">
-            <p className="eyebrow tracking-[0.3em] text-bone/90">
-              Made in Kenya · Since 2018
-            </p>
-            <h1 className="mt-6 max-w-xl font-display text-[2.75rem] leading-[1.12] sm:text-6xl xl:text-7xl">
-              Where African heritage{" "}
-              <span className="italic">lives in design.</span>
-            </h1>
-            <p className="mt-6 max-w-md text-base leading-relaxed text-bone/80">
-              Furniture built to order in our Nairobi workshop by thirteen
-              fundis and a guild of Kenyan artisans — never shipped from a
-              warehouse.
-            </p>
-            {hero && heroPrice && (
-              <Link
-                href={`/pieces/${hero.slug}`}
-                className="group mt-10 inline-block"
-              >
-                <span className="eyebrow block text-[0.5625rem] text-bone/60">
-                  Pictured
-                </span>
-                <span className="mt-1 block font-display text-lg">
-                  {hero.name} · {heroPrice.isFrom && "from "}
-                  {formatKsh(heroPrice.price)}
-                </span>
-                <span className="eyebrow mt-3 inline-block border-b border-bone/70 pb-1 transition-opacity group-hover:opacity-70">
-                  View the piece
-                </span>
-              </Link>
-            )}
-          </div>
-        </div>
-        {/* hairline frame, inset like a plate mark (mobile scene only) */}
-        <div
-          aria-hidden
-          className="pointer-events-none absolute inset-3 border border-bone/30 sm:inset-5 lg:hidden"
-        />
-      </section>
+      {/* ---- The cabinet · the opening. Two doors carrying the wordmark
+              swing apart onto the collection. DOM and CSS only: it is in the
+              server-rendered HTML, so there is nothing to download and no
+              loading state before the first paint. ---- */}
+      <Cabinet />
 
       {/* ---- Chapters 01–03 · Featured pieces (proof, straight after the
               statement). Mobile: immersive full-bleed scenes (portrait photos
@@ -295,67 +209,6 @@ export default function HomePage() {
         </Stagger>
       </section>
 
-      {/* ---- Statement + woods index · asymmetric editorial spread ---- */}
-      <section className="mx-auto max-w-6xl px-6 py-24 sm:px-8 sm:py-32">
-        <div className="grid gap-14 lg:grid-cols-12 lg:gap-8">
-          <Reveal className="lg:col-span-7">
-            <p className="eyebrow text-terracotta">The atelier</p>
-            <p className="mt-6 font-display text-4xl leading-[1.15] text-chocolate sm:text-5xl lg:text-6xl">
-              Every piece has a name.
-              <br />
-              <span className="italic text-terracotta">
-                Every name has a maker.
-              </span>
-            </p>
-            <p className="mt-8 max-w-md text-base leading-relaxed text-ink/70">
-              Mbura, Ngunia, Khadija, Diani, Kahawa — a catalogue of named
-              designs, each built to order in the wood you choose.
-            </p>
-          </Reveal>
-          <Reveal delay={0.1} className="lg:col-span-4 lg:col-start-9">
-            <p className="eyebrow text-ink/70">The woods</p>
-            <ul className="mt-5 grid grid-cols-2 gap-x-8 border-b border-line lg:grid-cols-1 lg:gap-x-0">
-              {WOODS.map((wood) => (
-                <li
-                  key={wood}
-                  className="eyebrow border-t border-line py-3.5 text-[0.6875rem] text-ink/80"
-                >
-                  {wood}
-                </li>
-              ))}
-            </ul>
-          </Reveal>
-        </div>
-      </section>
-
-      {/* ---- The build · charcoal tonal band with craft walkthrough ---- */}
-      <TonalBand className="py-24 sm:py-32">
-        <div className="mx-auto max-w-6xl px-6 sm:px-8">
-          <Reveal className="max-w-3xl">
-            <p className="eyebrow opacity-70">The workshop</p>
-            <h2 className="mt-5 font-display text-3xl leading-snug sm:text-5xl lg:text-6xl">
-              Nothing here is pulled from a shelf.{" "}
-              <span className="italic opacity-90">Watch it become yours.</span>
-            </h2>
-          </Reveal>
-          <div className="mt-16 lg:mt-8">
-            <CraftWalkthrough />
-          </div>
-          <Reveal className="mt-16 border-t border-bone/20 pt-10 lg:mt-8">
-            <p className="max-w-2xl font-display text-xl leading-relaxed sm:text-2xl">
-              Thirteen fundis. A guild of some fifteen artisan partners —
-              weavers, carvers, welders. Five to eight weeks, made for you.
-            </p>
-            <Link
-              href="/story"
-              className="eyebrow mt-8 inline-block border-b border-current pb-1 transition-opacity hover:opacity-70"
-            >
-              Read our story
-            </Link>
-          </Reveal>
-        </div>
-      </TonalBand>
-
       {/* ---- How it works · vertical rhythm on mobile ---- */}
       <section className="border-b border-line">
         <div className="mx-auto max-w-6xl px-6 py-20 sm:px-8 sm:py-24">
@@ -384,6 +237,31 @@ export default function HomePage() {
           </Reveal>
         </div>
       </section>
+
+      {/* ---- About · the person, in one paragraph. The full page carries
+              the founding, the guild and the woods. ---- */}
+      <TonalBand className="py-24 sm:py-32">
+        <div className="mx-auto max-w-6xl px-6 sm:px-8">
+          <Reveal className="max-w-3xl">
+            <p className="eyebrow opacity-70">About</p>
+            <h2 className="mt-5 font-display text-3xl leading-snug sm:text-5xl lg:text-6xl">
+              Cherie Kihato started this with twenty thousand shillings{" "}
+              <span className="italic opacity-90">and two fundis.</span>
+            </h2>
+            <p className="mt-8 max-w-xl text-base leading-relaxed opacity-80">
+              Two became thirteen. One market stall became a guild of fifteen
+              artisan workshops. The workshop is ours, the wood is chosen for
+              your piece, and nothing here waits in a warehouse.
+            </p>
+            <Link
+              href="/about"
+              className="eyebrow mt-8 inline-block border-b border-current pb-1 transition-opacity hover:opacity-70"
+            >
+              About Savannah Space
+            </Link>
+          </Reveal>
+        </div>
+      </TonalBand>
 
       {/* ---- Closing statement + showroom ---- */}
       <section className="bg-blush">

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import CraftWalkthrough from "@/components/CraftWalkthrough";
 import TonalBand from "@/components/motion/TonalBand";
 import { ClipReveal, Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
 
@@ -72,6 +73,24 @@ export default function StoryPage() {
           </p>
         </Reveal>
       </section>
+
+      {/* The build · five stages, moved here from the homepage. It is the
+          story; on the homepage it was a section competing with the page
+          that is meant to own it. */}
+      <TonalBand className="py-20 sm:py-28">
+        <div className="mx-auto max-w-6xl px-4">
+          <Reveal className="max-w-3xl">
+            <p className="eyebrow opacity-70">The build</p>
+            <h2 className="mt-5 font-display text-3xl leading-snug sm:text-5xl">
+              Nothing here is pulled from a shelf.{" "}
+              <span className="italic opacity-90">Watch it become yours.</span>
+            </h2>
+          </Reveal>
+          <div className="mt-16 lg:mt-8">
+            <CraftWalkthrough />
+          </div>
+        </div>
+      </TonalBand>
 
       {/* The guild */}
       <section className="border-y border-line">
