@@ -1,6 +1,8 @@
-/* Geometry is all calc() off two numbers written onto .stage each frame:
-   --t (0 to 1, the arch opening) and --r (0 to 1, the arch's curve
-   flattening at the end). React never re-renders while scrolling. */
+/* Everything is calc() off --t (0 to 1), written onto .stage by the scroll
+   listener. The arch is a real arch at every frame: one box with a
+   semicircular top that grows from a doorway to wider-and-taller than the
+   screen, so its curve rises out of view instead of squashing into a
+   rounded rectangle. */
 
 .wrap {
   position: relative;
@@ -10,30 +12,30 @@
 
 @media (prefers-reduced-motion: no-preference) {
   .wrap {
-    height: 240vh;
-    height: 240dvh;
+    height: 260vh;
+    height: 260dvh;
   }
 }
 
 .stage {
   --t: 0;
-  --r: 0;
-  --x0: 19vw;
-  --y0: 25dvh;
-  --b0: 11dvh;
-  --s0: 0.8;
-  /* The cabinet sits ~45% across the photo; centre on it when the photo is
-     wider than the screen, on the photo itself when the window is capped. */
-  --ox: -45%;
-  /* The photo is 3:4 and only 605px wide, so the open state is capped at its
-     natural aspect (bone either side on wide screens) instead of being
-     stretched into a soft full-bleed. */
-  --x1: max(0px, calc((100vw - 75dvh) / 2));
-  --x: calc(var(--x0) * (1 - var(--t)) + var(--x1) * var(--t));
-  --y: calc(var(--y0) * (1 - var(--t)));
+
+  /* phone: one piece; the arch is ~0.62 as wide as it is tall */
+  --h0: 64dvh;
+  --b0: 9dvh;
+  --w0: min(calc(var(--h0) * 0.62), 80vw);
+  --colW: 100vw;
+  --ox: 0.45; /* the cabinet sits ~45% across the photo */
+
+  --w: calc(var(--w0) * (1 - var(--t)) + 100vw * var(--t));
+  --h: calc(var(--h0) * (1 - var(--t)) + (100dvh + 50vw) * var(--t));
   --b: calc(var(--b0) * (1 - var(--t)));
-  --rad: calc((100vw - 2 * var(--x)) / 2 * (1 - var(--r)));
-  --s: calc(var(--s0) + (1 - var(--s0)) * var(--t));
+
+  /* Photo width: cabinet fills 72% of the arch when shut (cabinet = 48.7% of
+     the photo's width), and the photo covers a full-height column when open. */
+  --wi0: calc(var(--w0) * 1.478);
+  --wi1: max(calc(100dvh * 0.75), var(--colW));
+  --wi: calc(var(--wi0) * (1 - var(--t)) + var(--wi1) * var(--t));
 
   position: sticky;
   top: 0;
@@ -44,46 +46,90 @@
 
 @media (min-width: 768px) {
   .stage {
-    --x0: 34vw;
-    --y0: 15dvh;
-    --b0: 10dvh;
-    --s0: 1.2;
-    --ox: -50%;
+    --h0: 72dvh;
+    --b0: 8dvh;
+    --colW: calc(100vw / 3);
   }
 }
 
-.photo {
+.arch {
   position: absolute;
-  inset: 0;
-  clip-path: inset(var(--y) var(--x) var(--b) var(--x) round var(--rad) var(--rad) 0 0);
+  left: 50%;
+  bottom: var(--b);
+  width: var(--w);
+  height: var(--h);
+  transform: translateX(-50%);
+  border-radius: calc(var(--w) / 2) calc(var(--w) / 2) 0 0;
+  overflow: hidden;
 }
 
-.photoImg {
+/* Stage-sized layer glued to the screen while the arch moves around it. */
+.layer {
   position: absolute;
-  top: 0;
+  left: calc((var(--w) - 100vw) / 2);
+  bottom: calc(-1 * var(--b));
+  width: 100vw;
+  height: 100vh;
+  height: 100dvh;
+}
+
+.centre {
+  position: absolute;
   left: 50%;
+  bottom: 0;
+  width: var(--colW);
   height: 100%;
-  width: auto;
+  transform: translateX(-50%);
+  overflow: hidden;
+  box-shadow: 0 0 0 2px var(--color-bone);
+}
+
+.centreImg {
+  position: absolute;
+  bottom: var(--b);
+  left: calc(50% - var(--ox) * var(--wi));
+  width: var(--wi);
+  height: auto;
   max-width: none;
-  transform: translateX(var(--ox)) scale(var(--s));
-  transform-origin: 50% 62%;
-  will-change: transform;
+}
+
+.side {
+  position: absolute;
+  bottom: 0;
+  width: var(--colW);
+  height: 100%;
+  overflow: hidden;
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .side {
+    display: block;
+  }
+}
+
+.sideLeft {
+  left: calc(50% - var(--colW) * 1.5);
+}
+
+.sideRight {
+  left: calc(50% + var(--colW) * 0.5);
 }
 
 .shade {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgb(25 20 16 / 0.78), rgb(25 20 16 / 0.18) 38%, transparent 60%);
+  background: linear-gradient(to top, rgb(25 20 16 / 0.72), rgb(25 20 16 / 0.15) 36%, transparent 58%);
   opacity: clamp(0, calc((var(--t) - 0.5) * 3), 1);
 }
 
 .intro {
-  opacity: clamp(0, calc(1 - var(--t) * 2.8), 1);
+  opacity: clamp(0, calc(1 - var(--t) * 3), 1);
   transform: translateY(calc(var(--t) * -14px));
 }
 
 .plate {
-  opacity: clamp(0, calc((var(--t) - 0.6) * 4), 1);
+  opacity: clamp(0, calc((var(--t) - 0.62) * 4), 1);
   transform: translateY(calc((1 - var(--t)) * 16px));
 }
 

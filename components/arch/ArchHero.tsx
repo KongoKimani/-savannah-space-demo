@@ -4,8 +4,9 @@
   The arch — an alternative homepage opening (/arch).
 
   A tall arch window sits on the bone canvas holding one piece. Scrolling
-  opens it: the window grows to the full height of the photograph, the
-  arch's curve flattens, and the piece's nameplate arrives.
+  opens it: the arch grows until its curve rises out of view and the piece
+  fills the screen (on wide screens, flanked by two more), then the
+  nameplate arrives.
 
   Same technique as the cabinet: one scroll listener writes --t and --r onto
   the stage, and every transform is calc() off them. With reduced motion the
@@ -18,9 +19,13 @@ import Image from "next/image";
 import Link from "next/link";
 import styles from "./arch.module.css";
 
+type Side = { src: string; blurDataURL?: string; name: string };
+
 type Props = {
   src: string;
   blurDataURL?: string;
+  left: Side;
+  right: Side;
   name: string;
   materials: string;
   priceLine: string;
@@ -34,7 +39,7 @@ const ease = (v: number) => v * v * (3 - 2 * v);
 const OPEN_FROM = 0.06;
 const OPEN_TO = 0.8;
 
-export default function ArchHero({ src, blurDataURL, name, materials, priceLine, href }: Props) {
+export default function ArchHero({ src, blurDataURL, left, right, name, materials, priceLine, href }: Props) {
   const wrapRef = useRef<HTMLElement>(null);
   const stageRef = useRef<HTMLDivElement>(null);
 
@@ -50,9 +55,7 @@ export default function ArchHero({ src, blurDataURL, name, materials, priceLine,
       const travel = wrap.offsetHeight - stage.offsetHeight;
       const p = travel > 0 ? clamp01(-wrap.getBoundingClientRect().top / travel) : 0;
       const t = ease(clamp01((p - OPEN_FROM) / (OPEN_TO - OPEN_FROM)));
-      const r = clamp01((t - 0.72) / 0.28);
       stage.style.setProperty("--t", t.toFixed(4));
-      stage.style.setProperty("--r", r.toFixed(4));
       const open = t > 0.6 ? "true" : "false";
       if (stage.dataset.open !== open) stage.dataset.open = open;
     };
@@ -99,18 +102,42 @@ export default function ArchHero({ src, blurDataURL, name, materials, priceLine,
           <p className="eyebrow mt-2 text-[0.5625rem] text-ink/60">{materials}</p>
         </div>
 
-        <div className={styles.photo}>
-          <Image
-            src={src}
-            alt={`${name}, handcrafted in Kenya by Savannah Space`}
-            width={605}
-            height={807}
-            priority
-            sizes="(min-width: 768px) 75dvh, 100vw"
-            className={styles.photoImg}
-            {...(blurDataURL ? { placeholder: "blur" as const, blurDataURL } : {})}
-          />
-          <div aria-hidden className={styles.shade} />
+        <div className={styles.arch}>
+          <div className={styles.layer}>
+            <div className={`${styles.side} ${styles.sideLeft}`}>
+              <Image
+                src={left.src}
+                alt={`${left.name}, handcrafted in Kenya by Savannah Space`}
+                fill
+                sizes="34vw"
+                className="object-cover object-[50%_60%]"
+                {...(left.blurDataURL ? { placeholder: "blur" as const, blurDataURL: left.blurDataURL } : {})}
+              />
+            </div>
+            <div className={styles.centre}>
+              <Image
+                src={src}
+                alt={`${name}, handcrafted in Kenya by Savannah Space`}
+                width={605}
+                height={807}
+                priority
+                sizes="(min-width: 768px) 75dvh, 100vw"
+                className={styles.centreImg}
+                {...(blurDataURL ? { placeholder: "blur" as const, blurDataURL } : {})}
+              />
+            </div>
+            <div className={`${styles.side} ${styles.sideRight}`}>
+              <Image
+                src={right.src}
+                alt={`${right.name}, handcrafted in Kenya by Savannah Space`}
+                fill
+                sizes="34vw"
+                className="object-cover object-[50%_60%]"
+                {...(right.blurDataURL ? { placeholder: "blur" as const, blurDataURL: right.blurDataURL } : {})}
+              />
+            </div>
+            <div aria-hidden className={styles.shade} />
+          </div>
         </div>
 
         {/* The nameplate, arriving once the arch is open. */}
