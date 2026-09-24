@@ -26,9 +26,11 @@ const NAV = [
   restoring a header CTA. Mobile-first: >=44px targets throughout.
 */
 export default function Header() {
-  const isHome = usePathname() === "/";
+  const pathname = usePathname();
+  const isHome = pathname === "/";
+  const isArch = pathname === "/arch";
 
-  const shell = isHome
+  const shell = isHome || isArch
     ? "absolute inset-x-0 top-0 z-30"
     : "border-b border-line bg-bone";
   const wordmark = isHome ? "text-bone" : "text-chocolate";

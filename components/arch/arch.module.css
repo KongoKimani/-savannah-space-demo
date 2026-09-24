@@ -1,0 +1,96 @@
+/* Geometry is all calc() off two numbers written onto .stage each frame:
+   --t (0 to 1, the arch opening) and --r (0 to 1, the arch's curve
+   flattening at the end). React never re-renders while scrolling. */
+
+.wrap {
+  position: relative;
+  height: 100vh;
+  height: 100dvh;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .wrap {
+    height: 240vh;
+    height: 240dvh;
+  }
+}
+
+.stage {
+  --t: 0;
+  --r: 0;
+  --x0: 19vw;
+  --y0: 25dvh;
+  --b0: 11dvh;
+  --s0: 0.8;
+  /* The cabinet sits ~45% across the photo; centre on it when the photo is
+     wider than the screen, on the photo itself when the window is capped. */
+  --ox: -45%;
+  /* The photo is 3:4 and only 605px wide, so the open state is capped at its
+     natural aspect (bone either side on wide screens) instead of being
+     stretched into a soft full-bleed. */
+  --x1: max(0px, calc((100vw - 75dvh) / 2));
+  --x: calc(var(--x0) * (1 - var(--t)) + var(--x1) * var(--t));
+  --y: calc(var(--y0) * (1 - var(--t)));
+  --b: calc(var(--b0) * (1 - var(--t)));
+  --rad: calc((100vw - 2 * var(--x)) / 2 * (1 - var(--r)));
+  --s: calc(var(--s0) + (1 - var(--s0)) * var(--t));
+
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  height: 100dvh;
+  overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .stage {
+    --x0: 34vw;
+    --y0: 15dvh;
+    --b0: 10dvh;
+    --s0: 1.2;
+    --ox: -50%;
+  }
+}
+
+.photo {
+  position: absolute;
+  inset: 0;
+  clip-path: inset(var(--y) var(--x) var(--b) var(--x) round var(--rad) var(--rad) 0 0);
+}
+
+.photoImg {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  height: 100%;
+  width: auto;
+  max-width: none;
+  transform: translateX(var(--ox)) scale(var(--s));
+  transform-origin: 50% 62%;
+  will-change: transform;
+}
+
+.shade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgb(25 20 16 / 0.78), rgb(25 20 16 / 0.18) 38%, transparent 60%);
+  opacity: clamp(0, calc((var(--t) - 0.5) * 3), 1);
+}
+
+.intro {
+  opacity: clamp(0, calc(1 - var(--t) * 2.8), 1);
+  transform: translateY(calc(var(--t) * -14px));
+}
+
+.plate {
+  opacity: clamp(0, calc((var(--t) - 0.6) * 4), 1);
+  transform: translateY(calc((1 - var(--t)) * 16px));
+}
+
+.stage[data-open="false"] .plate {
+  pointer-events: none;
+}
+
+.stage[data-open="true"] .intro {
+  pointer-events: none;
+}
