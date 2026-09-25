@@ -2,8 +2,7 @@ import type { Metadata } from "next";
 import ArchHero from "@/components/arch/ArchHero";
 import HomePage from "@/components/home/HomePage";
 import { getBlur } from "@/lib/blur";
-import { getAllPieces, priceInfo } from "@/lib/products";
-import { formatKsh } from "@/lib/site";
+import { getAllPieces } from "@/lib/products";
 
 // A preview of the alternative opening — kept out of search results.
 export const metadata: Metadata = {
@@ -24,21 +23,15 @@ export default function ArchHomePage() {
     return { src: p.images[0], blurDataURL: getBlur(p.images[0]), name: p.name };
   };
   const piece = bySlug("oromo-bar");
-  const src = piece.images[0];
-  const { price, isFrom } = priceInfo(piece);
 
   return (
     <HomePage
       hero={
         <ArchHero
-          src={src}
-          blurDataURL={getBlur(src)}
+          centre={side("oromo-bar")}
           left={side("aoro-bar")}
           right={side("kahawa-bar")}
-          name={piece.name}
           materials={piece.materials.join(" · ")}
-          priceLine={`Built to order · ${isFrom ? "from " : ""}${formatKsh(price)}`}
-          href={`/pieces/${piece.slug}`}
         />
       }
     />

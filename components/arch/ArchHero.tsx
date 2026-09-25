@@ -5,31 +5,27 @@
 
   A tall arch window sits on the bone canvas holding one piece. Scrolling
   opens it: the arch grows until its curve rises out of view and the piece
-  fills the screen (on wide screens, flanked by two more), then the
-  nameplate arrives.
+  fills the screen. On wide screens it is flanked by two more pieces; on
+  phones, once open, the hero becomes a swipeable slideshow of all three
+  that advances by itself until the visitor touches it.
 
-  Same technique as the cabinet: one scroll listener writes --t and --r onto
-  the stage, and every transform is calc() off them. With reduced motion the
-  listener never runs and the wrapper is one screen tall, so the resting
-  composition is the whole hero.
+  One scroll listener writes --t onto the stage and every transform is
+  calc() off it. With reduced motion the listener never runs and the wrapper
+  is one screen tall, so the resting composition is the whole hero.
 */
 
-import { useEffect, useRef } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./arch.module.css";
 
-type Side = { src: string; blurDataURL?: string; name: string };
+type Piece = { src: string; blurDataURL?: string; name: string };
 
 type Props = {
-  src: string;
-  blurDataURL?: string;
-  left: Side;
-  right: Side;
-  name: string;
+  centre: Piece;
+  left: Piece;
+  right: Piece;
   materials: string;
-  priceLine: string;
-  href: string;
 };
 
 const clamp01 = (v: number) => (v < 0 ? 0 : v > 1 ? 1 : v);
@@ -38,10 +34,20 @@ const ease = (v: number) => v * v * (3 - 2 * v);
 /* Held closed for a beat, fully open before the stage releases. */
 const OPEN_FROM = 0.06;
 const OPEN_TO = 0.8;
+const ADVANCE_MS = 4500;
 
-export default function ArchHero({ src, blurDataURL, left, right, name, materials, priceLine, href }: Props) {
+const blur = (p: Piece) =>
+  p.blurDataURL ? { placeholder: "blur" as const, blurDataURL: p.blurDataURL } : {};
+
+export default function ArchHero({ centre, left, right, materials }: Props) {
   const wrapRef = useRef<HTMLElement>(null);
   const stageRef = useRef<HTMLDivElement>(null);
+  const slidesRef = useRef<HTMLDivElement>(null);
+  const touched = useRef(false);
+  const [active, setActive] = useState(0);
+
+  // Phone slideshow order: the arch opens on the centre piece.
+  const slides = [centre, left, right];
 
   useEffect(() => {
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
@@ -58,6 +64,8 @@ export default function ArchHero({ src, blurDataURL, left, right, name, material
       stage.style.setProperty("--t", t.toFixed(4));
       const open = t > 0.6 ? "true" : "false";
       if (stage.dataset.open !== open) stage.dataset.open = open;
+      const done = t > 0.97 ? "true" : "false";
+      if (stage.dataset.done !== done) stage.dataset.done = done;
     };
     const onScroll = () => {
       if (!raf) raf = requestAnimationFrame(update);
@@ -72,9 +80,39 @@ export default function ArchHero({ src, blurDataURL, left, right, name, material
     };
   }, []);
 
+  const goTo = useCallback((i: number) => {
+    const el = slidesRef.current;
+    if (el) el.scrollTo({ left: i * el.clientWidth, behavior: "smooth" });
+  }, []);
+
+  // Auto-advance on phones once open, until the visitor touches the slides.
+  useEffect(() => {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    const id = window.setInterval(() => {
+      const stage = stageRef.current;
+      const el = slidesRef.current;
+      if (!stage || !el || touched.current) return;
+      if (stage.dataset.done !== "true" || window.matchMedia("(min-width: 768px)").matches) return;
+      const r = stage.getBoundingClientRect();
+      if (r.bottom < window.innerHeight * 0.5 || r.top > window.innerHeight * 0.5) return;
+      goTo((Math.round(el.scrollLeft / el.clientWidth) + 1) % slides.length);
+    }, ADVANCE_MS);
+    return () => window.clearInterval(id);
+  }, [goTo, slides.length]);
+
+  const onSlidesScroll = () => {
+    const el = slidesRef.current;
+    if (!el || !el.clientWidth) return;
+    const i = Math.round(el.scrollLeft / el.clientWidth);
+    setActive((prev) => (prev === i ? prev : i));
+  };
+  const stopAuto = () => {
+    touched.current = true;
+  };
+
   return (
     <section ref={wrapRef} className={styles.wrap} aria-label="Savannah Space">
-      <div ref={stageRef} className={`${styles.stage} bg-bone`} data-open="false">
+      <div ref={stageRef} className={`${styles.stage} bg-bone`} data-open="false" data-done="false">
         {/* Above the arch on phones; a left column on wide screens. */}
         <div
           className={`${styles.intro} absolute inset-x-0 top-[6.9rem] z-10 px-6 text-center md:inset-x-auto md:left-[6vw] md:top-1/2 md:w-[26vw] md:-translate-y-1/2 md:px-0 md:text-left`}
@@ -97,7 +135,7 @@ export default function ArchHero({ src, blurDataURL, left, right, name, material
         >
           <p className="eyebrow text-[0.625rem] text-ink/60">Pictured</p>
           <p className="mt-2 font-display text-2xl uppercase tracking-[0.08em] text-chocolate">
-            {name}
+            {centre.name}
           </p>
           <p className="eyebrow mt-2 text-[0.5625rem] text-ink/60">{materials}</p>
         </div>
@@ -111,19 +149,19 @@ export default function ArchHero({ src, blurDataURL, left, right, name, material
                 fill
                 sizes="34vw"
                 className="object-cover object-[50%_60%]"
-                {...(left.blurDataURL ? { placeholder: "blur" as const, blurDataURL: left.blurDataURL } : {})}
+                {...blur(left)}
               />
             </div>
             <div className={styles.centre}>
               <Image
-                src={src}
-                alt={`${name}, handcrafted in Kenya by Savannah Space`}
+                src={centre.src}
+                alt={`${centre.name}, handcrafted in Kenya by Savannah Space`}
                 width={605}
                 height={807}
                 priority
                 sizes="(min-width: 768px) 75dvh, 100vw"
                 className={styles.centreImg}
-                {...(blurDataURL ? { placeholder: "blur" as const, blurDataURL } : {})}
+                {...blur(centre)}
               />
             </div>
             <div className={`${styles.side} ${styles.sideRight}`}>
@@ -133,31 +171,96 @@ export default function ArchHero({ src, blurDataURL, left, right, name, material
                 fill
                 sizes="34vw"
                 className="object-cover object-[50%_60%]"
-                {...(right.blurDataURL ? { placeholder: "blur" as const, blurDataURL: right.blurDataURL } : {})}
+                {...blur(right)}
               />
             </div>
             <div aria-hidden className={styles.shade} />
           </div>
         </div>
 
-        {/* The nameplate, arriving once the arch is open. */}
+        {/* Phones, once the arch is open: the three pieces as a slideshow.
+            Its first slide is pixel-identical to the open arch, so the hand-off
+            is a fade between two identical frames. */}
+        <div
+          ref={slidesRef}
+          className={styles.slides}
+          onScroll={onSlidesScroll}
+          onTouchStart={stopAuto}
+          onPointerDown={stopAuto}
+          onWheel={stopAuto}
+          aria-roledescription="carousel"
+          aria-label="Featured pieces"
+        >
+          {slides.map((p, i) => (
+            <div
+              key={p.name}
+              className={styles.slide}
+              role="group"
+              aria-roledescription="slide"
+              aria-label={`${i + 1} of ${slides.length}`}
+            >
+              {i === 0 ? (
+                <Image
+                  src={p.src}
+                  alt={`${p.name}, handcrafted in Kenya by Savannah Space`}
+                  width={605}
+                  height={807}
+                  sizes="100vw"
+                  className={styles.slideFirst}
+                  {...blur(p)}
+                />
+              ) : (
+                <Image
+                  src={p.src}
+                  alt={`${p.name}, handcrafted in Kenya by Savannah Space`}
+                  fill
+                  sizes="100vw"
+                  className="object-cover object-[50%_60%]"
+                  {...blur(p)}
+                />
+              )}
+              <div aria-hidden className={styles.slideShade} />
+            </div>
+          ))}
+        </div>
+
+        {/* The nameplate and the way in, arriving once the arch is open. */}
         <div
           className={`${styles.plate} absolute inset-x-0 bottom-0 z-10 px-6 pb-10 text-center text-bone md:pb-12`}
         >
-          <p className="eyebrow text-[0.625rem] text-bone/85">
-            <span className="text-marigold">01</span> — The piece
-          </p>
-          <h2 className="mt-3 font-display text-3xl uppercase tracking-[0.08em]">{name}</h2>
-          <p className="eyebrow mt-3 text-[0.5625rem] text-bone/75">{materials}</p>
-          <p className="mt-3 font-display text-lg">{priceLine}</p>
-          <div className="mt-6 flex items-center justify-center gap-8">
-            <Link href={href} className="eyebrow border-b border-bone/70 pb-1">
-              View the piece
-            </Link>
-            <Link href="/collections" className="eyebrow border-b border-bone/70 pb-1">
-              Collections
-            </Link>
+          <div className="mb-5 flex items-center justify-center gap-1 md:hidden" role="group" aria-label="Choose a piece">
+            {slides.map((p, i) => (
+              <button
+                key={p.name}
+                type="button"
+                aria-label={`Show ${p.name}`}
+                aria-current={active === i}
+                onClick={() => {
+                  stopAuto();
+                  goTo(i);
+                }}
+                className="flex h-8 w-8 items-center justify-center"
+              >
+                <span
+                  className={`block h-1.5 rounded-full bg-bone transition-all duration-300 ${
+                    active === i ? "w-6 opacity-100" : "w-1.5 opacity-50"
+                  }`}
+                />
+              </button>
+            ))}
           </div>
+          <p className="eyebrow text-[0.625rem] text-bone/85">
+            <span className="text-marigold">{String(active + 1).padStart(2, "0")}</span> — The pieces
+          </p>
+          <h2 className="mt-3 font-display text-3xl uppercase tracking-[0.08em]" aria-live="polite">
+            {slides[active]?.name ?? centre.name}
+          </h2>
+          <Link
+            href="/collections"
+            className="eyebrow mt-7 inline-block border-b border-bone/70 pb-1"
+          >
+            View collections
+          </Link>
         </div>
 
         <p

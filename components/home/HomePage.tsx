@@ -51,8 +51,7 @@ export default function HomePage({ hero }: { hero: ReactNode }) {
       {hero}
 
       {/* ---- Chapters 01–03 · Featured pieces (proof, straight after the
-              statement). Mobile: immersive full-bleed scenes (portrait photos
-              fill a phone naturally). Desktop: alternating editorial gallery
+              statement). Mobile: swipeable cards. Desktop: alternating editorial gallery
               rows — the portrait photo at its natural 3:4, uncropped. ---- */}
       <section className="pb-6 pt-16 sm:pt-20 lg:pb-14">
         <Reveal className="mx-auto max-w-6xl px-6 pb-10 sm:px-8 lg:pb-4">
@@ -61,61 +60,53 @@ export default function HomePage({ hero }: { hero: ReactNode }) {
             The pieces
           </h2>
         </Reveal>
+        {/* Mobile: swipeable cards — the next one peeks in from the right so the
+            swipe is obvious, and the whole section is one screen, not three. */}
+        <div className="flex snap-x snap-mandatory gap-4 overflow-x-auto scroll-px-6 px-6 pb-2 [scrollbar-width:none] lg:hidden [&::-webkit-scrollbar]:hidden">
+          {featured.map((piece, i) => {
+            const { price, isFrom } = priceInfo(piece);
+            const img = piece.images[FEATURE_IMAGE[piece.slug] ?? 0];
+            return (
+              <Link
+                key={piece.slug}
+                href={`/pieces/${piece.slug}`}
+                className="group block w-[78%] max-w-[22rem] shrink-0 snap-start"
+              >
+                <div className="relative aspect-[4/5] overflow-hidden bg-blush">
+                  <Image
+                    src={img}
+                    alt={`${piece.name}, handcrafted in Kenya by Savannah Space`}
+                    fill
+                    sizes="78vw"
+                    className="object-cover transition-transform duration-700 group-hover:scale-[1.03]"
+                    {...blurProps(img)}
+                  />
+                </div>
+                <p className="eyebrow mt-4 text-[0.625rem] text-ink/70">
+                  <span className="text-terracotta">{String(i + 1).padStart(2, "0")}</span> — The pieces
+                </p>
+                <h3 className="mt-2 font-display text-2xl uppercase tracking-[0.08em] text-chocolate">
+                  {piece.name}
+                </h3>
+                {piece.name_note && (
+                  <p className="mt-1 font-display text-base italic text-terracotta">{piece.name_note}</p>
+                )}
+                <p className="eyebrow mt-3 text-[0.5625rem] text-ink/70">{piece.materials.join(" · ")}</p>
+                <p className="mt-3 font-display text-lg text-ink">
+                  Built to order · {isFrom && "from "}
+                  {formatKsh(price)}
+                </p>
+              </Link>
+            );
+          })}
+        </div>
+
         {featured.map((piece, i) => {
           const { price, isFrom } = priceInfo(piece);
           // curated home shots: styled interiors only (galleries keep page order)
           const img = piece.images[FEATURE_IMAGE[piece.slug] ?? 0];
           return (
             <article key={piece.slug}>
-              {/* Mobile scene — image always visible, only the caption animates */}
-              <Link
-                href={`/pieces/${piece.slug}`}
-                className="group block lg:hidden"
-              >
-                <div className="relative h-[72dvh] overflow-hidden bg-blush">
-                  <Image
-                    src={img}
-                    alt={`${piece.name}, handcrafted in Kenya by Savannah Space`}
-                    fill
-                    sizes="100vw"
-                    className="object-cover transition-transform duration-700 group-hover:scale-[1.03]"
-                    {...blurProps(img)}
-                  />
-                  <div
-                    aria-hidden
-                    className="absolute inset-0 bg-gradient-to-t from-charcoal/90 via-charcoal/60 to-charcoal/10"
-                  />
-                  <div className="absolute inset-x-0 bottom-0 px-6 pb-10">
-                    <Reveal>
-                      <p className="eyebrow text-[0.625rem] text-bone/90">
-                        <span className="text-marigold">
-                          {String(i + 1).padStart(2, "0")}
-                        </span>{" "}
-                        — The pieces
-                      </p>
-                      <h2 className="mt-3 font-display text-3xl uppercase tracking-[0.08em] text-bone">
-                        {piece.name}
-                      </h2>
-                      {piece.name_note && (
-                        <p className="mt-2 font-display text-base italic text-bone/80">
-                          {piece.name_note}
-                        </p>
-                      )}
-                      <p className="eyebrow mt-3 text-[0.5625rem] text-bone/70">
-                        {piece.materials.join(" · ")}
-                      </p>
-                      <p className="mt-4 font-display text-lg text-bone">
-                        Built to order · {isFrom && "from "}
-                        {formatKsh(price)}
-                      </p>
-                      <span className="eyebrow mt-6 inline-block border-b border-bone/70 pb-1 text-bone">
-                        View the piece
-                      </span>
-                    </Reveal>
-                  </div>
-                </div>
-              </Link>
-
               {/* Desktop gallery row */}
               <div
                 className={`mx-auto hidden max-w-6xl grid-cols-2 items-center gap-x-20 px-8 py-14 lg:grid ${
