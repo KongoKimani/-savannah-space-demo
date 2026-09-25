@@ -17,6 +17,7 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import ArchHeader from "./ArchHeader";
 import styles from "./arch.module.css";
 
 type Piece = { src: string; blurDataURL?: string; name: string };
@@ -113,6 +114,8 @@ export default function ArchHero({ centre, left, right, materials }: Props) {
   return (
     <section ref={wrapRef} className={styles.wrap} aria-label="Savannah Space">
       <div ref={stageRef} className={`${styles.stage} bg-bone`} data-open="false" data-done="false">
+        <ArchHeader />
+
         {/* Above the arch on phones; a left column on wide screens. */}
         <div
           className={`${styles.intro} absolute inset-x-0 top-[6.9rem] z-10 px-6 text-center md:inset-x-auto md:left-[6vw] md:top-1/2 md:w-[26vw] md:-translate-y-1/2 md:px-0 md:text-left`}

@@ -7,7 +7,7 @@ import { usePathname } from "next/navigation";
 /* `short` is the phone label. Four full labels measure 353px against a 340px
    nav at 360px wide, and the only ways to close that gap are shrinking the
    type to 9px or shortening a word — the word is the cheaper loss. */
-const NAV = [
+export const NAV = [
   { href: "/collections", label: "Collections" },
   { href: "/how-to-order", label: "How to Order", short: "Ordering" },
   { href: "/story", label: "Story" },
@@ -28,9 +28,12 @@ const NAV = [
 export default function Header() {
   const pathname = usePathname();
   const isHome = pathname === "/";
-  const isArch = pathname === "/arch";
 
-  const shell = isHome || isArch
+  // /arch draws its own header inside the hero (ArchHeader) so it can change
+  // colour as the arch opens; nothing else on the page needs this one.
+  if (pathname === "/arch") return null;
+
+  const shell = isHome
     ? "absolute inset-x-0 top-0 z-30"
     : "border-b border-line bg-bone";
   const wordmark = isHome ? "text-bone" : "text-chocolate";
