@@ -1,5 +1,8 @@
 "use client";
 
+import { useEffect, useRef, useState } from "react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { trackEnquiryClick } from "@/lib/analytics";
 import { SITE, whatsappLink } from "@/lib/site";
 
@@ -7,6 +10,11 @@ import { SITE, whatsappLink } from "@/lib/site";
   Site-wide floating enquiry buttons, bottom-right: WhatsApp (primary) and
   email. On-palette chocolate per design review; inline SVG glyphs; >=48px
   targets; safe-area aware.
+
+  The WhatsApp button opens a small quick-start panel. WhatsApp itself cannot
+  be embedded in a page, so each option hands off to WhatsApp with a written
+  message. On a piece page the enquiry names that piece. Without JavaScript
+  the button is still a plain link to WhatsApp.
 */
 
 const BUTTON =
@@ -38,12 +46,139 @@ function MailGlyph() {
   );
 }
 
+function CloseGlyph() {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" className="h-5 w-5" aria-hidden>
+      <path d="M6 6l12 12M18 6 6 18" />
+    </svg>
+  );
+}
+
+const ITEM =
+  "flex min-h-12 w-full items-center justify-between gap-3 rounded-xl border border-line bg-white/60 px-4 py-3 text-left text-[0.9375rem] text-ink transition-colors hover:border-chocolate/40 hover:bg-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-chocolate";
+
 export default function FloatingActions() {
+  const pathname = usePathname();
+  const [open, setOpen] = useState(false);
+  const [piece, setPiece] = useState<string | null>(null);
+  const closeRef = useRef<HTMLButtonElement>(null);
+  const rootRef = useRef<HTMLDivElement>(null);
+
+  const toggle = () => {
+    if (!open) {
+      // Piece pages set their title to "The Name — Savannah Space".
+      const onPiece = pathname.startsWith("/pieces/");
+      const name = onPiece ? document.title.split(" — ")[0].trim() : "";
+      setPiece(name || null);
+    }
+    setOpen((o) => !o);
+  };
+
+  useEffect(() => {
+    if (!open) return;
+    closeRef.current?.focus();
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setOpen(false);
+    };
+    const onDown = (e: PointerEvent) => {
+      if (rootRef.current && !rootRef.current.contains(e.target as Node)) setOpen(false);
+    };
+    document.addEventListener("keydown", onKey);
+    document.addEventListener("pointerdown", onDown);
+    return () => {
+      document.removeEventListener("keydown", onKey);
+      document.removeEventListener("pointerdown", onDown);
+    };
+  }, [open]);
+
+  useEffect(() => {
+    setOpen(false);
+  }, [pathname]);
+
+  const options: { label: string; message: string }[] = [
+    {
+      label: piece ? `Enquire about ${piece}` : "Enquire about a piece",
+      message: piece
+        ? `Hi Savannah Space, I'd like to enquire about ${piece}.`
+        : "Hi Savannah Space, I'd like to enquire about a piece.",
+    },
+    {
+      label: "How ordering works",
+      message: "Hi Savannah Space, could you walk me through how ordering works?",
+    },
+    {
+      label: "Visit the showroom",
+      message: "Hi Savannah Space, I'd like to visit the showroom at Lavington Green Mall.",
+    },
+    {
+      label: "Something else",
+      message: "Hi Savannah Space, I'd like to make an enquiry.",
+    },
+  ];
+
   return (
     <div
+      ref={rootRef}
       className="fixed right-4 z-40 flex flex-col gap-3 sm:right-6"
       style={{ bottom: "max(1rem, env(safe-area-inset-bottom))" }}
     >
+      <div
+        role="dialog"
+        aria-label="Chat with Savannah Space"
+        aria-hidden={!open}
+        className={`absolute bottom-[calc(100%+0.75rem)] right-0 w-[min(22rem,calc(100vw-2rem))] origin-bottom-right overflow-hidden rounded-2xl border border-line bg-bone shadow-2xl shadow-charcoal/30 transition duration-200 motion-reduce:transition-none ${
+          open ? "scale-100 opacity-100" : "pointer-events-none invisible scale-95 opacity-0"
+        }`}
+      >
+        <div className="flex items-center justify-between gap-3 bg-chocolate px-5 py-4 text-bone">
+          <div>
+            <p className="font-display text-xl uppercase tracking-[0.14em]">Savannah Space</p>
+            <p className="eyebrow mt-1 text-[0.5625rem] text-bone/80">Chat on WhatsApp</p>
+          </div>
+          <button
+            ref={closeRef}
+            type="button"
+            onClick={() => setOpen(false)}
+            aria-label="Close"
+            className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full hover:bg-bone/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-bone"
+          >
+            <CloseGlyph />
+          </button>
+        </div>
+        <div className="px-5 pb-5 pt-4">
+          <p className="rounded-2xl rounded-tl-sm bg-white/70 px-4 py-3 text-[0.9375rem] leading-relaxed text-ink">
+            Hello, welcome to Savannah Space. What can we help with?
+          </p>
+          <ul className="mt-4 space-y-2">
+            {options.map((o) => (
+              <li key={o.label}>
+                <a
+                  href={whatsappLink(o.message)}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => {
+                    trackEnquiryClick(piece ?? "floating", null, "whatsapp");
+                    setOpen(false);
+                  }}
+                  className={ITEM}
+                >
+                  <span>{o.label}</span>
+                  <span aria-hidden className="text-chocolate">
+                    →
+                  </span>
+                </a>
+              </li>
+            ))}
+          </ul>
+          <p className="mt-4 text-[0.8125rem] leading-relaxed text-ink/70">
+            Showroom: {SITE.showroom.name}, {SITE.showroom.hours}.{" "}
+            <Link href="/how-to-order" className="underline underline-offset-2 hover:text-chocolate">
+              Read how ordering works
+            </Link>
+          </p>
+        </div>
+      </div>
+
       <a
         href={`mailto:${SITE.email}?subject=${encodeURIComponent("Enquiry — Savannah Space")}`}
         aria-label="Enquire by email"
@@ -58,8 +193,13 @@ export default function FloatingActions() {
         target="_blank"
         rel="noopener noreferrer"
         aria-label={`Chat on WhatsApp, ${SITE.phonePrimary}`}
+        aria-haspopup="dialog"
+        aria-expanded={open}
         title="Chat on WhatsApp"
-        onClick={() => trackEnquiryClick("floating", null, "whatsapp")}
+        onClick={(e) => {
+          e.preventDefault();
+          toggle();
+        }}
         className={BUTTON}
       >
         <WhatsAppGlyph />
